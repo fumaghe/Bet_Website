@@ -1,0 +1,1140 @@
+{
+  "1733692914.684222": [
+    {
+      "bet_radar_id": "54555309",
+      "cycle": 2,
+      "probability": 0.9673659673659674,
+      "sportbooks": [
+        "sisal",
+        "better"
+      ],
+      "staus": true,
+      "score": 1.3263403263403264,
+      "info": {
+        "better": {
+          "sport": "basket",
+          "name": "radford highlanders - bucknell bison",
+          "minute": "Overtime",
+          "score": "59-59"
+        },
+        "sisal": {
+          "sport": "basket",
+          "name": "Radford Highlanders - Bucknell Bison",
+          "start": "2024-12-08T19:00:00.000Z",
+          "period": "Supplementari",
+          "score": [
+            "60 - 61"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 2.2,
+          "sportbook": "sisal",
+          "stake": 45,
+          "win": 99.00000000000001,
+          "bet_type": "T/T",
+          "outcome": "1",
+          "bet_radar_id": "54555309"
+        },
+        {
+          "odd": 1.95,
+          "sportbook": "better",
+          "stake": 55,
+          "win": 107.25,
+          "bet_type": "T/T",
+          "outcome": "2",
+          "bet_radar_id": "54555309"
+        }
+      ]
+    }
+  ],
+  "1733692933.9828782": [
+    {
+      "bet_radar_id": "11675371",
+      "cycle": 6,
+      "probability": 0.986013986013986,
+      "sportbooks": [
+        "better",
+        "sisal"
+      ],
+      "staus": true,
+      "score": 2.1398601398601396,
+      "info": {
+        "better": {
+          "sport": "football",
+          "name": "club deportivo mandiy\u00fa - deportivo empedrado",
+          "minute": "17&deg;",
+          "score": "1-0"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Club Deportivo Mandiyu - Deportivo Empedrado",
+          "start": "2024-12-08T21:00:00.000Z",
+          "period": "1\u00b0 Tempo",
+          "score": [
+            "0 - 0"
+          ]
+        },
+        "vincitu": {
+          "sport": "football",
+          "name": "club deportivo mandiy\u00fa - deportivo empedrado",
+          "start": "08/12/24 22:00",
+          "tournament": "argentina - iv divisione",
+          "period": "1",
+          "minute": "17",
+          "score": [
+            "0-0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.1,
+          "sportbook": "better",
+          "stake": 90,
+          "win": 99.00000000000001,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "11675371"
+        },
+        {
+          "odd": 13.0,
+          "sportbook": "sisal",
+          "stake": 10,
+          "win": 130.0,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "11675371"
+        }
+      ]
+    },
+    {
+      "bet_radar_id": "11675371",
+      "cycle": 6,
+      "probability": 0.8469765528589058,
+      "sportbooks": [
+        "better",
+        "sisal"
+      ],
+      "staus": true,
+      "score": 3.5302344714109415,
+      "info": {
+        "better": {
+          "sport": "football",
+          "name": "club deportivo mandiy\u00fa - deportivo empedrado",
+          "minute": "17&deg;",
+          "score": "1-0"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Club Deportivo Mandiyu - Deportivo Empedrado",
+          "start": "2024-12-08T21:00:00.000Z",
+          "period": "1\u00b0 Tempo",
+          "score": [
+            "0 - 0"
+          ]
+        },
+        "vincitu": {
+          "sport": "football",
+          "name": "club deportivo mandiy\u00fa - deportivo empedrado",
+          "start": "08/12/24 22:00",
+          "tournament": "argentina - iv divisione",
+          "period": "1",
+          "minute": "17",
+          "score": [
+            "0-0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.3,
+          "sportbook": "better",
+          "stake": 90,
+          "win": 117.0,
+          "bet_type": "DC",
+          "outcome": "12",
+          "bet_radar_id": "11675371"
+        },
+        {
+          "odd": 5.5,
+          "sportbook": "sisal",
+          "stake": 20,
+          "win": 110.0,
+          "bet_type": "1X2",
+          "outcome": "X",
+          "bet_radar_id": "11675371"
+        }
+      ]
+    }
+  ],
+  "1733692972.8582108": [
+    {
+      "bet_radar_id": "51271719",
+      "cycle": 13,
+      "probability": 0.49373433583959897,
+      "sportbooks": [
+        "sisal",
+        "better"
+      ],
+      "staus": true,
+      "score": 7.062656641604011,
+      "info": {
+        "allinbet": {
+          "name": "Napoli - Lazio",
+          "sport": "football",
+          "start": "20241208 20:45:00",
+          "period": "2\u00b0 Tempo",
+          "time": "78",
+          "score": [
+            "1T#0 - 0",
+            "2T#0 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "napoli - lazio",
+          "minute": "79&deg;",
+          "score": "0-0"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Napoli - Lazio ",
+          "start": "2024-12-08T19:45:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "0 - 0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 2.85,
+          "sportbook": "sisal",
+          "stake": 70,
+          "win": 199.5,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "51271719"
+        },
+        {
+          "odd": 7.0,
+          "sportbook": "better",
+          "stake": 30,
+          "win": 210.0,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "51271719"
+        }
+      ]
+    },
+    {
+      "bet_radar_id": "51271719",
+      "cycle": 13,
+      "probability": 0.48313492063492064,
+      "sportbooks": [
+        "better",
+        "sisal"
+      ],
+      "staus": true,
+      "score": 7.168650793650793,
+      "info": {
+        "allinbet": {
+          "name": "Napoli - Lazio",
+          "sport": "football",
+          "start": "20241208 20:45:00",
+          "period": "2\u00b0 Tempo",
+          "time": "78",
+          "score": [
+            "1T#0 - 0",
+            "2T#0 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "napoli - lazio",
+          "minute": "79&deg;",
+          "score": "0-0"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Napoli - Lazio ",
+          "start": "2024-12-08T19:45:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "0 - 0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 2.5,
+          "sportbook": "better",
+          "stake": 85,
+          "win": 212.5,
+          "bet_type": "DC",
+          "outcome": "12",
+          "bet_radar_id": "51271719"
+        },
+        {
+          "odd": 3.6,
+          "sportbook": "sisal",
+          "stake": 55,
+          "win": 198.0,
+          "bet_type": "1X2",
+          "outcome": "X",
+          "bet_radar_id": "51271719"
+        }
+      ]
+    }
+  ],
+  "1733693043.853132": [
+    {
+      "bet_radar_id": "54555309",
+      "cycle": 24,
+      "probability": 0.8928571428571428,
+      "sportbooks": [
+        "better",
+        "sisal"
+      ],
+      "staus": true,
+      "score": 2.071428571428572,
+      "info": {
+        "better": {
+          "sport": "basket",
+          "name": "radford highlanders - bucknell bison",
+          "minute": "Overtime",
+          "score": "59-59"
+        },
+        "sisal": {
+          "sport": "basket",
+          "name": "Radford Highlanders - Bucknell Bison",
+          "start": "2024-12-08T19:00:00.000Z",
+          "period": "Supplementari",
+          "score": [
+            "64 - 64"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 2.4,
+          "sportbook": "better",
+          "stake": 45,
+          "win": 108.0,
+          "bet_type": "T/T",
+          "outcome": "1",
+          "bet_radar_id": "54555309"
+        },
+        {
+          "odd": 2.1,
+          "sportbook": "sisal",
+          "stake": 55,
+          "win": 115.5,
+          "bet_type": "T/T",
+          "outcome": "2",
+          "bet_radar_id": "54555309"
+        }
+      ]
+    }
+  ],
+  "1733693081.8635619": [
+    {
+      "bet_radar_id": "11670927",
+      "cycle": 29,
+      "probability": 0.8632478632478633,
+      "sportbooks": [
+        "sisal",
+        "better"
+      ],
+      "staus": true,
+      "score": 3.367521367521367,
+      "info": {
+        "better": {
+          "sport": "football",
+          "name": "cd platense reserves - cd dragon reserves",
+          "minute": "21&deg;",
+          "score": "0-0"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "CD Platense U20 - CD Dragon Reserves",
+          "start": "2024-12-08T21:00:00.000Z",
+          "period": "1\u00b0 Tempo",
+          "score": [
+            "0 - 0"
+          ]
+        },
+        "vincitu": {
+          "sport": "football",
+          "name": "cd platense reserves - cd dragon reserves",
+          "start": "08/12/24 22:00",
+          "tournament": "el salvador - campionato u20",
+          "period": "1",
+          "minute": "21",
+          "score": [
+            "0-0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.8,
+          "sportbook": "sisal",
+          "stake": 65,
+          "win": 117.0,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "11670927"
+        },
+        {
+          "odd": 3.25,
+          "sportbook": "better",
+          "stake": 35,
+          "win": 113.75,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "11670927"
+        }
+      ]
+    },
+    {
+      "bet_radar_id": "11670927",
+      "cycle": 29,
+      "probability": 0.8518099547511313,
+      "sportbooks": [
+        "better",
+        "sisal"
+      ],
+      "staus": true,
+      "score": 3.481900452488687,
+      "info": {
+        "better": {
+          "sport": "football",
+          "name": "cd platense reserves - cd dragon reserves",
+          "minute": "21&deg;",
+          "score": "0-0"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "CD Platense U20 - CD Dragon Reserves",
+          "start": "2024-12-08T21:00:00.000Z",
+          "period": "1\u00b0 Tempo",
+          "score": [
+            "0 - 0"
+          ]
+        },
+        "vincitu": {
+          "sport": "football",
+          "name": "cd platense reserves - cd dragon reserves",
+          "start": "08/12/24 22:00",
+          "tournament": "el salvador - campionato u20",
+          "period": "1",
+          "minute": "21",
+          "score": [
+            "0-0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.3,
+          "sportbook": "better",
+          "stake": 90,
+          "win": 117.0,
+          "bet_type": "DC",
+          "outcome": "12",
+          "bet_radar_id": "11670927"
+        },
+        {
+          "odd": 3.4,
+          "sportbook": "sisal",
+          "stake": 35,
+          "win": 119.0,
+          "bet_type": "1X2",
+          "outcome": "X",
+          "bet_radar_id": "11670927"
+        }
+      ]
+    }
+  ],
+  "1733693085.423557": [
+    {
+      "bet_radar_id": "11670927",
+      "cycle": 30,
+      "probability": 0.8359133126934984,
+      "sportbooks": [
+        "better",
+        "vincitu"
+      ],
+      "staus": true,
+      "score": 3.6408668730650158,
+      "info": {
+        "better": {
+          "sport": "football",
+          "name": "cd platense reserves - cd dragon reserves",
+          "minute": "21&deg;",
+          "score": "0-1"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "CD Platense U20 - CD Dragon Reserves",
+          "start": "2024-12-08T21:00:00.000Z",
+          "period": "1\u00b0 Tempo",
+          "score": [
+            "0 - 0"
+          ]
+        },
+        "vincitu": {
+          "sport": "football",
+          "name": "cd platense reserves - cd dragon reserves",
+          "start": "08/12/24 22:00",
+          "tournament": "el salvador - campionato u20",
+          "period": "1",
+          "minute": "21",
+          "score": [
+            "0-0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.9,
+          "sportbook": "better",
+          "stake": 65,
+          "win": 123.5,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "11670927"
+        },
+        {
+          "odd": 3.23,
+          "sportbook": "vincitu",
+          "stake": 35,
+          "win": 113.05,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "11670927"
+        }
+      ]
+    }
+  ],
+  "1733693153.1106973": [
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 40,
+      "probability": 0.763157894736842,
+      "sportbooks": [
+        "better",
+        "allinbet"
+      ],
+      "staus": true,
+      "score": 4.36842105263158,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        }
+      },
+      "bets": [
+        {
+          "odd": 3.8,
+          "sportbook": "better",
+          "stake": 35,
+          "win": 133.0,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 2.0,
+          "sportbook": "allinbet",
+          "stake": 65,
+          "win": 130.0,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    }
+  ],
+  "1733693157.5043824": [
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 41,
+      "probability": 0.7076023391812865,
+      "sportbooks": [
+        "better",
+        "allinbet"
+      ],
+      "staus": true,
+      "score": 4.923976608187136,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Atletico Madrid - Siviglia",
+          "start": "2024-12-08T20:00:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "1 - 3"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 3.8,
+          "sportbook": "better",
+          "stake": 35,
+          "win": 133.0,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 2.25,
+          "sportbook": "allinbet",
+          "stake": 65,
+          "win": 146.25,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    },
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 41,
+      "probability": 0.7356877922915659,
+      "sportbooks": [
+        "sisal",
+        "better"
+      ],
+      "staus": true,
+      "score": 4.643122077084341,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Atletico Madrid - Siviglia",
+          "start": "2024-12-08T20:00:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "1 - 3"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.18,
+          "sportbook": "sisal",
+          "stake": 115,
+          "win": 135.7,
+          "bet_type": "DC",
+          "outcome": "X2",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 9.75,
+          "sportbook": "better",
+          "stake": 15,
+          "win": 146.25,
+          "bet_type": "1X2",
+          "outcome": "1",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    }
+  ],
+  "1733693161.7819903": [
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 42,
+      "probability": 0.7076023391812865,
+      "sportbooks": [
+        "better",
+        "allinbet"
+      ],
+      "staus": true,
+      "score": 4.923976608187136,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Atletico Madrid - Siviglia",
+          "start": "2024-12-08T20:00:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "1 - 3"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 3.8,
+          "sportbook": "better",
+          "stake": 35,
+          "win": 133.0,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 2.25,
+          "sportbook": "allinbet",
+          "stake": 65,
+          "win": 146.25,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    },
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 42,
+      "probability": 0.7356877922915659,
+      "sportbooks": [
+        "sisal",
+        "better"
+      ],
+      "staus": true,
+      "score": 4.643122077084341,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Atletico Madrid - Siviglia",
+          "start": "2024-12-08T20:00:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "1 - 3"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.18,
+          "sportbook": "sisal",
+          "stake": 115,
+          "win": 135.7,
+          "bet_type": "DC",
+          "outcome": "X2",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 9.75,
+          "sportbook": "better",
+          "stake": 15,
+          "win": 146.25,
+          "bet_type": "1X2",
+          "outcome": "1",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    }
+  ],
+  "1733693169.7608075": [
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 43,
+      "probability": 0.7076023391812865,
+      "sportbooks": [
+        "better",
+        "allinbet"
+      ],
+      "staus": true,
+      "score": 4.923976608187136,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        }
+      },
+      "bets": [
+        {
+          "odd": 3.8,
+          "sportbook": "better",
+          "stake": 35,
+          "win": 133.0,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 2.25,
+          "sportbook": "allinbet",
+          "stake": 65,
+          "win": 146.25,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    }
+  ],
+  "1733693174.0692265": [
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 44,
+      "probability": 0.7393483709273183,
+      "sportbooks": [
+        "better",
+        "sisal"
+      ],
+      "staus": true,
+      "score": 4.606516290726817,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Atletico Madrid - Siviglia",
+          "start": "2024-12-08T20:00:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "2 - 3"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 3.8,
+          "sportbook": "better",
+          "stake": 35,
+          "win": 133.0,
+          "bet_type": "DC",
+          "outcome": "1X",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 2.1,
+          "sportbook": "sisal",
+          "stake": 65,
+          "win": 136.5,
+          "bet_type": "1X2",
+          "outcome": "2",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    },
+    {
+      "bet_radar_id": "50852383",
+      "cycle": 44,
+      "probability": 0.7674338240375976,
+      "sportbooks": [
+        "sisal",
+        "better"
+      ],
+      "staus": true,
+      "score": 4.325661759624023,
+      "info": {
+        "allinbet": {
+          "name": "Atletico Madrid - Siviglia",
+          "sport": "football",
+          "start": "20241208 21:00:00",
+          "period": "2\u00b0 Tempo",
+          "time": "61",
+          "score": [
+            "1T#1 - 2",
+            "2T#1 - 1",
+            "OT#"
+          ]
+        },
+        "better": {
+          "sport": "football",
+          "name": "atletico madrid - siviglia",
+          "minute": "62&deg;",
+          "score": "1-3"
+        },
+        "sisal": {
+          "sport": "football",
+          "name": "Atletico Madrid - Siviglia",
+          "start": "2024-12-08T20:00:00.000Z",
+          "period": "2\u00b0 Tempo",
+          "score": [
+            "2 - 3"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.18,
+          "sportbook": "sisal",
+          "stake": 110,
+          "win": 129.79999999999998,
+          "bet_type": "DC",
+          "outcome": "X2",
+          "bet_radar_id": "50852383"
+        },
+        {
+          "odd": 9.75,
+          "sportbook": "better",
+          "stake": 15,
+          "win": 146.25,
+          "bet_type": "1X2",
+          "outcome": "1",
+          "bet_radar_id": "50852383"
+        }
+      ]
+    }
+  ],
+  "1733747000.3890905": [
+    {
+      "bet_radar_id": "56253105",
+      "cycle": 1,
+      "probability": 0.9982174688057042,
+      "sportbooks": [
+        "sisal",
+        "better"
+      ],
+      "staus": true,
+      "score": 1.0178253119429583,
+      "info": {
+        "better": {
+          "sport": "tennis",
+          "name": "canter, alexis - perez martin, ivan",
+          "minute": "3&deg; set",
+          "score": "0-0"
+        },
+        "sisal": {
+          "sport": "tennis",
+          "name": "Canter, Alexis - Perez Martin, Ivan",
+          "start": "2024-12-09T10:00:00.000Z",
+          "period": "Iniziata",
+          "score": [
+            "4 - 6",
+            "7 - 6",
+            "0 - 0",
+            "0 - 1"
+          ]
+        },
+        "vincitu": {
+          "sport": "tennis",
+          "name": "alexis canter - ivan perez martin",
+          "start": "09/12/24 11:00",
+          "tournament": "itf spagna",
+          "period": "3",
+          "minute": "0",
+          "score": [
+            "4-6",
+            "7-6",
+            "0-0"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.65,
+          "sportbook": "sisal",
+          "stake": 60,
+          "win": 99.0,
+          "bet_type": "T/T",
+          "outcome": "1",
+          "bet_radar_id": "56253105"
+        },
+        {
+          "odd": 2.55,
+          "sportbook": "better",
+          "stake": 40,
+          "win": 102.0,
+          "bet_type": "T/T",
+          "outcome": "2",
+          "bet_radar_id": "56253105"
+        }
+      ]
+    }
+  ],
+  "1733747437.9166613": [
+    {
+      "bet_radar_id": "56253309",
+      "cycle": 0,
+      "probability": 0.9971509971509971,
+      "sportbooks": [
+        "vincitu",
+        "sisal"
+      ],
+      "staus": true,
+      "score": 1.0284900284900291,
+      "info": {
+        "allinbet": {
+          "name": "Divar  Carlos - Baumgartner  Sam Kydd",
+          "sport": "tennis",
+          "start": "20241209 12:50:00",
+          "period": "1\u00b0 Set",
+          "time": "0",
+          "score": [
+            "G#0:0",
+            "1S#5 - 4",
+            "2S#",
+            "3S#",
+            "4S#",
+            "5S#"
+          ]
+        },
+        "better": {
+          "sport": "tennis",
+          "name": "divar, carlos - baumgartner, sam kydd",
+          "minute": "1&deg; set",
+          "score": "0-0"
+        },
+        "sisal": {
+          "sport": "tennis",
+          "name": "Divar, Carlos - Baumgartner, Sam Kydd",
+          "start": "2024-12-09T11:50:00.000Z",
+          "period": "Iniziata",
+          "score": [
+            "5 - 4",
+            "0 - 0"
+          ]
+        },
+        "vincitu": {
+          "sport": "tennis",
+          "name": "carlos divar - sam kydd baumgartner",
+          "start": "09/12/24 12:50",
+          "tournament": "itf spagna",
+          "period": "1",
+          "minute": "0",
+          "score": [
+            "4-4"
+          ]
+        }
+      },
+      "bets": [
+        {
+          "odd": 1.35,
+          "sportbook": "vincitu",
+          "stake": 75,
+          "win": 101.25,
+          "bet_type": "T/T",
+          "outcome": "1",
+          "bet_radar_id": "56253309"
+        },
+        {
+          "odd": 3.9,
+          "sportbook": "sisal",
+          "stake": 25,
+          "win": 97.5,
+          "bet_type": "T/T",
+          "outcome": "2",
+          "bet_radar_id": "56253309"
+        }
+      ]
+    }
+  ]
+}

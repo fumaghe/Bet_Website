@@ -5,7 +5,6 @@ import { Navbar } from '@/components/layout/navbar';
 import { Sidebar } from '@/components/layout/sidebar';
 import { Card } from '@/components/ui/card';
 import { loadData } from '@/lib/services/data-service';
-import { StandingsTable } from '@/components/standings-table';
 
 export default function CompetitionsPage() {
   const [isLoading, setIsLoading] = useState(true);
