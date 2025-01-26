@@ -1,0 +1,19 @@
+Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
+1,Bayern Munich,19,15,3,1,58,16,42,48,45.8,11.0,Bundesliga
+2,Leverkusen,19,12,6,1,46,26,20,42,36.5,20.0,Bundesliga
+3,Eint Frankfurt,18,11,3,4,42,24,18,36,35.0,26.4,Bundesliga
+4,Stuttgart,19,9,5,5,36,28,8,32,36.2,25.9,Bundesliga
+5,RB Leipzig,19,9,5,5,34,29,5,32,26.6,31.2,Bundesliga
+6,Mainz 05,19,9,4,6,33,23,10,31,26.9,26.4,Bundesliga
+7,Wolfsburg,19,8,4,7,42,34,8,28,28.9,31.3,Bundesliga
+8,Gladbach,19,8,3,8,30,29,1,27,29.4,35.3,Bundesliga
+9,Werder Bremen,19,7,6,6,33,36,-3,27,25.8,26.4,Bundesliga
+10,Freiburg,19,8,3,8,26,36,-10,27,23.3,24.7,Bundesliga
+11,Dortmund,19,7,5,7,34,33,1,26,27.2,25.5,Bundesliga
+12,Augsburg,19,7,4,8,23,34,-11,25,20.2,26.7,Bundesliga
+13,Union Berlin,18,5,4,9,15,25,-10,19,19.8,23.0,Bundesliga
+14,St. Pauli,18,5,2,11,14,21,-7,17,20.0,24.1,Bundesliga
+15,Hoffenheim,18,4,5,9,23,35,-12,17,22.5,30.8,Bundesliga
+16,Heidenheim,19,4,2,13,24,40,-16,14,25.1,31.6,Bundesliga
+17,Holstein Kiel,19,3,3,13,28,48,-20,12,20.9,32.2,Bundesliga
+18,Bochum,19,3,3,13,18,42,-24,12,22.0,39.3,Bundesliga

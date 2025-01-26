@@ -1,0 +1,37 @@
+Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
+1,Liverpool,7,7,0,0,15,2,13,21,17.3,5.8,Champions League
+2,Barcelona,7,6,0,1,26,11,15,18,18.0,9.4,Champions League
+3,Arsenal,7,5,1,1,14,2,12,16,13.7,5.0,Champions League
+4,Inter,7,5,1,1,8,1,7,16,10.4,7.1,Champions League
+5,Atlético Madrid,7,5,0,2,16,11,5,15,10.9,10.6,Champions League
+6,Milan,7,5,0,2,13,9,4,15,10.4,11.0,Champions League
+7,Atalanta,7,4,2,1,18,4,14,14,19.1,6.0,Champions League
+8,Leverkusen,7,4,1,2,13,7,6,13,11.7,7.3,Champions League
+9,Aston Villa,7,4,1,2,9,4,5,13,8.4,8.5,Champions League
+10,Monaco,7,4,1,2,13,10,3,13,11.2,9.0,Champions League
+11,Feyenoord,7,4,1,2,17,15,2,13,9.3,12.5,Champions League
+12,Lille,7,4,1,2,11,9,2,13,8.2,12.8,Champions League
+13,Brest,7,4,1,2,10,8,2,13,8.2,10.0,Champions League
+14,Dortmund,7,4,0,3,19,11,8,12,13.5,11.6,Champions League
+15,Bayern Munich,7,4,0,3,17,11,6,12,18.1,7.0,Champions League
+16,Real Madrid,7,4,0,3,17,12,5,12,16.8,13.5,Champions League
+17,Juventus,7,3,3,1,9,5,4,12,7.7,10.8,Champions League
+18,Celtic,7,3,3,1,11,10,1,12,11.2,9.3,Champions League
+19,PSV Eindhoven,7,3,2,2,13,10,3,11,10.8,12.7,Champions League
+20,Club Brugge,7,3,2,2,6,8,-2,11,6.7,6.5,Champions League
+21,Benfica,7,3,1,3,14,12,2,10,14.9,9.1,Champions League
+22,Paris S-G,7,3,1,3,10,8,2,10,13.8,6.2,Champions League
+23,Sporting CP,7,3,1,3,12,11,1,10,10.4,13.1,Champions League
+24,Stuttgart,7,3,1,3,12,13,-1,10,13.3,8.7,Champions League
+25,Manchester City,7,2,2,3,15,13,2,8,16.2,10.0,Champions League
+26,Dinamo Zagreb,7,2,2,3,10,18,-8,8,5.7,15.3,Champions League
+27,Shakhtar,7,2,1,4,7,13,-6,7,7.9,13.1,Champions League
+28,Bologna,7,1,2,4,3,8,-5,5,7.0,8.6,Champions League
+29,Sparta Prague,7,1,1,5,7,19,-12,4,5.6,11.7,Champions League
+30,RB Leipzig,7,1,0,6,8,14,-6,3,10.7,11.4,Champions League
+31,Girona,7,1,0,6,4,11,-7,3,8.8,10.5,Champions League
+32,Red Star,7,1,0,6,12,22,-10,3,7.6,14.4,Champions League
+33,Sturm Graz,7,1,0,6,4,14,-10,3,5.0,14.7,Champions League
+34,RB Salzburg,7,1,0,6,4,23,-19,3,6.0,17.3,Champions League
+35,Slovan Bratislava,7,0,0,7,6,24,-18,0,6.0,17.9,Champions League
+36,Young Boys,7,0,0,7,3,23,-20,0,5.2,17.3,Champions League

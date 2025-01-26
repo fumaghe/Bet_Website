@@ -1,0 +1,368 @@
+2025-01-17 13:58:02,430: 
+2025-01-17 13:58:02,430: Iteration n.0
+2025-01-17 13:58:03,913: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:58:04,146: Found n.0 events
+2025-01-17 13:58:18,358: 
+2025-01-17 13:58:18,358: Iteration n.1
+2025-01-17 13:58:19,679: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:58:20,084: Found n.0 events
+2025-01-17 13:58:37,086: 
+2025-01-17 13:58:37,086: Iteration n.2
+2025-01-17 13:58:38,478: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:58:39,130: Found n.0 events
+2025-01-17 13:58:49,411: 
+2025-01-17 13:58:49,411: Iteration n.3
+2025-01-17 13:58:50,315: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:58:50,790: Found n.0 events
+2025-01-17 13:59:06,290: 
+2025-01-17 13:59:06,290: Iteration n.4
+2025-01-17 13:59:07,500: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:59:07,868: Found n.0 events
+2025-01-17 13:59:23,769: 
+2025-01-17 13:59:23,769: Iteration n.5
+2025-01-17 13:59:25,025: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:59:25,463: Found n.0 events
+2025-01-17 13:59:41,462: 
+2025-01-17 13:59:41,462: Iteration n.6
+2025-01-17 13:59:42,741: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:59:42,998: Found n.0 events
+2025-01-17 13:59:58,350: 
+2025-01-17 13:59:58,350: Iteration n.7
+2025-01-17 13:59:59,634: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 13:59:59,990: Found n.0 events
+2025-01-17 14:00:16,068: 
+2025-01-17 14:00:16,068: Iteration n.8
+2025-01-17 14:00:17,265: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:00:17,665: Found n.0 events
+2025-01-17 14:00:31,683: 
+2025-01-17 14:00:31,683: Iteration n.9
+2025-01-17 14:00:32,837: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:00:33,394: Found n.0 events
+2025-01-17 14:00:47,453: 
+2025-01-17 14:00:47,454: Iteration n.10
+2025-01-17 14:00:48,771: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:00:50,768: Found n.0 events
+2025-01-17 14:01:04,107: 
+2025-01-17 14:01:04,107: Iteration n.11
+2025-01-17 14:01:05,176: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:01:05,895: Found n.0 events
+2025-01-17 14:01:19,235: 
+2025-01-17 14:01:19,235: Iteration n.12
+2025-01-17 14:01:20,445: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:01:20,864: Found n.0 events
+2025-01-17 14:01:37,093: 
+2025-01-17 14:01:37,093: Iteration n.13
+2025-01-17 14:01:38,265: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:01:38,607: Found n.0 events
+2025-01-17 14:01:51,807: 
+2025-01-17 14:01:51,807: Iteration n.14
+2025-01-17 14:01:53,074: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:01:53,146: Found n.0 events
+2025-01-17 14:02:06,489: 
+2025-01-17 14:02:06,489: Iteration n.15
+2025-01-17 14:02:08,628: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:02:09,559: Found n.0 events
+2025-01-17 14:02:23,280: 
+2025-01-17 14:02:23,280: Iteration n.16
+2025-01-17 14:02:24,334: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:02:24,871: Found n.0 events
+2025-01-17 14:02:35,228: 
+2025-01-17 14:02:35,228: Iteration n.17
+2025-01-17 14:02:36,442: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:02:36,878: Found n.0 events
+2025-01-17 14:02:50,137: 
+2025-01-17 14:02:50,137: Iteration n.18
+2025-01-17 14:02:51,174: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:02:52,057: Found n.0 events
+2025-01-17 14:03:03,710: 
+2025-01-17 14:03:03,710: Iteration n.19
+2025-01-17 14:03:04,900: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:03:05,373: Found n.0 events
+2025-01-17 14:03:20,476: 
+2025-01-17 14:03:20,476: Iteration n.20
+2025-01-17 14:03:21,384: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:03:21,812: Found n.0 events
+2025-01-17 14:03:35,129: 
+2025-01-17 14:03:35,129: Iteration n.21
+2025-01-17 14:03:36,323: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:03:36,856: Found n.0 events
+2025-01-17 14:03:51,214: 
+2025-01-17 14:03:51,214: Iteration n.22
+2025-01-17 14:03:52,498: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:03:52,948: Found n.0 events
+2025-01-17 14:04:10,274: 
+2025-01-17 14:04:10,274: Iteration n.23
+2025-01-17 14:04:11,672: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:04:12,110: Found n.0 events
+2025-01-17 14:04:26,367: 
+2025-01-17 14:04:26,367: Iteration n.24
+2025-01-17 14:04:27,604: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:04:28,183: Found n.0 events
+2025-01-17 14:04:44,597: 
+2025-01-17 14:04:44,597: Iteration n.25
+2025-01-17 14:04:45,788: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:04:46,393: Found n.0 events
+2025-01-17 14:05:04,369: 
+2025-01-17 14:05:04,369: Iteration n.26
+2025-01-17 14:05:05,737: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:05:06,114: Found n.0 events
+2025-01-17 14:05:20,849: 
+2025-01-17 14:05:20,849: Iteration n.27
+2025-01-17 14:05:22,207: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:05:22,604: Found n.0 events
+2025-01-17 14:05:41,531: 
+2025-01-17 14:05:41,531: Iteration n.28
+2025-01-17 14:05:43,332: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:05:43,948: Found n.0 events
+2025-01-17 14:06:02,290: 
+2025-01-17 14:06:02,290: Iteration n.29
+2025-01-17 14:06:03,582: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:06:04,173: Found n.0 events
+2025-01-17 14:06:21,763: 
+2025-01-17 14:06:21,763: Iteration n.30
+2025-01-17 14:06:22,947: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:06:23,552: Found n.0 events
+2025-01-17 14:06:37,692: 
+2025-01-17 14:06:37,692: Iteration n.31
+2025-01-17 14:06:39,046: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:06:39,484: Found n.0 events
+2025-01-17 14:06:55,007: 
+2025-01-17 14:06:55,007: Iteration n.32
+2025-01-17 14:06:56,812: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:06:56,822: Found n.0 events
+2025-01-17 14:07:11,613: 
+2025-01-17 14:07:11,613: Iteration n.33
+2025-01-17 14:07:14,428: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:07:15,307: Found n.0 events
+2025-01-17 14:07:32,927: 
+2025-01-17 14:07:32,927: Iteration n.34
+2025-01-17 14:07:34,320: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:07:35,001: Found n.0 events
+2025-01-17 14:07:50,307: 
+2025-01-17 14:07:50,307: Iteration n.35
+2025-01-17 14:07:53,335: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:07:55,469: Found n.0 events
+2025-01-17 14:08:13,502: 
+2025-01-17 14:08:13,506: Iteration n.36
+2025-01-17 14:08:14,801: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:08:15,419: Found n.0 events
+2025-01-17 14:08:31,642: 
+2025-01-17 14:08:31,642: Iteration n.37
+2025-01-17 14:08:34,791: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:08:35,390: Found n.0 events
+2025-01-17 14:08:53,356: 
+2025-01-17 14:08:53,356: Iteration n.38
+2025-01-17 14:08:54,627: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:08:55,223: Found n.0 events
+2025-01-17 14:09:10,776: 
+2025-01-17 14:09:10,776: Iteration n.39
+2025-01-17 14:09:13,614: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:09:15,597: Found n.0 events
+2025-01-17 14:09:34,581: 
+2025-01-17 14:09:34,581: Iteration n.40
+2025-01-17 14:09:36,061: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:09:36,609: Found n.0 events
+2025-01-17 14:09:55,630: 
+2025-01-17 14:09:55,630: Iteration n.41
+2025-01-17 14:09:56,842: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:09:57,356: Found n.0 events
+2025-01-17 14:10:17,233: 
+2025-01-17 14:10:17,234: Iteration n.42
+2025-01-17 14:10:18,584: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:10:18,965: Found n.0 events
+2025-01-17 14:10:38,659: 
+2025-01-17 14:10:38,659: Iteration n.43
+2025-01-17 14:10:39,992: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:10:40,398: Found n.0 events
+2025-01-17 14:10:59,509: 
+2025-01-17 14:10:59,509: Iteration n.44
+2025-01-17 14:11:01,161: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:11:01,694: Found n.0 events
+2025-01-17 14:11:21,286: 
+2025-01-17 14:11:21,286: Iteration n.45
+2025-01-17 14:11:22,709: Request, code 403
+Traceback (most recent call last):
+  File "C:\Progetti\BetScore\odds-checker\scripts\scraping\scraper.py", line 80, in scrape
+    raise Exception(f'Request, code {r.status_code}')
+Exception: Request, code 403
+2025-01-17 14:11:23,382: Found n.0 events

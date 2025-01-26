@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+    --card: 222 47% 13%;
+    --card-foreground: 0 0% 98%;
+    --popover: 222 47% 13%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 84% 50%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 47% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 222 47% 20%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 222 47% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 47% 20%;
+    --input: 222 47% 20%;
+    --ring: 142 84% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Stile per la barra di scorrimento */
+div::-webkit-scrollbar {
+  width: 3px; /* Larghezza della scrollbar */
+  height: 3px; /* Altezza della scrollbar orizzontale */
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Colore del pollice della scrollbar */
+  border-radius: 4px; /* Angoli arrotondati */
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background-color: #1f2937; /* Colore più scuro al passaggio del mouse */
+}
+
+div::-webkit-scrollbar-track {
+  background-color: #1c1e26; /* Colore del tracciato della scrollbar */
+  border-radius: 4px; /* Angoli arrotondati */
+}
+
+/* In your global CSS or a relevant CSS file */
+.tooltip-content {
+  background-color: theme('colors.gray.700');
+  color: theme('colors.white');
+  padding: theme('spacing.2');
+  border-radius: theme('borderRadius.md');
+  font-size: theme('fontSize.sm');
+  box-shadow: theme('boxShadow.lg');
+}
+
+.tooltip-arrow {
+  fill: theme('colors.gray.700');
+}
+
+.tabs-trigger[data-state="active"] {
+  background-color: #22c55e !important; /* Green color */
+  color: white !important;
+}
+
+
