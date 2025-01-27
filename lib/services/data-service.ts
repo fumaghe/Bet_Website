@@ -98,7 +98,7 @@ export async function loadData() {
     }
 
     // Carica tutte le partite dal CSV
-    const matchesResponse = await fetch(`/data/all_leagues_matches.csv`);
+    const matchesResponse = await fetch(`/Bet_Website/data/all_leagues_matches.csv`);
     if (!matchesResponse.ok) {
       throw new Error(`Failed to load matches: ${matchesResponse.status}`);
     }

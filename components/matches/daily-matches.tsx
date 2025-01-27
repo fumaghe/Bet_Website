@@ -94,7 +94,7 @@ export function DailyMatches({ highlightLeague }: DailyMatchesProps) {
               <div className="flex items-center gap-2">
                 <div className="relative w-4 h-4">
                   <Image
-                    src={`/images/leagues/${match.league.toLowerCase().replace(/\s+/g, '_')}.png`}
+                    src={`/Bet_Website/images/leagues/${match.league.toLowerCase().replace(/\s+/g, '_')}.png`}
                     alt={match.league}
                     fill
                     className="object-contain"
