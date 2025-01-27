@@ -3,13 +3,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Se usi immagini statiche e non vuoi ottimizzarle
   images: { unoptimized: true },
-
   output: 'export',
   basePath: '/Bet_Website',
-
   reactStrictMode: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/Bet_Website',
+  },
 };
 
 module.exports = nextConfig;
