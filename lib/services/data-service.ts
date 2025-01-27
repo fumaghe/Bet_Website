@@ -13,32 +13,32 @@ export const LEAGUES: League[] = [
   {
     name: 'Serie A',
     country: 'Italia',
-    icon: '/images/leagues/serie_a.png',
+    icon: '/Bet_Website/images/leagues/serie_a.png',
   },
   {
     name: 'Premier League',
     country: 'Inghilterra',
-    icon: '/images/leagues/premier_league.png',
+    icon: '/Bet_Website/images/leagues/premier_league.png',
   },
   {
     name: 'La Liga',
     country: 'Spagna',
-    icon: '/images/leagues/la_liga.png',
+    icon: '/Bet_Website/images/leagues/la_liga.png',
   },
   {
     name: 'Bundesliga',
     country: 'Germania',
-    icon: '/images/leagues/bundesliga.png',
+    icon: '/Bet_Website/images/leagues/bundesliga.png',
   },
   {
     name: 'Ligue 1',
     country: 'Francia',
-    icon: '/images/leagues/ligue_1.png',
+    icon: '/Bet_Website/images/leagues/ligue_1.png',
   },
   {
     name: 'Champions League',
     country: 'Europa',
-    icon: '/images/leagues/champions_league.png',
+    icon: '/Bet_Website/images/leagues/champions_league.png',
   },
 ];
 
@@ -87,7 +87,7 @@ export async function loadData() {
 
     // Carica le classifiche per ogni lega
     for (const league of leagues) {
-      const response = await fetch(`/data/standings/${league}.csv`);
+      const response = await fetch(`/Bet_Website/data/standings/${league}.csv`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -172,7 +172,7 @@ export function getTeamPerformance(teamName: string): TeamPerformance | undefine
       npxG: 0, // Placeholder
       xAG: 0, // Placeholder
       rating: 3, // Placeholder
-      logo: `/images/teams/${normalizeTeamName(teamStats.team)}.png`,
+      logo: `/Bet_Website/images/teams/${normalizeTeamName(teamStats.team)}.png`,
     };
   }
 

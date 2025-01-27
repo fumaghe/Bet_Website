@@ -69,7 +69,7 @@ export function StandingsTable({ league, limit, selectedHomeTeam, selectedAwayTe
                 <TableCell className="text-center">
                   <div className="relative w-7 h-7 mx-auto">
                     <img
-                      src={`/images/teams/${team.team.toLowerCase().replace(/\s+/g, '_')}.png`}
+                      src={`/Bet_Website/images/teams/${team.team.toLowerCase().replace(/\s+/g, '_')}.png`}
                       alt={team.team}
                       className="w-full h-full object-cover"
                     />

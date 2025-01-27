@@ -32,12 +32,12 @@ export function PredictionSection({
   const [awayTeamIndex, setAwayTeamIndex] = useState(0);
 
   const LEAGUES = [
-    { name: 'Serie A', country: 'Italia', icon: '/images/leagues/serie_a.png' },
-    { name: 'Premier League', country: 'Inghilterra', icon: '/images/leagues/premier_league.png' },
-    { name: 'La Liga', country: 'Spagna', icon: '/images/leagues/la_liga.png' },
-    { name: 'Bundesliga', country: 'Germania', icon: '/images/leagues/bundesliga.png' },
-    { name: 'Ligue 1', country: 'Francia', icon: '/images/leagues/ligue_1.png' },
-    { name: 'Champions League', country: 'Europa', icon: '/images/leagues/champions_league.png' },
+    { name: 'Serie A', country: 'Italia', icon: '/Bet_Website/images/leagues/serie_a.png' },
+    { name: 'Premier League', country: 'Inghilterra', icon: '/Bet_Website/images/leagues/premier_league.png' },
+    { name: 'La Liga', country: 'Spagna', icon: '/Bet_Website/images/leagues/la_liga.png' },
+    { name: 'Bundesliga', country: 'Germania', icon: '/Bet_Website/images/leagues/bundesliga.png' },
+    { name: 'Ligue 1', country: 'Francia', icon: '/Bet_Website/images/leagues/ligue_1.png' },
+    { name: 'Champions League', country: 'Europa', icon: '/Bet_Website/images/leagues/champions_league.png' },
   ];
 
   // Aggiorna il currentLeagueIndex in base alla lega selezionata
@@ -58,7 +58,7 @@ export function PredictionSection({
       const teamsWithLogos = standings.map((team: any) => ({
         id: team.team.toLowerCase().replace(/\s+/g, '_'),
         name: team.team,
-        logo: `/images/teams/${team.team.toLowerCase().replace(/\s+/g, '_')}.png`,
+        logo: `/Bet_Website/images/teams/${team.team.toLowerCase().replace(/\s+/g, '_')}.png`,
         rating: Math.min(5, team.points / 10), // Esempio di calcolo del rating
       }));
       setTeams(teamsWithLogos);

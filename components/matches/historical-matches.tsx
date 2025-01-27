@@ -78,7 +78,7 @@ export function HistoricalMatches({ homeTeam, awayTeam }: HistoricalMatchesProps
         <div className="mb-4 flex justify-center items-center gap-6">
           <div className="flex flex-col items-center">
             <Image
-              src={`/images/teams/${homeTeam.toLowerCase().replace(/\s+/g, '_')}.png`}
+              src={`/Bet_Website/images/teams/${homeTeam.toLowerCase().replace(/\s+/g, '_')}.png`}
               alt={homeTeam}
               width={30}
               height={30}
@@ -95,7 +95,7 @@ export function HistoricalMatches({ homeTeam, awayTeam }: HistoricalMatchesProps
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src={`/images/teams/${awayTeam.toLowerCase().replace(/\s+/g, '_')}.png`}
+              src={`/Bet_Website/images/teams/${awayTeam.toLowerCase().replace(/\s+/g, '_')}.png`}
               alt={awayTeam}
               width={30}
               height={30}
@@ -193,7 +193,7 @@ export function HistoricalMatches({ homeTeam, awayTeam }: HistoricalMatchesProps
                     </span>
                     <div className="relative w-5 h-5 flex-shrink-0">
                       <Image
-                        src={`/images/teams/${match.homeTeam
+                        src={`/Bet_Website/images/teams/${match.homeTeam
                           .toLowerCase()
                           .replace(/\s+/g, '_')}.png`}
                         alt={match.homeTeam}
@@ -208,7 +208,7 @@ export function HistoricalMatches({ homeTeam, awayTeam }: HistoricalMatchesProps
                   <div className="flex items-center justify-start gap-2">
                     <div className="relative w-5 h-5 flex-shrink-0">
                       <Image
-                        src={`/images/teams/${match.awayTeam
+                        src={`/Bet_Website/images/teams/${match.awayTeam
                           .toLowerCase()
                           .replace(/\s+/g, '_')}.png`}
                         alt={match.awayTeam}
