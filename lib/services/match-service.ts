@@ -23,7 +23,7 @@ let historicalMatches: HistoricalMatch[] = [];
 // Funzione per caricare i dati delle partite
 export async function loadHistoricalMatches() {
   try {
-    const response = await fetch('/data/all_leagues_matches.csv');
+    const response = await fetch('/Bet_Website/data/all_leagues_matches.csv');
     const data = await response.text();
 
     // Specifica il tipo generico per parseCSV

@@ -192,7 +192,7 @@ export function DailyMatches({ league, year, highlightLeague }: DailyMatchesProp
     const loadMatchData = async () => {
       try {
         console.log('Inizio caricamento dati delle partite...');
-        const response = await fetch('/data/all_leagues_matches.csv');
+        const response = await fetch('/Bet_Website/data/all_leagues_matches.csv');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

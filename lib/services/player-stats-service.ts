@@ -13,8 +13,8 @@ let championsLeaguePlayers: PlayerStats[] = [];
  */
 export async function loadPlayerStats() {
   try {
-    const leagueResponse = await fetch('/data/players/league_players.csv');
-    const championsResponse = await fetch('/data/players/champions_league_players.csv');
+    const leagueResponse = await fetch('/Bet_Website/data/players/league_players.csv');
+    const championsResponse = await fetch('/Bet_Website/data/players/champions_league_players.csv');
 
     if (!leagueResponse.ok || !championsResponse.ok) {
       throw new Error('Errore nel caricamento dei file CSV');

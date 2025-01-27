@@ -2,32 +2,32 @@ export const LEAGUES = [
   {
     name: 'Serie A',
     country: 'Italy',
-    icon: '/images/leagues/serie_a.png',
+    icon: '/Bet_Website/images/leagues/serie_a.png',
   },
   {
     name: 'Premier League',
     country: 'England',
-    icon: '/images/leagues/premier_league.png',
+    icon: '/Bet_Website/images/leagues/premier_league.png',
   },
   {
     name: 'La Liga',
     country: 'Spain',
-    icon: '/images/leagues/la_liga.png',
+    icon: '/Bet_Website/images/leagues/la_liga.png',
   },
   {
     name: 'Bundesliga',
     country: 'Germany',
-    icon: '/images/leagues/bundesliga.png',
+    icon: '/Bet_Website/images/leagues/bundesliga.png',
   },
   {
     name: 'Ligue 1',
     country: 'France',
-    icon: '/images/leagues/ligue_one.png',
+    icon: '/Bet_Website/images/leagues/ligue_one.png',
   },
   {
     name: 'Champions League',
     country: 'Europe',
-    icon: '/images/leagues/champions_league.png',
+    icon: '/Bet_Website/images/leagues/champions_league.png',
   },
 ];
 
@@ -41,7 +41,7 @@ export const TEAMS = [
     attack: 84,
     midfield: 83,
     defense: 82,
-    logo: '/images/teams/inter.png',
+    logo: '/Bet_Website/images/teams/inter.png',
   },
   {
     id: '2',
@@ -51,7 +51,7 @@ export const TEAMS = [
     attack: 82,
     midfield: 81,
     defense: 80,
-    logo: '/images/teams/milan.png',
+    logo: '/Bet_Website/images/teams/milan.png',
   },
   {
     id: '3',
@@ -61,7 +61,7 @@ export const TEAMS = [
     attack: 81,
     midfield: 82,
     defense: 83,
-    logo: '/images/teams/juventus.png',
+    logo: '/Bet_Website/images/teams/juventus.png',
   },
   {
     id: '4',
@@ -71,7 +71,7 @@ export const TEAMS = [
     attack: 83,
     midfield: 82,
     defense: 81,
-    logo: '/images/teams/napoli.png',
+    logo: '/Bet_Website/images/teams/napoli.png',
   },
   {
     id: '5',
@@ -81,7 +81,7 @@ export const TEAMS = [
     attack: 80,
     midfield: 79,
     defense: 78,
-    logo: '/images/teams/roma.png',
+    logo: '/Bet_Website/images/teams/roma.png',
   },
   {
     id: '6',
@@ -91,7 +91,7 @@ export const TEAMS = [
     attack: 79,
     midfield: 78,
     defense: 77,
-    logo: '/images/teams/lazio.png',
+    logo: '/Bet_Website/images/teams/lazio.png',
   },
   {
     id: '7',
@@ -101,7 +101,7 @@ export const TEAMS = [
     attack: 79,
     midfield: 78,
     defense: 77,
-    logo: '/images/teams/atalanta.png',
+    logo: '/Bet_Website/images/teams/atalanta.png',
   },
   {
     id: '8',
@@ -111,7 +111,7 @@ export const TEAMS = [
     attack: 79,
     midfield: 78,
     defense: 77,
-    logo: '/images/teams/fiorentina.png',
+    logo: '/Bet_Website/images/teams/fiorentina.png',
   },
   {
     id: '9',
@@ -121,7 +121,7 @@ export const TEAMS = [
     attack: 75,
     midfield: 74,
     defense: 73,
-    logo: '/images/teams/bologna.png',
+    logo: '/Bet_Website/images/teams/bologna.png',
   },
   {
     id: '10',
@@ -131,7 +131,7 @@ export const TEAMS = [
     attack: 72,
     midfield: 71,
     defense: 70,
-    logo: '/images/teams/sampdoria.png',
+    logo: '/Bet_Website/images/teams/sampdoria.png',
   },
 
   // Premier League Teams
@@ -143,7 +143,7 @@ export const TEAMS = [
     attack: 85,
     midfield: 82,
     defense: 80,
-    logo: '/images/teams/manchester_united.png',
+    logo: '/Bet_Website/images/teams/manchester_united.png',
   },
   {
     id: '12',
@@ -153,7 +153,7 @@ export const TEAMS = [
     attack: 88,
     midfield: 85,
     defense: 84,
-    logo: '/images/teams/manchester_city.png',
+    logo: '/Bet_Website/images/teams/manchester_city.png',
   },
   {
     id: '13',
@@ -163,7 +163,7 @@ export const TEAMS = [
     attack: 86,
     midfield: 83,
     defense: 81,
-    logo: '/images/teams/liverpool.png',
+    logo: '/Bet_Website/images/teams/liverpool.png',
   },
   {
     id: '14',
@@ -173,7 +173,7 @@ export const TEAMS = [
     attack: 82,
     midfield: 80,
     defense: 79,
-    logo: '/images/teams/chelsea.png',
+    logo: '/Bet_Website/images/teams/chelsea.png',
   },
   {
     id: '15',
@@ -183,7 +183,7 @@ export const TEAMS = [
     attack: 83,
     midfield: 81,
     defense: 78,
-    logo: '/images/teams/arsenal.png',
+    logo: '/Bet_Website/images/teams/arsenal.png',
   },
   {
     id: '16',
@@ -193,7 +193,7 @@ export const TEAMS = [
     attack: 80,
     midfield: 79,
     defense: 77,
-    logo: '/images/teams/tottenham.png',
+    logo: '/Bet_Website/images/teams/tottenham.png',
   },
   {
     id: '17',
@@ -203,7 +203,7 @@ export const TEAMS = [
     attack: 78,
     midfield: 77,
     defense: 75,
-    logo: '/images/teams/leicester.png',
+    logo: '/Bet_Website/images/teams/leicester.png',
   },
   {
     id: '18',
@@ -213,7 +213,7 @@ export const TEAMS = [
     attack: 76,
     midfield: 74,
     defense: 73,
-    logo: '/images/teams/everton.png',
+    logo: '/Bet_Website/images/teams/everton.png',
   },
 
   // Bundesliga Teams
@@ -225,7 +225,7 @@ export const TEAMS = [
     attack: 90,
     midfield: 85,
     defense: 86,
-    logo: '/images/teams/bayern_munich.png',
+    logo: '/Bet_Website/images/teams/bayern_munich.png',
   },
   {
     id: '20',
@@ -235,7 +235,7 @@ export const TEAMS = [
     attack: 84,
     midfield: 80,
     defense: 82,
-    logo: '/images/teams/dortmund.png',
+    logo: '/Bet_Website/images/teams/dortmund.png',
   },
   {
     id: '21',
@@ -245,7 +245,7 @@ export const TEAMS = [
     attack: 82,
     midfield: 81,
     defense: 80,
-    logo: '/images/teams/rb_leipzig.png',
+    logo: '/Bet_Website/images/teams/rb_leipzig.png',
   },
   {
     id: '22',
@@ -255,7 +255,7 @@ export const TEAMS = [
     attack: 83,
     midfield: 80,
     defense: 79,
-    logo: '/images/teams/bayer_leverkusen.png',
+    logo: '/Bet_Website/images/teams/bayer_leverkusen.png',
   },
   {
     id: '23',
@@ -265,7 +265,7 @@ export const TEAMS = [
     attack: 80,
     midfield: 78,
     defense: 77,
-    logo: '/images/teams/wolfsburg.png',
+    logo: '/Bet_Website/images/teams/wolfsburg.png',
   },
 
   // La Liga Teams
@@ -277,7 +277,7 @@ export const TEAMS = [
     attack: 89,
     midfield: 85,
     defense: 87,
-    logo: '/images/teams/real_madrid.png',
+    logo: '/Bet_Website/images/teams/real_madrid.png',
   },
   {
     id: '25',
@@ -287,7 +287,7 @@ export const TEAMS = [
     attack: 88,
     midfield: 84,
     defense: 85,
-    logo: '/images/teams/barcelona.png',
+    logo: '/Bet_Website/images/teams/barcelona.png',
   },
   {
     id: '26',
@@ -297,7 +297,7 @@ export const TEAMS = [
     attack: 87,
     midfield: 83,
     defense: 84,
-    logo: '/images/teams/atletico_madrid.png',
+    logo: '/Bet_Website/images/teams/atletico_madrid.png',
   },
   {
     id: '27',
@@ -307,7 +307,7 @@ export const TEAMS = [
     attack: 80,
     midfield: 79,
     defense: 78,
-    logo: '/images/teams/sevilla.png',
+    logo: '/Bet_Website/images/teams/sevilla.png',
   },
   {
     id: '28',
@@ -317,7 +317,7 @@ export const TEAMS = [
     attack: 78,
     midfield: 77,
     defense: 76,
-    logo: '/images/teams/villareal.png',
+    logo: '/Bet_Website/images/teams/villareal.png',
   },
 
   // Ligue 1 Teams
@@ -329,7 +329,7 @@ export const TEAMS = [
     attack: 87,
     midfield: 84,
     defense: 82,
-    logo: '/images/teams/psg.png',
+    logo: '/Bet_Website/images/teams/psg.png',
   },
   {
     id: '30',
@@ -339,7 +339,7 @@ export const TEAMS = [
     attack: 82,
     midfield: 80,
     defense: 78,
-    logo: '/images/teams/lyon.png',
+    logo: '/Bet_Website/images/teams/lyon.png',
   },
   {
     id: '31',
@@ -349,7 +349,7 @@ export const TEAMS = [
     attack: 80,
     midfield: 79,
     defense: 77,
-    logo: '/images/teams/marseille.png',
+    logo: '/Bet_Website/images/teams/marseille.png',
   },
   {
     id: '32',
@@ -359,7 +359,7 @@ export const TEAMS = [
     attack: 79,
     midfield: 77,
     defense: 75,
-    logo: '/images/teams/monaco.png',
+    logo: '/Bet_Website/images/teams/monaco.png',
   },
   {
     id: '33',
@@ -369,7 +369,7 @@ export const TEAMS = [
     attack: 90,
     midfield: 85,
     defense: 86,
-    logo: '/images/teams/bayern_munich.png',
+    logo: '/Bet_Website/images/teams/bayern_munich.png',
   },
   {
     id: '34',
@@ -379,7 +379,7 @@ export const TEAMS = [
     attack: 89,
     midfield: 85,
     defense: 87,
-    logo: '/images/teams/real_madrid.png',
+    logo: '/Bet_Website/images/teams/real_madrid.png',
   },
   {
     id: '35',
@@ -389,7 +389,7 @@ export const TEAMS = [
     attack: 88,
     midfield: 84,
     defense: 85,
-    logo: '/images/teams/barcelona.png',
+    logo: '/Bet_Website/images/teams/barcelona.png',
   },
   {
     id: '36',
@@ -399,7 +399,7 @@ export const TEAMS = [
     attack: 82,
     midfield: 80,
     defense: 79,
-    logo: '/images/teams/chelsea.png',
+    logo: '/Bet_Website/images/teams/chelsea.png',
   },
   {
     id: '37',
@@ -409,7 +409,7 @@ export const TEAMS = [
     attack: 82,
     midfield: 80,
     defense: 79,
-    logo: '/images/teams/inter.png',
+    logo: '/Bet_Website/images/teams/inter.png',
   },
   {
     id: '38',
@@ -419,7 +419,7 @@ export const TEAMS = [
     attack: 82,
     midfield: 80,
     defense: 79,
-    logo: '/images/teams/milan.png',
+    logo: '/Bet_Website/images/teams/milan.png',
   },
   {
     id: '39',
@@ -429,7 +429,7 @@ export const TEAMS = [
     attack: 87,
     midfield: 84,
     defense: 82,
-    logo: '/images/teams/psg.png',
+    logo: '/Bet_Website/images/teams/psg.png',
   },
   {
     id: '40',
@@ -439,7 +439,7 @@ export const TEAMS = [
     attack: 88,
     midfield: 85,
     defense: 84,
-    logo: '/images/teams/manchester_city.png',
+    logo: '/Bet_Website/images/teams/manchester_city.png',
   },
 ];
 

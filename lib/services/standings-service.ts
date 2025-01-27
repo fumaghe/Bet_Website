@@ -13,7 +13,7 @@ export async function loadStandings(): Promise<void> {
     const leagues = ['serie_a', 'premier_league', 'la_liga', 'bundesliga', 'ligue_1', 'champions_league'];
 
     for (const league of leagues) {
-      const response = await fetch(`/data/standings/${league}.csv`);
+      const response = await fetch(`/Bet_Website/data/standings/${league}.csv`);
       const csvData = await response.text();
       const parsedData = await parseCSV<any>(csvData);
 

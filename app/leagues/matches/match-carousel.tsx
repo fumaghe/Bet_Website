@@ -22,7 +22,7 @@ export function MatchCarousel({ league, onMatchSelect }: MatchCarouselProps) {
   useEffect(() => {
     const loadMatchData = async () => {
       try {
-        const response = await fetch('/data/partite_corretto.csv');
+        const response = await fetch('/Bet_Website/data/partite_corretto.csv');
         const csvText = await response.text();
 
         const parsed = Papa.parse(csvText, {

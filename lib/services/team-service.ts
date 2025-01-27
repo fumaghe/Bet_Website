@@ -12,7 +12,7 @@ export async function getTeamStats(
   try {
     // Carica dati della lega
     const leagueFile = league.toLowerCase().replace(/\s+/g, '_');
-    const leagueDataResponse = await fetch(`/data/standings/${leagueFile}.csv`);
+    const leagueDataResponse = await fetch(`/Bet_Website/data/standings/${leagueFile}.csv`);
     const leagueDataCSV = await leagueDataResponse.text();
     const leagueData = await parseCSV<any>(leagueDataCSV);
 
@@ -93,9 +93,9 @@ export async function getTeamStats(
     // Decide quale dataset utilizzare
     let dataFile = '';
     if (dataSource === 'team') {
-      dataFile = '/data/team_performance.csv';
+      dataFile = '/Bet_Website/data/team_performance.csv';
     } else if (dataSource === 'opponent') {
-      dataFile = '/data/opponent_performance.csv';
+      dataFile = '/Bet_Website/data/opponent_performance.csv';
     } else {
       throw new Error(`Data source ${dataSource} is not recognized.`);
     }
