@@ -95,7 +95,7 @@ export async function getTeamStats(
     if (dataSource === 'team') {
       dataFile = '/data/team_performance.csv';
     } else if (dataSource === 'opponent') {
-      dataFile = '/data/opponent_performance.csv'; // Assumiamo che il dataset degli avversari sia in opponent_performance.csv
+      dataFile = '/data/opponent_performance.csv';
     } else {
       throw new Error(`Data source ${dataSource} is not recognized.`);
     }

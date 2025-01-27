@@ -21,7 +21,7 @@ export function MatchCarousel({ onMatchSelect }: MatchCarouselProps) {
   useEffect(() => {
     const loadMatchData = async () => {
       try {
-        const response = await fetch('/data/partite_corretto.csv');
+        const response = await fetch('/data/matches_season.csv');
         const csvText = await response.text();
 
         const parsed = Papa.parse(csvText, {

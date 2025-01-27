@@ -15,7 +15,6 @@ const NAV_ITEMS = [
   { icon: Trophy, label: 'Competizioni', href: '/competitions' },
   { icon: BarChart3, label: 'Statistiche', href: '/stats' },
   { icon: Ticket, label: 'Le Mie Scommesse', href: '/my-bets' },
-  { icon: Scale, label: 'Arbitraggio Live', href: '/terminal' },
 ];
 
 export function Sidebar() {
