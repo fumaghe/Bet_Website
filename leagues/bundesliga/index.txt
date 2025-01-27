@@ -1,5 +1,5 @@
 1:HL["/Bet_Website/_next/static/css/aba5ffb3c4d87893.css","style"]
-0:["kQriI0dpUEnar5zSQzvuY",[[["",{"children":["leagues",{"children":["bundesliga",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/Bet_Website/_next/static/css/aba5ffb3c4d87893.css","precedence":"next"}]],"$L3"]]]]
+0:["U0JassrgUKGFRRPoTkynb",[[["",{"children":["leagues",{"children":["bundesliga",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/Bet_Website/_next/static/css/aba5ffb3c4d87893.css","precedence":"next"}]],"$L3"]]]]
 4:I{"id":8577,"chunks":["185:static/chunks/app/layout-ba32de15435234fa.js"],"name":"AuthProvider","async":false}
 5:I{"id":1443,"chunks":["272:static/chunks/webpack-0bd3c01002be3922.js","971:static/chunks/fd9d1056-4f15621c5711072b.js","864:static/chunks/864-1a2b2f8b3cb36a79.js"],"name":"","async":false}
 6:I{"id":8639,"chunks":["272:static/chunks/webpack-0bd3c01002be3922.js","971:static/chunks/fd9d1056-4f15621c5711072b.js","864:static/chunks/864-1a2b2f8b3cb36a79.js"],"name":"","async":false}
