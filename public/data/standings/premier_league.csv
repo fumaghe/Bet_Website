@@ -1,21 +1,21 @@
-Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
-1,Liverpool,22,16,5,1,54,21,33,53,51.4,19.2,Premier League
-2,Arsenal,23,13,8,2,44,21,23,47,37.6,20.2,Premier League
-3,Nott'ham Forest,23,13,5,5,33,27,6,44,28.4,25.9,Premier League
-4,Manchester City,23,12,5,6,47,30,17,41,43.6,32.9,Premier League
-5,Newcastle Utd,23,12,5,6,41,27,14,41,40.4,27.8,Premier League
-6,Chelsea,23,11,7,5,45,30,15,40,46.8,33.2,Premier League
-7,Bournemouth,23,11,7,5,41,26,15,40,44.1,28.6,Premier League
-8,Aston Villa,22,10,6,6,33,34,-1,36,32.9,26.9,Premier League
-9,Brighton,23,8,10,5,35,31,4,34,31.5,33.1,Premier League
-10,Fulham,22,8,9,5,34,30,4,33,31.7,26.6,Premier League
-11,Brentford,22,8,4,10,40,39,1,28,35.2,37.5,Premier League
-12,Crystal Palace,22,6,9,7,25,28,-3,27,30.1,30.1,Premier League
-13,Manchester Utd,22,7,5,10,27,32,-5,26,32.5,33.2,Premier League
-14,West Ham,22,7,5,10,27,43,-16,26,29.4,39.1,Premier League
-15,Tottenham,22,7,3,12,45,35,10,24,37.8,36.9,Premier League
-16,Everton,22,5,8,9,19,28,-9,23,21.9,29.7,Premier League
-17,Wolves,23,4,4,15,32,52,-20,16,23.9,39.0,Premier League
-18,Ipswich Town,23,3,7,13,21,47,-26,16,20.5,47.0,Premier League
-19,Leicester City,22,3,5,14,23,48,-25,14,21.5,43.1,Premier League
-20,Southampton,23,1,3,19,16,53,-37,6,22.8,54.0,Premier League
+﻿Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
+1,Liverpool,22,16,5,1,54,21,33,53,51.4,19.2,premier league
+2,Arsenal,23,13,8,2,44,21,23,47,37.6,20.4,premier league
+3,Nott'ham Forest,23,13,5,5,33,27,6,44,28.5,25.8,premier league
+4,Manchester City,23,12,5,6,47,30,17,41,43.4,33.1,premier league
+5,Newcastle Utd,23,12,5,6,41,27,14,41,40.5,27.8,premier league
+6,Chelsea,23,11,7,5,45,30,15,40,47.0,33.0,premier league
+7,Bournemouth,23,11,7,5,41,26,15,40,44.0,28.7,premier league
+8,Aston Villa,23,10,7,6,34,35,-1,37,33.7,28.2,premier league
+9,Brighton,23,8,10,5,35,31,4,34,31.4,33.1,premier league
+10,Fulham,23,8,9,6,34,31,3,33,32.4,26.8,premier league
+11,Brentford,23,9,4,10,42,40,2,31,36.7,38.6,premier league
+12,Manchester Utd,23,8,5,10,28,32,-4,29,32.8,33.9,premier league
+13,Crystal Palace,23,6,9,8,26,30,-4,27,31.2,31.6,premier league
+14,West Ham,23,7,6,10,28,44,-16,27,30.7,39.9,premier league
+15,Tottenham,23,7,3,13,46,37,9,24,38.8,38.5,premier league
+16,Everton,22,5,8,9,19,28,-9,23,21.9,29.7,premier league
+17,Leicester City,23,4,5,14,25,49,-24,17,23.1,44.2,premier league
+18,Wolves,23,4,4,15,32,52,-20,16,24.1,39.0,premier league
+19,Ipswich Town,23,3,7,13,21,47,-26,16,20.5,47.0,premier league
+20,Southampton,23,1,3,19,16,53,-37,6,22.8,54.0,premier league

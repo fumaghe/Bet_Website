@@ -1,21 +1,21 @@
-Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
-1,Real Madrid,21,15,4,2,50,20,30,49,42.9,20.1,La Liga
-2,Atlético Madrid,21,13,6,2,35,14,21,45,36.0,17.8,La Liga
-3,Barcelona,20,12,3,5,52,23,29,39,49.8,24.7,La Liga
-4,Athletic Club,20,11,6,3,31,18,13,39,27.5,18.7,La Liga
-5,Villarreal,21,9,7,5,39,32,7,34,36.8,24.3,La Liga
-6,Mallorca,21,9,3,9,19,26,-7,30,22.7,23.5,La Liga
-7,Real Sociedad,20,8,4,8,17,14,3,28,23.2,21.0,La Liga
-8,Girona,20,8,4,8,28,27,1,28,25.2,22.1,La Liga
-9,Betis,21,7,7,7,23,26,-3,28,29.7,27.3,La Liga
-10,Osasuna,21,6,9,6,25,30,-5,27,21.9,28.2,La Liga
-11,Sevilla,21,7,6,8,24,30,-6,27,23.7,27.0,La Liga
-12,Rayo Vallecano,20,6,8,6,23,23,0,26,21.5,24.5,La Liga
-13,Celta Vigo,20,7,3,10,29,32,-3,24,28.4,22.2,La Liga
-14,Las Palmas,21,6,5,10,26,34,-8,23,20.4,40.1,La Liga
-15,Leganés,20,5,7,8,19,29,-10,22,15.4,32.7,La Liga
-16,Getafe,20,4,8,8,14,17,-3,20,18.8,24.2,La Liga
-17,Alavés,20,5,5,10,24,32,-8,20,22.2,26.0,La Liga
-18,Espanyol,21,5,5,11,20,33,-13,20,17.9,33.7,La Liga
-19,Valencia,20,3,7,10,19,29,-10,16,19.9,29.1,La Liga
-20,Valladolid,21,4,3,14,14,42,-28,15,18.6,35.3,La Liga
+﻿Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
+1,Real Madrid,21,15,4,2,50,20,30,49,43.0,20.1,la liga
+2,Atlético Madrid,21,13,6,2,35,14,21,45,36.2,18.1,la liga
+3,Barcelona,21,13,3,5,59,24,35,42,54.2,26.3,la liga
+4,Athletic Club,21,11,7,3,31,18,13,40,29.6,19.7,la liga
+5,Villarreal,21,9,7,5,39,32,7,34,37.1,24.5,la liga
+6,Mallorca,21,9,3,9,19,26,-7,30,22.8,23.5,la liga
+7,Rayo Vallecano,21,7,8,6,25,24,1,29,23.9,25.5,la liga
+8,Girona,21,8,4,9,29,29,0,28,26.2,24.5,la liga
+9,Real Sociedad,21,8,4,9,17,17,0,28,24.1,22.5,la liga
+10,Betis,21,7,7,7,23,26,-3,28,29.6,27.4,la liga
+11,Osasuna,21,6,9,6,25,30,-5,27,21.9,28.2,la liga
+12,Sevilla,21,7,6,8,24,30,-6,27,23.7,27.0,la liga
+13,Celta Vigo,20,7,3,10,29,32,-3,24,28.4,22.2,la liga
+14,Getafe,21,5,8,8,17,17,0,23,20.2,25.2,la liga
+15,Las Palmas,21,6,5,10,26,34,-8,23,20.4,40.1,la liga
+16,Leganés,21,5,8,8,19,29,-10,23,16.4,34.7,la liga
+17,Alavés,20,5,5,10,24,32,-8,20,22.2,26.0,la liga
+18,Espanyol,21,5,5,11,20,33,-13,20,18.0,33.6,la liga
+19,Valencia,21,3,7,11,20,36,-16,16,21.4,33.5,la liga
+20,Valladolid,21,4,3,14,14,42,-28,15,18.6,35.4,la liga
