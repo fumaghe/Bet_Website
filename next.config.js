@@ -3,7 +3,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true }, // Puoi mantenere questa opzione
+  // Se usi immagini statiche e non vuoi ottimizzarle
+  images: { unoptimized: true },
+
+  output: 'export',
+  basePath: '/Bet_Website',
+  assetPrefix: '/Bet_Website/',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
