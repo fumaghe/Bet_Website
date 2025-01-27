@@ -4,7 +4,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-  /* output: 'export',*/
+  output: 'export',
   basePath: '/Bet_Website',
   reactStrictMode: true,
   env: {
