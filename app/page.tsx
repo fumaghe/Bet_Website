@@ -16,6 +16,9 @@ import { motion } from 'framer-motion';
 import { loadData } from '@/lib/services/data-service';
 import { loadPlayerStats } from '@/lib/services/player-stats-service';
 
+// IMPORT del componente che calcola e mostra le bet
+import { RecommendedBets } from '@/components/bets/recommended-bets';
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [homeTeam, setHomeTeam] = useState<string | undefined>();
@@ -24,7 +27,7 @@ export default function Home() {
 
   useEffect(() => {
     const initializeData = async () => {
-      await loadData(); 
+      await loadData();       // tu hai già un loadData() che carica alcune info
       await loadPlayerStats(); 
       setIsLoading(false);
     };
@@ -40,11 +43,9 @@ export default function Home() {
   const handleHomeTeamSelect = (team: string) => {
     setHomeTeam(team);
   };
-
   const handleAwayTeamSelect = (team: string) => {
     setAwayTeam(team);
   };
-
   const handleLeagueChange = (newLeague: string) => {
     setLeague(newLeague);
   };
@@ -114,12 +115,20 @@ export default function Home() {
                   >
                     Fai una Predizione
                   </Button>
+
+                  {/* Seleziona le 5 bet consigliate */}
+                  <RecommendedBets
+                    homeTeam={homeTeam}
+                    awayTeam={awayTeam}
+                    league={league}
+                  />
+
                   <TeamStats 
                     teamHome={homeTeam} 
                     teamAway={awayTeam} 
                     league={league} 
                   />
-                  
+
                   <PlayerStatsSection 
                     homeTeam={homeTeam} 
                     awayTeam={awayTeam} 
