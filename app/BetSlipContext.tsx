@@ -3,47 +3,52 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 /**
- * Singola selezione nella schedina (es: "Milan vs Inter - 1", con quota X)
+ * Singola selezione (Bet).
  */
 export interface Bet {
-  id: string;          // univoco
-  matchName: string;   // es: "Milan vs Inter"
-  label: string;       // es: "1", "Over 2.5", "Risultato 2-1", ecc.
-  odd: number;         // quota
+  id: string;
+  matchName: string;
+  label: string;
+  odd: number;
 }
 
 /**
- * Una schedina confermata. Contiene varie selezioni e lo stato
+ * Schedina confermata (ConfirmedBetSlip).
  */
 export interface ConfirmedBetSlip {
   id: string;
   bets: Bet[];
-  totalOdds: number;       // Moltiplicato di tutte le quote
-  stake: number;           // Importo scommesso
-  potentialWin: number;    // stake * totalOdds
-  status: 'pending' | 'won' | 'lost'; // stato della schedina
+  totalOdds: number;
+  stake: number;
+  potentialWin: number;
+  status: 'pending' | 'won' | 'lost';
 }
 
 /**
- * Stato globale del contesto
+ * Interfaccia del contesto BetSlip
  */
 interface BetSlipContextType {
   wallet: number;
   betSlip: Bet[];
   totalStake: number;
   confirmedBets: ConfirmedBetSlip[];
+
+  // Metodi
   addBet: (bet: Omit<Bet, 'id'>) => void;
   removeBet: (betId: string) => void;
-  updateBetOdd: (betId: string, odd: number) => void;  // per modificare la quota manualmente
-  updateTotalStake: (stake: number) => void;           // stake unico per la multipla
-  confirmBetSlip: () => void;                          // conferma la schedina
+  updateBetOdd: (betId: string, odd: number) => void;
+  updateTotalStake: (stake: number) => void;
+  confirmBetSlip: () => void;
   setBetStatus: (betSlipId: string, newStatus: 'won' | 'lost' | 'pending') => void;
-  // eventuali metodi per gestire il portafoglio
-  deposit: (amount: number) => void;
+
+  // Metodi aggiunti per la gestione del saldo e delle schedine
+  updateWallet: (newVal: number) => void;
+  clearConfirmedBets: () => void;
+  removeConfirmedBetSlip: (slipId: string) => void;
 }
 
 const BetSlipContext = createContext<BetSlipContextType>({
-  wallet: 100,         // default
+  wallet: 100,
   betSlip: [],
   totalStake: 0,
   confirmedBets: [],
@@ -53,24 +58,24 @@ const BetSlipContext = createContext<BetSlipContextType>({
   updateTotalStake: () => {},
   confirmBetSlip: () => {},
   setBetStatus: () => {},
-  deposit: () => {},
+  updateWallet: () => {},
+  clearConfirmedBets: () => {},
+  removeConfirmedBetSlip: () => {},
 });
 
 export function BetSlipProvider({ children }: { children: React.ReactNode }) {
-  const [wallet, setWallet] = useState<number>(100);  // saldo iniziale
+  const [wallet, setWallet] = useState<number>(100);
   const [betSlip, setBetSlip] = useState<Bet[]>([]);
   const [totalStake, setTotalStake] = useState<number>(0);
   const [confirmedBets, setConfirmedBets] = useState<ConfirmedBetSlip[]>([]);
 
-  /**
-   * Carica i dati da localStorage all'avvio
-   */
+  // Caricamento da localStorage
   useEffect(() => {
     try {
       const dataString = localStorage.getItem('betSlipContext');
       if (dataString) {
         const data = JSON.parse(dataString);
-        if (data.wallet !== undefined) setWallet(data.wallet);
+        if (typeof data.wallet === 'number') setWallet(data.wallet);
         if (Array.isArray(data.betSlip)) setBetSlip(data.betSlip);
         if (typeof data.totalStake === 'number') setTotalStake(data.totalStake);
         if (Array.isArray(data.confirmedBets)) setConfirmedBets(data.confirmedBets);
@@ -80,9 +85,7 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  /**
-   * Salva i dati su localStorage ad ogni modifica
-   */
+  // Salvataggio su localStorage
   useEffect(() => {
     const payload = {
       wallet,
@@ -93,11 +96,8 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('betSlipContext', JSON.stringify(payload));
   }, [wallet, betSlip, totalStake, confirmedBets]);
 
-  /**
-   * Aggiunge una selezione alla schedina (evita duplicati)
-   */
+  // Aggiunge una bet, evita duplicati
   const addBet = (bet: Omit<Bet, 'id'>) => {
-    // Se esiste già la stessa label & matchName, non la duplicare.
     const exists = betSlip.find(
       (b) => b.label === bet.label && b.matchName === bet.matchName
     );
@@ -105,64 +105,56 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
 
     const newBet: Bet = {
       id: Date.now().toString(),
-      matchName: bet.matchName,
-      label: bet.label,
-      odd: bet.odd,
+      ...bet,
     };
     setBetSlip((prev) => [...prev, newBet]);
   };
 
-  /**
-   * Rimuove una selezione dalla schedina
-   */
+  // Rimuove una bet dal carrello
   const removeBet = (betId: string) => {
     setBetSlip((prev) => prev.filter((b) => b.id !== betId));
   };
 
-  /**
-   * Permette di modificare la quota manualmente
-   */
+  // Modifica la quota di una bet
   const updateBetOdd = (betId: string, odd: number) => {
     setBetSlip((prev) =>
-      prev.map((b) => (b.id === betId ? { ...b, odd } : b))
+      prev.map((b) => {
+        if (b.id === betId) {
+          return { ...b, odd };
+        }
+        return b;
+      })
     );
   };
 
-  /**
-   * Modifica l'importo totale (stake) per la multipla
-   */
+  // Aggiorna lo stake totale
   const updateTotalStake = (stake: number) => {
     setTotalStake(stake);
   };
 
-  /**
-   * Calcola la quota totale di tutte le selezioni
-   */
+  // Calcola la quota totale
   const calculateTotalOdds = (): number => {
     if (betSlip.length === 0) return 0;
     return betSlip.reduce((acc, bet) => acc * bet.odd, 1);
   };
 
-  /**
-   * Conferma la schedina. Viene scalato il saldo, si crea un record in confirmedBets.
-   */
+  // Conferma la schedina
   const confirmBetSlip = () => {
     if (betSlip.length === 0 || totalStake <= 0) return;
 
     const totalOdds = calculateTotalOdds();
     const potentialWin = parseFloat((totalOdds * totalStake).toFixed(2));
 
-    // Se il wallet non è sufficiente, blocca l'operazione
     if (wallet < totalStake) {
-      alert('Fondi insufficienti per confermare la schedina.');
+      alert('Fondi insufficienti!');
       return;
     }
 
-    // Scala lo stake dal wallet
+    // Scala stake dal wallet
     setWallet((prev) => parseFloat((prev - totalStake).toFixed(2)));
 
-    // Crea una nuova schedina confermata
-    const newConfirmedBetSlip: ConfirmedBetSlip = {
+    // Crea la schedina
+    const newConfirmed: ConfirmedBetSlip = {
       id: Date.now().toString(),
       bets: betSlip,
       totalOdds,
@@ -171,60 +163,53 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
       status: 'pending',
     };
 
-    setConfirmedBets((prev) => [...prev, newConfirmedBetSlip]);
-
-    // Reset della schedina e dello stake
+    setConfirmedBets((prev) => [...prev, newConfirmed]);
     setBetSlip([]);
     setTotalStake(0);
   };
 
-  /**
-   * Cambia lo stato di una schedina (pending -> won/lost, lost->won, etc.)
-   * e aggiorna il wallet di conseguenza.
-   */
+  // Setta lo stato di una schedina
   const setBetStatus = (betSlipId: string, newStatus: 'won' | 'lost' | 'pending') => {
     setConfirmedBets((prev) =>
       prev.map((slip) => {
         if (slip.id !== betSlipId) return slip;
-        if (slip.status === newStatus) {
-          // Nessuna modifica se lo stato è uguale
-          return slip;
-        }
+        if (slip.status === newStatus) return slip; // nessun cambio
 
-        // Se stiamo cambiando stato, ecco la logica:
-        const oldStatus = slip.status;
+        // Aggiorniamo il wallet se passiamo da pending->won, won->lost, etc.
         let updatedWallet = wallet;
-
-        // Se passiamo da 'pending' a 'won'
-        if (oldStatus === 'pending' && newStatus === 'won') {
-          updatedWallet += slip.potentialWin; // vinci
-        }
-        // Se passiamo da 'pending' a 'lost'
-        if (oldStatus === 'pending' && newStatus === 'lost') {
-          // non succede nulla, stake era già scalato
-        }
-        // Se passiamo da 'won' a 'lost'
-        if (oldStatus === 'won' && newStatus === 'lost') {
-          updatedWallet -= slip.potentialWin; // tolgo la vincita precedentemente aggiunta
-        }
-        // Se passiamo da 'lost' a 'won'
-        if (oldStatus === 'lost' && newStatus === 'won') {
-          updatedWallet += slip.potentialWin; // aggiungo la vincita
+        if (slip.status === 'pending') {
+          if (newStatus === 'won') {
+            updatedWallet += slip.potentialWin;
+          }
+        } else if (slip.status === 'won') {
+          if (newStatus === 'lost') {
+            updatedWallet -= slip.potentialWin;
+          }
+        } else if (slip.status === 'lost') {
+          if (newStatus === 'won') {
+            updatedWallet += slip.potentialWin;
+          }
         }
 
         setWallet(parseFloat(updatedWallet.toFixed(2)));
-
         return { ...slip, status: newStatus };
       })
     );
   };
 
-  /**
-   * Deposita fondi nel wallet
-   */
-  const deposit = (amount: number) => {
-    if (amount <= 0) return;
-    setWallet((prev) => parseFloat((prev + amount).toFixed(2)));
+  // Aggiorna direttamente il wallet
+  const updateWallet = (newVal: number) => {
+    setWallet(parseFloat(newVal.toFixed(2)));
+  };
+
+  // Cancella tutte le schedine confermate
+  const clearConfirmedBets = () => {
+    setConfirmedBets([]);
+  };
+
+  // Rimuove una singola schedina
+  const removeConfirmedBetSlip = (slipId: string) => {
+    setConfirmedBets((prev) => prev.filter((s) => s.id !== slipId));
   };
 
   return (
@@ -240,7 +225,9 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
         updateTotalStake,
         confirmBetSlip,
         setBetStatus,
-        deposit,
+        updateWallet,
+        clearConfirmedBets,
+        removeConfirmedBetSlip,
       }}
     >
       {children}

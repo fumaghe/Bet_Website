@@ -21,8 +21,9 @@ import {
   BetRecommendation,
   ScorelinePrediction,
 } from '@/lib/services/recommended-bets-service';
+
 import { RecommendedBets } from '@/components/bets/recommended-bets';
-import { BetSlip } from '@/components/bet-slip'; // Componente del carrello
+import { BetSlip } from '@/components/bet-slip';
 import { useBetSlip } from './BetSlipContext';
 
 export default function Home() {
@@ -86,11 +87,11 @@ export default function Home() {
     );
   }
 
-  // Esempio di 1, X, 2
+  // “1”, “X”, “2”
   const predictionTypes = ['1', 'X', '2'] as const;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Sidebar />
       <main className="lg:pl-60 pt-8">
@@ -98,7 +99,7 @@ export default function Home() {
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
             {/* Colonna principale */}
             <div className="lg:col-span-2 space-y-6">
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden bg-card border-border">
                 <MatchCarousel onMatchSelect={handleMatchSelect} />
               </Card>
 
@@ -120,16 +121,22 @@ export default function Home() {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {predictionTypes.map((type) => {
                       // Troviamo la raccomandazione corrispondente
-                      const recommendation = recommendations.find((r) => r.label.startsWith(`${type} `));
-                      const probability = recommendation?.probability ?? 0;
-                      const defaultOdd = probability > 0 ? parseFloat((100 / probability).toFixed(2)) : 2;
+                      const recommendation = recommendations.find((r) =>
+                        r.label.startsWith(`${type} `)
+                      );
+                      // Approssimazione a 1 decimale
+                      const probability = recommendation
+                        ? parseFloat(recommendation.probability.toFixed(1))
+                        : 0;
+
+                      const defaultOdd =
+                        probability > 0 ? parseFloat((100 / probability).toFixed(2)) : 2;
 
                       return (
                         <div
                           key={type}
                           className="cursor-pointer"
                           onClick={() => {
-                            // Aggiunge la selezione al carrello
                             addBet({
                               matchName: `${homeTeam} vs ${awayTeam}`,
                               label: recommendation?.label || `Scommessa ${type}`,
@@ -148,12 +155,14 @@ export default function Home() {
                     })}
                   </div>
 
-                  <Card className="p-4">
+                  {/* Predizioni Punteggio Esatto */}
+                  <Card className="p-4 bg-card border border-border">
                     <h2 className="text-lg font-semibold mb-4">Predizioni Punteggio Esatto</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                       {scorelinePredictions.map((score, index) => {
-                        const probability = score.probability;
-                        const defaultOdd = probability > 0 ? parseFloat((100 / probability).toFixed(2)) : 3;
+                        const probRounded = parseFloat(score.probability.toFixed(1));
+                        const defaultOdd =
+                          probRounded > 0 ? parseFloat((100 / probRounded).toFixed(2)) : 3;
 
                         return (
                           <motion.div
@@ -172,12 +181,10 @@ export default function Home() {
                             <div className="absolute inset-0 bg-gradient-to-br from-card to-card/50 rounded-lg border border-border opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div className="relative p-3 border border-border rounded-lg shadow-md bg-card overflow-hidden transition-colors duration-300 group-hover:border-transparent">
                               <div className="flex flex-col items-center">
-                                <span className="text-xl font-bold mb-2 text-white group-hover:bg-gradient-to-br from-primary to-primary/70 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                                  {`${score.homeGoals} - ${score.awayGoals}`}
+                                <span className="text-xl font-bold mb-2 group-hover:bg-gradient-to-br from-primary to-primary/70 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                                  {score.homeGoals} - {score.awayGoals}
                                 </span>
-                                <span className="text-sm text-muted-foreground">
-                                  {`${score.probability.toFixed(2)}%`}
-                                </span>
+                                <span className="text-sm text-muted-foreground">{probRounded}%</span>
                               </div>
                             </div>
                           </motion.div>
@@ -195,7 +202,7 @@ export default function Home() {
               )}
             </div>
 
-            {/* Colonna di destra (statistiche, partite storiche, etc.) */}
+            {/* Colonna di destra */}
             <div className="space-y-6">
               <StatsSection
                 selectedLeague={league}
@@ -210,7 +217,7 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Carrello Scommesse fluttuante in basso a destra */}
+      {/* Schedina “galleggiante” in basso a destra */}
       <BetSlip />
     </div>
   );
