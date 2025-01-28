@@ -1,13 +1,16 @@
+// components/bets/recommended-bets.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
-import {
-  BetRecommendation,
-  loadAllBetsData,
-  calculateRecommendedBets,
-} from '@/lib/services/recommended-bets-service';
+import { BetRecommendation, loadAllBetsData, calculateRecommendedBets } from '@/lib/services/recommended-bets-service';
+import { getTeamPerformance } from '@/lib/services/data-service';
+import { TeamPerformance } from '@/lib/types/stats'; 
+import { BadgeDollarSign } from 'lucide-react';
+import { MdSportsSoccer } from 'react-icons/md'; // Icona del pallone da calcio
 
 interface RecommendedBetsProps {
   homeTeam: string;
@@ -16,151 +19,43 @@ interface RecommendedBetsProps {
 }
 
 /**
- * Raggruppa le scommesse in macro-categorie in base al loro label.
- * Ritorna un array di oggetti: { category: string; bets: BetRecommendation[] }.
+ * Se la label contiene il nome di homeTeam o awayTeam,
+ * restituisce la stringa corrispondente a uno dei due team; altrimenti null.
  */
-function groupBetsByCategory(bets: BetRecommendation[]) {
-  const categories: Record<string, BetRecommendation[]> = {
-    '1X2': [],
-    'Over/Under': [],
-    'Multigol': [],
-    'Goal/NoGoal': [],
-    'Giocatori': [],
-  };
-
-  for (const bet of bets) {
-    const labelLower = bet.label.toLowerCase();
-
-    if (
-      labelLower.includes('home win') ||
-      labelLower.includes('(draw)') ||
-      labelLower.includes('(away win)') ||
-      labelLower.includes('1x') ||
-      labelLower.includes('x2') ||
-      labelLower.includes('12')
-    ) {
-      categories['1X2'].push(bet);
-    } else if (labelLower.includes('over') || labelLower.includes('under')) {
-      categories['Over/Under'].push(bet);
-    } else if (labelLower.includes('multigol')) {
-      categories['Multigol'].push(bet);
-    } else if (
-      labelLower.includes('goal (entrambe segnano)') ||
-      labelLower.includes('nogoal')
-    ) {
-      categories['Goal/NoGoal'].push(bet);
-    } else {
-      categories['Giocatori'].push(bet);
-    }
+function getTeamFromBetLabel(label: string, homeTeam: string, awayTeam: string): string | null {
+  const labelLower = label.toLowerCase();
+  if (labelLower.includes(homeTeam.toLowerCase())) {
+    return homeTeam;
   }
-
-  // Converti in array e ordina ogni gruppo per probabilità
-  const grouped = Object.entries(categories)
-    .map(([category, catBets]) => {
-      const sortedBets = [...catBets].sort((a, b) => b.probability - a.probability);
-      return { category, bets: sortedBets };
-    })
-    .filter((g) => g.bets.length > 0);
-
-  return grouped;
-}
-
-/**
- * Card di Categoria:
- * - Mostra il nome della categoria.
- * - Al click, si espande con un'animazione per mostrare le 4 scommesse più probabili.
- */
-function CategoryCard({
-  category,
-  bets,
-}: {
-  category: string;
-  bets: BetRecommendation[];
-}) {
-  // Stato locale per l'espansione/collasso della card
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleExpand = () => setIsExpanded((prev) => !prev);
-
-  // Al massimo mostriamo 4 bets per la categoria
-  const topBets = bets.slice(0, 4);
-
-  return (
-    <div className="border border-border rounded-lg overflow-hidden bg-background shadow-sm">
-      {/* HEADER CATEGORIA */}
-      <motion.div
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.97 }}
-        onClick={toggleExpand}
-        className="p-3 cursor-pointer group relative"
-      >
-        {/* Bordo gradient al passaggio del mouse */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary to-primary/70 rounded-lg pointer-events-none transition-opacity duration-300" />
-        <h3 className="relative text-lg font-semibold text-foreground">
-          {category}
-        </h3>
-      </motion.div>
-
-      {/* CONTENUTO ESPANDIBILE */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            key="expandable-content"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="px-4 pb-4 overflow-hidden"
-          >
-            {/* Mostra le top 4 bets */}
-            <div className="mt-3 grid grid-cols-1 gap-2">
-              {topBets.map((bet, idx) => (
-                <motion.div
-                  key={idx}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="relative p-2 rounded-lg cursor-pointer group"
-                >
-                  {/* Wrapper per il bordo gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/70 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  {/* Contenuto della card */}
-                  <div className="relative p-3 border border-border rounded-lg bg-card text-foreground shadow-sm overflow-hidden transition-colors duration-300 group-hover:border-transparent">
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium mb-1 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-primary/70 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        {bet.label}
-                      </span>
-                      <span className="text-sm font-bold text-white">
-                        {bet.probability.toFixed(1)}%
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
+  if (labelLower.includes(awayTeam.toLowerCase())) {
+    return awayTeam;
+  }
+  return null;
 }
 
 export function RecommendedBets({ homeTeam, awayTeam, league }: RecommendedBetsProps) {
   const [bets, setBets] = useState<BetRecommendation[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [teamsData, setTeamsData] = useState<Record<string, TeamPerformance>>({});
 
   useEffect(() => {
     async function loadDataAndCalculate() {
       setIsLoading(true);
-      // Carica CSV e calcola le scommesse
       await loadAllBetsData();
+
+      const tData: Record<string, TeamPerformance> = {};
+      const homePerf = getTeamPerformance(homeTeam);
+      const awayPerf = getTeamPerformance(awayTeam);
+
+      if (homePerf) tData[homeTeam] = homePerf;
+      if (awayPerf) tData[awayTeam] = awayPerf;
+      
+      setTeamsData(tData);
+
       const allBets = calculateRecommendedBets(homeTeam, awayTeam, league);
-
-      // Ordina e prendi le prime 45
-      const topFortyFive = allBets
-        .sort((a, b) => b.probability - a.probability)
-        .slice(0, 45);
-
-      setBets(topFortyFive);
+      const topTen = allBets.sort((a, b) => b.probability - a.probability).slice(0, 10);
+      
+      setBets(topTen);
       setIsLoading(false);
     }
 
@@ -169,67 +64,63 @@ export function RecommendedBets({ homeTeam, awayTeam, league }: RecommendedBetsP
     }
   }, [homeTeam, awayTeam, league]);
 
-  // Se mancano dati, non mostrare nulla
-  if (!homeTeam || !awayTeam || !league) return null;
-
-  // Mostra primo piano (top 3) e poi raggruppa il resto
-  const topThree = bets.slice(0, 3);
-  const grouped = groupBetsByCategory(bets.slice(3));
+  if (!homeTeam || !awayTeam || !league) {
+    return null;
+  }
 
   return (
-    <Card className="p-4 mt-4 bg-card text-foreground rounded-lg border border-border shadow-md">
-      <h2 className="text-xl font-bold mb-4">Scommesse Consigliate</h2>
+    <Card className="p-4 mt-4 bg-card text-card-foreground rounded-lg border border-border">
+      <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+        Scommesse Consigliate
+      </h2>
 
       {isLoading ? (
-        <p className="text-muted-foreground">Caricamento...</p>
+        <p className="text-sm text-muted-foreground">Caricamento...</p>
       ) : bets.length === 0 ? (
-        <p className="text-muted-foreground">
-          Nessun dato disponibile per questa partita.
-        </p>
+        <p className="text-sm text-muted-foreground">Nessun dato disponibile per questa partita.</p>
       ) : (
-        <>
-          {/* SEZIONE TOP 3 */}
-          <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-3">In Primo Piano</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {topThree.map((bet, idx) => (
-                <motion.div
-                  key={idx}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="relative p-1 rounded-lg cursor-pointer group"
-                >
-                  {/* Wrapper per il bordo gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/70 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  {/* Contenuto della card */}
-                  <div className="relative p-3 border border-border rounded-lg bg-background text-foreground shadow-sm overflow-hidden transition-colors duration-300 group-hover:border-transparent">
-                    <div className="flex flex-col">
-                      {/* Nome Scommessa */}
-                      <span className="text-sm font-medium mb-1 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-primary/70 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        {bet.label}
-                      </span>
-                      {/* Percentuale */}
-                      <span className="text-sm font-bold text-white">
-                        {bet.probability.toFixed(1)}%
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {bets.map((bet, idx) => {
+            const referencedTeam = getTeamFromBetLabel(bet.label, homeTeam, awayTeam);
+            const logo = referencedTeam && teamsData[referencedTeam]?.logo;
 
-          {/* ELENCO CATEGORIE */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {grouped.map((group) => (
-              <CategoryCard
-                key={group.category}
-                category={group.category}
-                bets={group.bets}
-              />
-            ))}
-          </div>
-        </>
+            return (
+              <motion.div
+                key={idx}
+                className="relative p-4 bg-background rounded-lg border border-border overflow-hidden flex items-center gap-3"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-card opacity-0 hover:opacity-10 transition-opacity pointer-events-none" />
+
+                {/* Mostra il logo se disponibile, altrimenti un'icona di pallone da calcio */}
+                {logo ? (
+                  <div className="relative w-10 h-10 flex-shrink-0">
+                    <Image
+                      src={logo}
+                      alt={referencedTeam}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  <MdSportsSoccer className="w-8 h-8 text-muted-foreground flex-shrink-0" />
+                )}
+
+                <div className="flex flex-col min-w-0">
+                  <div className="text-sm font-medium text-ellipsis overflow-hidden whitespace-nowrap max-w-full">
+                    {bet.label}
+                  </div>
+                  <div className="text-green-400 font-bold text-lg">
+                    {bet.probability.toFixed(1)}%
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       )}
     </Card>
   );
