@@ -31,22 +31,36 @@ export function HistoricalMatches({ homeTeam, awayTeam }: HistoricalMatchesProps
   }, [homeTeam, awayTeam]);
 
   const calculateStatistics = () => {
-    let homeWins = 0;
-    let awayWins = 0;
+    let homeTeamWins = 0;
+    let awayTeamWins = 0;
     let draws = 0;
-
+  
     matches.forEach((match) => {
+      // Check if homeTeam is actually the home team or away team in the match
+      const isHomeSelectedAsHome = match.homeTeam === homeTeam;
+      const isAwaySelectedAsHome = match.homeTeam === awayTeam;
+  
+      // Determine winner
       if (match.goalsHome > match.goalsAway) {
-        homeWins++;
+        if (isHomeSelectedAsHome) {
+          homeTeamWins++;
+        } else if (isAwaySelectedAsHome) {
+          awayTeamWins++;
+        }
       } else if (match.goalsAway > match.goalsHome) {
-        awayWins++;
+        if (!isHomeSelectedAsHome) {
+          homeTeamWins++; // Home team (selected) was actually playing away
+        } else if (!isAwaySelectedAsHome) {
+          awayTeamWins++; // Away team (selected) was actually playing away
+        }
       } else {
         draws++;
       }
     });
-
-    return { homeWins, awayWins, draws };
+  
+    return { homeWins: homeTeamWins, awayWins: awayTeamWins, draws };
   };
+  
 
   const getLastFiveResults = (team: string) => {
     const results = matches
