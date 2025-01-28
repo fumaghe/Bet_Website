@@ -886,7 +886,7 @@ export function calculateScorelinePredictions(
   }
 
   // Ordina le predizioni per probabilità decrescente e prendi le prime 5
-  return predictions.sort((a, b) => b.probability - a.probability).slice(0, 5);
+  return predictions.sort((a, b) => b.probability - a.probability).slice(0, 4);
 }
 
 // ----------------------------------------------------------------------------

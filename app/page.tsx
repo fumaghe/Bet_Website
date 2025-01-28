@@ -186,19 +186,32 @@ export default function Home() {
                     })}
                   </div>
 
-                  {/* Sezione per le linee di punteggio esatto */}
+                  {/* Sezione per le linee di punteggio esatto con card più piccole e interattive */}
                   <Card className="p-4">
                     <h2 className="text-lg font-semibold mb-4">Predizioni Punteggio Esatto</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                       {scorelinePredictions.map((score, index) => (
-                        <div key={index} className="flex justify-between items-center p-2 border rounded">
-                          <span className="font-medium">{`${score.homeGoals} - ${score.awayGoals}`}</span>
-                          <span className="text-sm text-muted-foreground">{`${score.probability.toFixed(2)}%`}</span>
-                        </div>
+                        <motion.div
+                          key={index}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="relative p-1 rounded-lg cursor-pointer group"
+                        >
+                          {/* Wrapper per il bordo gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-card to-card/50 rounded-lg border border-border opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          {/* Contenuto della card */}
+                          <div className="relative p-3 border border-border rounded-lg shadow-md bg-card overflow-hidden transition-colors duration-300 group-hover:border-transparent">
+                            <div className="flex flex-col items-center">
+                              <span className="text-xl font-bold mb-2 text-white group-hover:bg-gradient-to-br from-primary to-primary/70 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                                {`${score.homeGoals} - ${score.awayGoals}`}
+                              </span>
+                              <span className="text-sm text-muted-foreground">{`${score.probability.toFixed(2)}%`}</span>
+                            </div>
+                          </div>
+                        </motion.div>
                       ))}
                     </div>
                   </Card>
-
 
                   {/* Seleziona le 5 bet consigliate */}
                   <RecommendedBets

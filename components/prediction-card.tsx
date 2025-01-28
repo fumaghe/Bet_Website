@@ -69,9 +69,6 @@ export function PredictionCard({
                 <div className="text-3xl font-bold mb-1">
                   {percentage}%
                 </div>
-                <div className="text-xs text-muted-foreground">
-                  Basato su {matchCount} partite
-                </div>
               </div>
 
               {/* Dynamic Fill */}
@@ -93,7 +90,7 @@ export function PredictionCard({
           <p className="text-xs text-muted-foreground">
             {getConfidenceText(confidence)}
             <br />
-            Analisi basata su {matchCount} partite precedenti
+            Analisi basata su statistiche e partite precedenti
           </p>
         </TooltipContent>
       </Tooltip>
