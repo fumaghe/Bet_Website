@@ -43,6 +43,24 @@ function statLabelToKey(label: string): NumericPlayerStatsKeys {
 export function PlayerStatsTable({ players, statLabel, displayMode }: PlayerStatsTableProps) {
   const statKey = useMemo(() => statLabelToKey(statLabel), [statLabel]);
 
+  // Utilizziamo useMemo per memorizzare l'elenco ordinato
+  const sortedPlayers = useMemo(() => {
+    return [...players].sort((a, b) => {
+      let aValue: number;
+      let bValue: number;
+
+      if (displayMode === 'total') {
+        aValue = a[statKey] as number;
+        bValue = b[statKey] as number;
+      } else { // perMatch
+        aValue = (a.matches > 0) ? (a[statKey] as number) / a.matches : 0;
+        bValue = (b.matches > 0) ? (b[statKey] as number) / b.matches : 0;
+      }
+
+      return bValue - aValue; // Ordinamento decrescente
+    });
+  }, [players, statKey, displayMode]);
+
   if (!players || players.length === 0) {
     return <div className="text-muted-foreground">Nessun dato disponibile.</div>;
   }
@@ -60,12 +78,12 @@ export function PlayerStatsTable({ players, statLabel, displayMode }: PlayerStat
         </TableRow>
       </TableHeader>
       <TableBody>
-        {players.map((player) => {
+        {sortedPlayers.map((player) => {
           const statValue = displayMode === 'total'
             ? (player[statKey] as number)
             : player.matches > 0
-              ? ((player[statKey] as number) / player.matches).toFixed(2)
-              : '0.00';
+              ? Number(((player[statKey] as number) / player.matches).toFixed(2))
+              : 0.00;
           
           return (
             <TableRow
