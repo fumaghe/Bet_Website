@@ -3,7 +3,7 @@
 import Papa from 'papaparse';
 
 /** STANDINGS (serie_a.csv, etc.) */
-interface StandingsRow {
+export interface StandingsRow {
   ["Pos"]: string;
   ["Squadra"]: string;
   ["PG"]: string;
@@ -20,7 +20,7 @@ interface StandingsRow {
 }
 
 /** TEAM PERFORMANCE (team_performance.csv) */
-interface TeamPerformanceRow {
+export interface TeamPerformanceRow {
   ["Pos."]: string;
   ["Squadra"]: string;
   ["Competizione"]: string;
@@ -51,10 +51,10 @@ interface TeamPerformanceRow {
 }
 
 /** OPPONENT PERFORMANCE (opponent_performance.csv) */
-type OpponentPerformanceRow = TeamPerformanceRow;
+export type OpponentPerformanceRow = TeamPerformanceRow;
 
 /** PLAYERS (league_players.csv) */
-interface PlayerRow {
+export interface PlayerRow {
   ["Pos."]: string;
   ["Giocatore"]: string;
   ["Nazione"]: string;
@@ -89,7 +89,7 @@ interface PlayerRow {
 }
 
 /** ALL LEAGUES MATCHES (all_leagues_matches.csv) */
-interface MatchRow {
+export interface MatchRow {
   ["Squadra Casa"]: string;
   ["Squadra Trasferta"]: string;
   ["Orario"]: string;
@@ -105,6 +105,13 @@ interface MatchRow {
 export interface BetRecommendation {
   label: string;
   probability: number;  // 0..100
+}
+
+/** INTERFACCIA PER PUNTEGGI ESATTI */
+export interface ScorelinePrediction {
+  homeGoals: number;
+  awayGoals: number;
+  probability: number; // 0..100
 }
 
 // ----------------------------------------------------------------------------
@@ -192,7 +199,7 @@ function normalizeName(n: string): string {
   return n.trim().toLowerCase();
 }
 
-function num(v: string | undefined): number {
+export function num(v: string | undefined): number {
   if (!v) return 0;
   const parsed = parseFloat(v.replace(',', '.'));
   return isNaN(parsed) ? 0 : parsed;
@@ -215,7 +222,7 @@ function poissonPMF(k: number, lambda: number): number {
 }
 
 /** Probability that X >= floor(line)+1 in a Poisson distribution. */
-function poissonOver(lambda: number, line: number): number {
+export function poissonOver(lambda: number, line: number): number {
   // es: line=3.5 => floor(3.5)=3 => P(X>=4).
   const cut = Math.floor(line);
   let sumP = 0;
@@ -226,7 +233,7 @@ function poissonOver(lambda: number, line: number): number {
 }
 
 /** Probability that X <= floor(line) in a Poisson distribution. */
-function poissonUnder(lambda: number, line: number): number {
+export function poissonUnder(lambda: number, line: number): number {
   // es: line=3.5 => floor(3.5)=3 => P(X<=3).
   const cut = Math.floor(line);
   let sumP = 0;
@@ -237,7 +244,7 @@ function poissonUnder(lambda: number, line: number): number {
 }
 
 /** Sums P(X=k) in a Poisson distribution from m to n (clamped to 0..15). */
-function poissonRange(lambda: number, m: number, n: number): number {
+export function poissonRange(lambda: number, m: number, n: number): number {
   let sum = 0;
   const low = Math.max(0, m);
   const high = Math.min(n, 15);
@@ -248,7 +255,7 @@ function poissonRange(lambda: number, m: number, n: number): number {
 }
 
 /** Convert a 0..1 probability to a 0..100 range, clamped to [0..99.9]. */
-function clampProb(p: number): number {
+export function clampProb(p: number): number {
   let x = p * 100;
   if (x < 0) x = 0;
   if (x > 99.9) x = 99.9;
@@ -410,7 +417,7 @@ function getTeamDefensiveStrength(team: string, league: string, isHome: boolean,
   return defVal;
 }
 
-function predictTeamGoals(team: string, opp: string, league: string, isHome: boolean): number {
+export function predictTeamGoals(team: string, opp: string, league: string, isHome: boolean): number {
   const opponentRating = computeOpponentRating(opp, league);
   const off = getTeamOffensiveStrength(team, league, isHome, opponentRating);
   const defOpp = getTeamDefensiveStrength(opp, league, !isHome, computeOpponentRating(team, league));
@@ -454,7 +461,7 @@ function computeTeamRating(team: string, league: string): number {
   return r;
 }
 
-function get1X2(homeTeam: string, awayTeam: string, league: string): BetRecommendation[] {
+export function get1X2(homeTeam: string, awayTeam: string, league: string): BetRecommendation[] {
   const homeR = computeTeamRating(homeTeam, league);
   const awayR = computeTeamRating(awayTeam, league);
 
@@ -499,7 +506,7 @@ function get1X2(homeTeam: string, awayTeam: string, league: string): BetRecommen
 //   Over/Under & Multigol
 // ----------------------------------------------------------------------------
 
-function getOverUnderAndMultigol(homeTeam: string, awayTeam: string, league: string): BetRecommendation[] {
+export function getOverUnderAndMultigol(homeTeam: string, awayTeam: string, league: string): BetRecommendation[] {
   const out: BetRecommendation[] = [];
   
   // Previsione gol
@@ -589,7 +596,7 @@ function getOverUnderAndMultigol(homeTeam: string, awayTeam: string, league: str
 //   Goal / NoGoal
 // ----------------------------------------------------------------------------
 
-function getGoalNoGoal(homeTeam: string, awayTeam: string, league: string): BetRecommendation[] {
+export function getGoalNoGoal(homeTeam: string, awayTeam: string, league: string): BetRecommendation[] {
   const ghHome = predictTeamGoals(homeTeam, awayTeam, league, true);
   const ghAway = predictTeamGoals(awayTeam, homeTeam, league, false);
   const lambdaTotal = ghHome + ghAway;
@@ -687,7 +694,7 @@ function findTopOffsidesPlayers(players: PlayerRow[], n: number = 5): PlayerRow[
   return [...players]
     .sort((a, b) => offsidesPerMatch(b) - offsidesPerMatch(a))
     .slice(0, n);
-}
+} 
 
 /** 
  * Dato un avgShots, restituisce tutte le linee "Over" a intervalli di 1.0,
@@ -707,7 +714,7 @@ function pickShotLinesForOver(avg: number): number[] {
   }
 
   return lines;
-}
+} 
 
 /** 
  * Per i cartellini di solito si fa Over 0.5, o Over 1.5.  
@@ -751,7 +758,7 @@ function pickOffsidesLineForOver(avg: number): number[] {
  * Genera le scommesse "Over" per le varie statistiche dei giocatori.
  * Include Tiri Totali, Tiri in Porta, Cartellini, Falli Commmessi e Fuorigioco.
  */
-function getPlayerBets(players: PlayerRow[], teamName: string): BetRecommendation[] {
+export function getPlayerBets(players: PlayerRow[], teamName: string): BetRecommendation[] {
   const out: BetRecommendation[] = [];
 
   // 1) TOP 5 SHOOTERS => TIRI TOT
@@ -838,6 +845,48 @@ function getPlayerBets(players: PlayerRow[], teamName: string): BetRecommendatio
   }
 
   return out;
+}
+
+// ----------------------------------------------------------------------------
+//   FUNZIONE PER CALCOLARE LE PREDIZIONI DEI PUNTEGGI ESATTI
+// ----------------------------------------------------------------------------
+
+/**
+ * Restituisce le predizioni delle linee di punteggio esatto più probabili.
+ * Limita le predizioni a un massimo di 3 gol per squadra.
+ */
+export function calculateScorelinePredictions(
+  homeTeam: string,
+  awayTeam: string,
+  league: string
+): ScorelinePrediction[] {
+  // Calcola i gol attesi per entrambe le squadre
+  const expectedHomeGoals = predictTeamGoals(homeTeam, awayTeam, league, true);
+  const expectedAwayGoals = predictTeamGoals(awayTeam, homeTeam, league, false);
+
+  // Definisci la funzione Poisson
+  const poisson = (k: number, lambda: number): number => {
+    return poissonPMF(k, lambda);
+  };
+
+  const maxGoals = 3; // Limitiamo a 3 gol per squadra
+  const predictions: ScorelinePrediction[] = [];
+
+  for (let home = 0; home <= maxGoals; home++) {
+    for (let away = 0; away <= maxGoals; away++) {
+      const prob = poisson(home, expectedHomeGoals) * poisson(away, expectedAwayGoals);
+      if (prob > 0) {
+        predictions.push({
+          homeGoals: home,
+          awayGoals: away,
+          probability: clampProb(prob),
+        });
+      }
+    }
+  }
+
+  // Ordina le predizioni per probabilità decrescente e prendi le prime 5
+  return predictions.sort((a, b) => b.probability - a.probability).slice(0, 5);
 }
 
 // ----------------------------------------------------------------------------
