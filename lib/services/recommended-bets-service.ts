@@ -540,7 +540,7 @@ export function getOverUnderAndMultigol(homeTeam: string, awayTeam: string, leag
   }
 
   // Scommesse Over/Under per Squadra di Casa con limite a 3.5
-  const homeLines = [0.5, 1.5, 2.5, 3.5];
+  const homeLines = [0.5, 1.5, 2.5];
   for (const line of homeLines) {
     const pOv = poissonOver(ghHome, line);
     const pUn = poissonUnder(ghHome, line);
@@ -565,7 +565,7 @@ export function getOverUnderAndMultigol(homeTeam: string, awayTeam: string, leag
   }
 
   // Scommesse Over/Under per Squadra in Trasferta con limite a 3.5
-  const awayLines = [0.5, 1.5, 2.5, 3.5];
+  const awayLines = [0.5, 1.5, 2.5];
   for (const line of awayLines) {
     const pOv = poissonOver(ghAway, line);
     const pUn = poissonUnder(ghAway, line);

@@ -39,7 +39,7 @@ export function PredictionSection({
   onLeagueChange,
 }: PredictionSectionProps) {
   const [currentLeagueIndex, setCurrentLeagueIndex] = useState<number>(0);
-  const [teams, setTeams] = useState<Team[]>([]); // Squadre per la lega corrente
+  const [teams, setTeams] = useState<Team[]>([]);
   const [homeTeamIndex, setHomeTeamIndex] = useState<number>(0);
   const [awayTeamIndex, setAwayTeamIndex] = useState<number>(0);
 
@@ -63,12 +63,12 @@ export function PredictionSection({
         setCurrentLeagueIndex(leagueIndex);
       }
     }
-  }, [selectedLeague, leagues]);
+  }, [selectedLeague]);
 
   // Carica le squadre per la lega selezionata
   useEffect(() => {
     const loadTeams = async () => {
-      const leagueToLoad = selectedLeague || leagues[0].name; // Usa la lega di default se selectedLeague è undefined
+      const leagueToLoad = selectedLeague || leagues[0].name;
 
       if (!leagueTeamsCache[leagueToLoad]) {
         const standings = await getLeagueStandings(leagueToLoad);
@@ -76,7 +76,7 @@ export function PredictionSection({
           id: team.team.toLowerCase().replace(/\s+/g, '_'),
           name: team.team,
           logo: `/Bet_Website/images/teams/${team.team.toLowerCase().replace(/\s+/g, '_')}.png`,
-          rating: Math.min(5, team.points / 10), // Esempio di calcolo del rating
+          rating: Math.min(5, team.points / 10),
           league: leagueToLoad,
         }));
         setLeagueTeamsCache((prev) => ({ ...prev, [leagueToLoad]: teamsWithLogos }));
@@ -91,7 +91,7 @@ export function PredictionSection({
     };
 
     loadTeams();
-  }, [selectedLeague, leagueTeamsCache, onLeagueChange, leagues]);
+  }, [selectedLeague, leagueTeamsCache, onLeagueChange]);
 
   // Aggiorna homeTeamIndex in base alla squadra selezionata
   useEffect(() => {
@@ -127,7 +127,6 @@ export function PredictionSection({
     onLeagueChange(newLeague);
   };
 
-  // Funzione per gestire la selezione di una squadra dal dropdown
   const handleTeamSelected = (team: Team, teamType: 'home' | 'away') => {
     if (team.league !== selectedLeague) {
       onLeagueChange(team.league);
@@ -217,7 +216,6 @@ export function PredictionSection({
   );
 }
 
-// Definizione delle props per TeamSelector
 interface TeamSelectorProps {
   teams: Team[];
   currentIndex: number;
@@ -281,20 +279,6 @@ function TeamSelector({
     onIndexChange(newIndex);
   };
 
-  const renderStars = (rating: number) =>
-    Array.from({ length: 5 }).map((_, i) => (
-      <span
-        key={i}
-        className={cn(
-          'text-lg',
-          i < Math.floor(rating) ? 'text-primary' : 'text-muted-foreground/30'
-        )}
-      >
-        ★
-      </span>
-    ));
-
-  // Funzione per cercare le squadre
   const searchTeams = async (searchQuery: string) => {
     if (!searchQuery) {
       setResults([]);
@@ -343,6 +327,19 @@ function TeamSelector({
 
   if (!currentTeam) return null;
 
+  const renderStars = (rating: number) =>
+    Array.from({ length: 5 }).map((_, i) => (
+      <span
+        key={i}
+        className={cn(
+          'text-lg',
+          i < Math.floor(rating) ? 'text-primary' : 'text-muted-foreground/30'
+        )}
+      >
+        ★
+      </span>
+    ));
+
   return (
     <div className="relative">
       <h4 className="text-xs font-medium text-muted-foreground mb-3">{label}</h4>
@@ -381,29 +378,27 @@ function TeamSelector({
             </div>
             <div className="text-center mt-2 relative" ref={dropdownRef}>
               <button
-                className="text-sm font-bold mb-1 hover:underline focus:outline-none flex items-center"
+                className="text-sm font-bold mb-1 hover:underline focus:outline-none w-full text-center"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
                 {currentTeam.name}
-                <ChevronDown className="ml-1 h-4 w-4" />
               </button>
 
               <AnimatePresence>
                 {isDropdownOpen && (
                   <motion.div
-                      initial={{ opacity: 0, scale: 0.90 }} // Ridotto del 25%
-                      animate={{ opacity: 1, scale: 0.90 }} // Ridotto del 25%
-                      exit={{ opacity: 0, scale: 0.95 }} // Ridotto del 25%
-                      transition={{ duration: 0.2 }}
-                      className="
-                        absolute left-0 transform -translate-x-[50%]
-                        mt-2 min-w-[195px] // Ridotto del 25%
-                        rounded-md shadow-lg z-50
-                        bg-card/50 text-white
-                        border-0
-                      "
-                    >
-
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 0.9 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="
+                      absolute left-1/2 -translate-x-1/2
+                      mt-2 min-w-[195px]
+                      rounded-md shadow-lg z-50
+                      bg-card/50 text-white
+                      border-0
+                    "
+                  >
                     <div className="p-2">
                       <Input
                         placeholder="Cerca una squadra..."
@@ -428,7 +423,6 @@ function TeamSelector({
                                   alt={team.name}
                                   width={30}
                                   height={30}
-                                  // Manteniamo il cerchio per i loghi nel dropdown
                                   className="object-contain mr-3"
                                 />
                                 <div className="flex-1 text-left">
@@ -470,111 +464,6 @@ function TeamSelector({
           <ChevronRight className="h-5 w-5" />
         </Button>
       </div>
-    </div>
-  );
-}
-
-// Definizione delle props per TeamSearch
-interface TeamSearchProps {
-  onTeamSelected: (team: Team) => void;
-  onClose: () => void;
-  leagueTeamsCache: { [key: string]: Team[] };
-  setLeagueTeamsCache: React.Dispatch<React.SetStateAction<{ [key: string]: Team[] }>>;
-  leagues: { name: string; country: string; icon: string }[];
-}
-
-function TeamSearch({
-  onTeamSelected,
-  onClose,
-  leagueTeamsCache,
-  setLeagueTeamsCache,
-  leagues,
-}: TeamSearchProps) {
-  const [query, setQuery] = useState<string>('');
-  const [results, setResults] = useState<Team[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  // Funzione per cercare le squadre
-  const searchTeams = async (searchQuery: string) => {
-    if (!searchQuery) {
-      setResults([]);
-      return;
-    }
-
-    setIsLoading(true);
-    const lowerQuery = searchQuery.toLowerCase();
-    let foundTeams: Team[] = [];
-
-    for (const league of leagues) {
-      if (!leagueTeamsCache[league.name]) {
-        const standings = await getLeagueStandings(league.name);
-        const teamsWithLogos: Team[] = standings.map((team: any) => ({
-          id: team.team.toLowerCase().replace(/\s+/g, '_'),
-          name: team.team,
-          logo: `/Bet_Website/images/teams/${team.team.toLowerCase().replace(/\s+/g, '_')}.png`,
-          rating: Math.min(5, team.points / 10),
-          league: league.name,
-        }));
-        setLeagueTeamsCache((prev) => ({ ...prev, [league.name]: teamsWithLogos }));
-      }
-
-      const teamsInLeague = leagueTeamsCache[league.name] || [];
-      const matched = teamsInLeague.filter((team) =>
-        team.name.toLowerCase().includes(lowerQuery)
-      );
-      foundTeams = [...foundTeams, ...matched];
-    }
-
-    setResults(foundTeams);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
-      searchTeams(query);
-    }, 300);
-    return () => clearTimeout(delayDebounceFn);
-  }, [query]);
-
-  return (
-    <div>
-      <Input
-        placeholder="Cerca una squadra..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="mb-4"
-      />
-
-      {isLoading && <p className="text-center">Caricamento...</p>}
-
-      {!isLoading && results.length === 0 && query && (
-        <p className="text-center text-muted-foreground">Nessuna squadra trovata.</p>
-      )}
-
-      <ScrollArea className="h-64">
-        <ul className="space-y-2">
-          {results.map((team) => (
-            <li key={team.id}>
-              <button
-                className="flex items-center w-full p-2 hover:bg-white/10 rounded"
-                onClick={() => onTeamSelected(team)}
-              >
-                <Image
-                  src={team.logo}
-                  alt={team.name}
-                  width={30}
-                  height={30}
-                  className="object-contain rounded-full mr-3"
-                />
-                <div className="flex-1 text-left">
-                  <p className="font-medium">{team.name}</p>
-                  <p className="text-xs text-muted-foreground">{team.league}</p>
-                </div>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </ScrollArea>
     </div>
   );
 }
