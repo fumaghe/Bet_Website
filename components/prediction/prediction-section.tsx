@@ -127,11 +127,9 @@ export function PredictionSection({
     onLeagueChange(newLeague);
   };
 
+  // Nota: qui rimuoviamo il forzare il cambio lega quando si seleziona una squadra
+  // per evitare conflitti in alcuni scenari.
   const handleTeamSelected = (team: Team, teamType: 'home' | 'away') => {
-    if (team.league !== selectedLeague) {
-      onLeagueChange(team.league);
-    }
-
     if (teamType === 'home') {
       onHomeTeamSelect(team.name);
     } else {
