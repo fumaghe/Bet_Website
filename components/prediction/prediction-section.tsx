@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -63,7 +63,7 @@ export function PredictionSection({
         setCurrentLeagueIndex(leagueIndex);
       }
     }
-  }, [selectedLeague]);
+  }, [selectedLeague, leagues]);
 
   // Carica le squadre per la lega selezionata
   useEffect(() => {
@@ -91,7 +91,7 @@ export function PredictionSection({
     };
 
     loadTeams();
-  }, [selectedLeague, leagueTeamsCache, onLeagueChange]);
+  }, [selectedLeague, leagueTeamsCache, onLeagueChange, leagues]);
 
   // Aggiorna homeTeamIndex in base alla squadra selezionata
   useEffect(() => {
@@ -127,8 +127,7 @@ export function PredictionSection({
     onLeagueChange(newLeague);
   };
 
-  // Nota: qui rimuoviamo il forzare il cambio lega quando si seleziona una squadra
-  // per evitare conflitti in alcuni scenari.
+  // Gestione della selezione della squadra
   const handleTeamSelected = (team: Team, teamType: 'home' | 'away') => {
     if (teamType === 'home') {
       onHomeTeamSelect(team.name);
@@ -138,8 +137,8 @@ export function PredictionSection({
   };
 
   return (
-    <Card className="max-w-[900px] mx-auto p-6 space-y-6">
-      <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-6">
+    <Card className="max-w-[900px] mx-auto p-6">
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
         {teams.length > 0 ? (
           <TeamSelector
             teams={teams}
@@ -316,7 +315,7 @@ function TeamSelector({
       searchTeams(query);
     }, 300);
     return () => clearTimeout(delayDebounceFn);
-  }, [query]);
+  }, [query, leagues, leagueTeamsCache]);
 
   const handleTeamClick = (team: Team) => {
     onSelect(team);
@@ -339,10 +338,10 @@ function TeamSelector({
     ));
 
   return (
-    <div className="relative">
+    <div className="relative flex-1 min-w-[200px]">
       <h4 className="text-xs font-medium text-muted-foreground mb-3">{label}</h4>
 
-      <div className="relative bg-card rounded-md p-4">
+      <div className="relative bg-card rounded-md p-4 flex flex-col items-center">
         <Button
           variant="ghost"
           size="icon"
@@ -374,7 +373,7 @@ function TeamSelector({
                 className="object-contain"
               />
             </div>
-            <div className="text-center mt-2 relative" ref={dropdownRef}>
+            <div className="text-center mt-2 relative w-full" ref={dropdownRef}>
               <button
                 className="text-sm font-bold mb-1 hover:underline focus:outline-none w-full text-center"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -385,16 +384,16 @@ function TeamSelector({
               <AnimatePresence>
                 {isDropdownOpen && (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                     className="
                       absolute left-1/2 -translate-x-1/2
-                      mt-2 min-w-[195px]
+                      mt-2 w-64
                       rounded-md shadow-lg z-50
-                      bg-card/50 text-white
-                      border-0
+                      bg-card/90 text-white
+                      border border-border
                     "
                   >
                     <div className="p-2">

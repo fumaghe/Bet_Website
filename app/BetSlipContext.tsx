@@ -44,7 +44,7 @@ interface BetSlipContextType {
   walletHistory: WalletHistoryEntry[]; // Aggiunto
 
   // Metodi
-  addBet: (bet: Omit<Bet, 'id'>) => void;
+  addBet: (bet: Omit<Bet, 'id' | 'status'>) => void; // Modificato
   removeBet: (betId: string) => void;
   updateBetOdd: (betId: string, odd: number) => void;
   updateTotalStake: (stake: number) => void;
@@ -117,7 +117,7 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
   }, [wallet, betSlip, totalStake, confirmedBets, walletHistory]);
 
   // Aggiunge una bet, evita duplicati
-  const addBet = (bet: Omit<Bet, 'id'>) => {
+  const addBet = (bet: Omit<Bet, 'id' | 'status'>) => { // Modificato
     const exists = betSlip.find(
       (b) => b.label === bet.label && b.matchName === bet.matchName
     );

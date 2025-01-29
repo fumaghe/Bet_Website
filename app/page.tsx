@@ -94,8 +94,8 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Sidebar />
-      <main className="lg:pl-60 pt-8">
-        <div className="container px-6">
+      <main className="lg:pl-60 pt-8 px-4 sm:px-6 md:px-8">
+        <div className="container mx-auto">
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
             {/* Colonna principale */}
             <div className="lg:col-span-2 space-y-6">
@@ -118,7 +118,8 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   className="space-y-6"
                 >
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {/* Predizioni 1X2 */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {predictionTypes.map((type) => {
                       // Troviamo la raccomandazione corrispondente
                       const recommendation = recommendations.find((r) =>
