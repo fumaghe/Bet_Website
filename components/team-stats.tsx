@@ -185,7 +185,7 @@ export function TeamStats({ teamHome, teamAway, league }: TeamStatsProps) {
     let awayDisplayValue = viewMode === 'total' ? awayValue : awayPerMatch;
 
     if (comparisonMode === 'league') {
-      // Confronto con la media della lega
+      // Confronto con la media delle squadre vicine
       const renderComparisonCard = (teamName: string, teamValue: number, leagueAvg: number) => {
         const isBetter = isPositiveStat
           ? teamValue >= leagueAvg

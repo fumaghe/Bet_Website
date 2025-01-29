@@ -159,7 +159,7 @@ export async function loadAllBetsData() {
     '/Bet_Website/data/standings/ligue_1.csv',
     '/Bet_Website/data/standings/premier_league.csv',
     '/Bet_Website/data/standings/bundesliga.csv',
-    '/Bet_Website/data/standings/laliga.csv',
+    '/Bet_Website/data/standings/la_liga.csv',
     '/Bet_Website/data/standings/champions_league.csv', // Added Champions League standings if available
   ];
   for (const file of possibleStandingsFiles) {
@@ -230,7 +230,7 @@ export async function loadAllBetsData() {
   }
   // 3. champions_league_players.csv
   {
-    const resp = await fetch('/Bet_Website/data/champions_league_players.csv');
+    const resp = await fetch('/Bet_Website/data/players/champions_league_players.csv');
     if (resp.ok) {
       const text = await resp.text();
       const parsed = Papa.parse<ChampionsLeaguePlayerRow>(text, { header: true, skipEmptyLines: true });

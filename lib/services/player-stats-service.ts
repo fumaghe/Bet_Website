@@ -26,6 +26,7 @@ export async function loadPlayerStats() {
     const parsedLeaguePlayers = await parseCSV(leagueData);
     const parsedChampionsPlayers = await parseCSV(championsData);
 
+    // Normalizza e separa i dati in due array globali
     leaguePlayers = normalizePlayerStats(parsedLeaguePlayers, 'league');
     championsLeaguePlayers = normalizePlayerStats(parsedChampionsPlayers, 'champions');
 
@@ -44,13 +45,21 @@ export async function loadPlayerStats() {
  * @returns Array di PlayerStats normalizzati.
  */
 function normalizePlayerStats(data: any[], type: 'league' | 'champions'): PlayerStats[] {
-  return data.map(row => ({
-    pos: parseInt(row.Pos) || 0,
+  return data.map((row) => ({
+    // Nota: nel CSV di Champions la colonna è "Pos." (con il punto),
+    // perciò usiamo row['Pos.'] anziché row.Pos
+    pos: parseInt(row['Pos.']) || 0,
     name: row.Giocatore || 'Sconosciuto',
     nationality: row.Nazione || 'Sconosciuta',
     position: row.Ruolo || 'Sconosciuto',
-    team: typeof row.Squadra === 'string' && row.Squadra.trim() !== '' ? row.Squadra : 'Sconosciuta',
-    league: type === 'league' ? row.Competizione || 'Serie A' : 'Champions League',
+    team:
+      typeof row.Squadra === 'string' && row.Squadra.trim() !== ''
+        ? row.Squadra
+        : 'Sconosciuta',
+    league:
+      type === 'league'
+        ? row.Competizione || 'Serie A'
+        : 'Champions League',
     age: parseInt(row.Età) || 0,
     matches: parseInt(row.PG) || 0,
     starts: parseInt(row.Tit) || 0,
@@ -60,13 +69,16 @@ function normalizePlayerStats(data: any[], type: 'league' | 'champions'): Player
     yellowCards: parseInt(row['Amm.']) || 0,
     redCards: parseInt(row['Esp.']) || 0,
     xG: parseFloat(row.xG) || 0,
+
+    // Queste colonne potrebbero essere assenti in qualche CSV,
+    // quindi il parseInt/parseFloat + || 0 evita NaN
     shots: parseInt(row['Tiri totali']) || 0,
     shotsOnTarget: parseInt(row['Tiri in porta']) || 0,
     foulsCommitted: parseInt(row['Falli commessi']) || 0,
     foulsDrawn: parseInt(row['Falli subiti']) || 0,
     offsides: parseInt(row.Fuorigioco) || 0,
     progressiveCarries: parseInt(row.PrgC) || 0,
-    progressivePasses: parseInt(row.PrgP) || 0
+    progressivePasses: parseInt(row.PrgP) || 0,
   }));
 }
 
@@ -78,8 +90,10 @@ function normalizePlayerStats(data: any[], type: 'league' | 'champions'): Player
  */
 export function getPlayerStats(team: string, league: string): PlayerStats[] {
   const players = league === 'Champions League' ? championsLeaguePlayers : leaguePlayers;
-  return players.filter(player => 
-    typeof player.team === 'string' && player.team.toLowerCase() === team.toLowerCase()
+  return players.filter(
+    (player) =>
+      typeof player.team === 'string' &&
+      player.team.toLowerCase() === team.toLowerCase()
   );
 }
 
@@ -92,18 +106,18 @@ export function getPlayerStats(team: string, league: string): PlayerStats[] {
  * @returns Array di PlayerStats ordinati e limitati
  */
 export function getTopPlayersByStat(
-  team: string, 
-  league: string, 
-  stat: keyof PlayerStats, 
+  team: string,
+  league: string,
+  stat: keyof PlayerStats,
   limit: number = 10
 ): PlayerStats[] {
   const players = getPlayerStats(team, league);
   console.log(`Filtrando i giocatori per ${team} nella lega ${league} per la statistica ${stat}`);
 
-  // Applica il filtro sulle partite giocate
+  // Applica un filtro minimo di presenze (diverso per Champions o campionato)
   const minMatches = league === 'Champions League' ? 3 : 5;
-  const filteredPlayers = players.filter(player => 
-    player.matches >= minMatches && player[stat] !== undefined && player[stat] !== null
+  const filteredPlayers = players.filter(
+    (player) => player.matches >= minMatches && player[stat] !== undefined && player[stat] !== null
   );
 
   console.log(`Giocatori filtrati per ${stat}:`, filteredPlayers);
@@ -112,7 +126,6 @@ export function getTopPlayersByStat(
   const sortedPlayers = filteredPlayers.sort((a, b) => {
     const aValue = a[stat];
     const bValue = b[stat];
-    
     if (typeof aValue === 'number' && typeof bValue === 'number') {
       return bValue - aValue;
     }
@@ -126,18 +139,32 @@ export function getTopPlayersByStat(
   return topPlayers;
 }
 
-export function getLeagueTopPlayers(league: string, category: 'goals' | 'assists' | 'goalsAndAssists', limit: number = 20): PlayerStats[] {
-  const players = league === 'Champions League' ? championsLeaguePlayers : leaguePlayers.filter(p => p.league === league);
-  
-  return [...players]
-    .sort((a, b) => {
-      if (category === 'goals') {
-        return b.goals - a.goals;
-      } else if (category === 'assists') {
-        return b.assists - a.assists;
-      } else {
-        return (b.goals + b.assists) - (a.goals + a.assists);
-      }
-    })
-    .slice(0, limit);
+/**
+ * Restituisce i top giocatori in una determinata lega (o Champions),
+ * ordinati per goals, assists o somma goals+assists.
+ */
+export function getLeagueTopPlayers(
+  league: string,
+  category: 'goals' | 'assists' | 'goalsAndAssists',
+  limit: number = 20
+): PlayerStats[] {
+  // Se è Champions League, usa il relativo array;
+  // altrimenti filtra i giocatori di "league" che abbiano come league = 'Serie A', 'La Liga', ecc.
+  const players =
+    league === 'Champions League'
+      ? championsLeaguePlayers
+      : leaguePlayers.filter((p) => p.league === league);
+
+  const sorted = [...players].sort((a, b) => {
+    if (category === 'goals') {
+      return b.goals - a.goals;
+    } else if (category === 'assists') {
+      return b.assists - a.assists;
+    } else {
+      // goalsAndAssists
+      return b.goals + b.assists - (a.goals + a.assists);
+    }
+  });
+
+  return sorted.slice(0, limit);
 }

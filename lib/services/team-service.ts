@@ -20,7 +20,7 @@ export async function getTeamStats(
     const teamLeagueStats = leagueData.find((row: any) => row.Squadra === team);
 
     if (!teamLeagueStats) {
-      // Return null or a default value instead of throwing an error
+      // Se non trovi la squadra, ritorna valori di default
       return {
         goalsFor: 0,
         goalsAgainst: 0,
@@ -48,7 +48,7 @@ export async function getTeamStats(
             'Falli Comessi': 0,
             'Falli Subiti': 0,
             Fuorigioco: 0,
-            'Ammonizioni': 0,
+            Ammonizioni: 0,
           },
           perMatch: {
             'Reti Fatte': 0,
@@ -58,7 +58,7 @@ export async function getTeamStats(
             'Falli Comessi': 0,
             'Falli Subiti': 0,
             Fuorigioco: 0,
-            'Ammonizioni': 0,
+            Ammonizioni: 0,
           },
         },
       };
@@ -91,13 +91,13 @@ export async function getTeamStats(
 
     // Decide quale dataset utilizzare
     let dataFile = '';
-    const normalizedLeague = league.trim().toLowerCase();
 
-    if (normalizedLeague === 'champions league') {
+    // Usiamo leagueFile per discriminare la Champions dalle altre competizioni
+    if (leagueFile === 'champions_league') {
       if (dataSource === 'team') {
-        dataFile = '/public/data/champions_casa.csv';
+        dataFile = '/Bet_Website/data/champions_casa.csv';
       } else if (dataSource === 'opponent') {
-        dataFile = '/public/data/champions_avversari.csv';
+        dataFile = '/Bet_Website/data/champions_avversari.csv';
       } else {
         throw new Error(`Data source ${dataSource} is not recognized.`);
       }
@@ -119,6 +119,7 @@ export async function getTeamStats(
     const teamDataStats = data.find((row: any) => row.Squadra === team);
 
     if (!teamDataStats) {
+      // Se non trovi i dati della squadra nel file di performance, ritorna valori di default
       return {
         goalsFor: 0,
         goalsAgainst: 0,
@@ -146,7 +147,7 @@ export async function getTeamStats(
             'Falli Comessi': 0,
             'Falli Subiti': 0,
             Fuorigioco: 0,
-            'Ammonizioni': 0,
+            Ammonizioni: 0,
           },
           perMatch: {
             'Reti Fatte': 0,
@@ -155,8 +156,8 @@ export async function getTeamStats(
             xAG: 0,
             'Falli Comessi': 0,
             'Falli Subiti': 0,
-            'Fuorigioco': 0,
-            'Ammonizioni': 0,
+            Fuorigioco: 0,
+            Ammonizioni: 0,
           },
         },
       };
@@ -176,8 +177,8 @@ export async function getTeamStats(
         : parseInt(teamLeagueStats.Rf, 10);
 
     const stats = {
-      goalsFor: goalsFor,
-      goalsAgainst: goalsAgainst,
+      goalsFor,
+      goalsAgainst,
       xG: parseFloat(teamDataStats.xG),
       xAG: parseFloat(teamDataStats.xAG),
       foulsCommitted: parseInt(teamDataStats['Falli commessi'], 10),
@@ -221,8 +222,10 @@ export async function getTeamStats(
         0
       ) / totalNearbyTeams;
     const avgOffside =
-      nearbyTeamsDataStats.reduce((sum: number, t: any) => sum + parseInt(t['Fuorigioco'], 10), 0) /
-      totalNearbyTeams;
+      nearbyTeamsDataStats.reduce(
+        (sum: number, t: any) => sum + parseInt(t['Fuorigioco'], 10),
+        0
+      ) / totalNearbyTeams;
     const avgYellowCards =
       nearbyTeamsDataStats.reduce(
         (sum: number, t: any) => sum + parseInt(t['Amm.'], 10),
@@ -233,13 +236,19 @@ export async function getTeamStats(
     const avgPerMatchGoalsFor =
       nearbyTeams.reduce(
         (sum: number, t: any) =>
-          sum + (dataSource === 'team' ? parseInt(t.Rf, 10) / parseInt(t.PG, 10) : parseInt(t.Rs, 10) / parseInt(t.PG, 10)),
+          sum +
+          (dataSource === 'team'
+            ? parseInt(t.Rf, 10) / parseInt(t.PG, 10)
+            : parseInt(t.Rs, 10) / parseInt(t.PG, 10)),
         0
       ) / totalNearbyTeams;
     const avgPerMatchGoalsAgainst =
       nearbyTeams.reduce(
         (sum: number, t: any) =>
-          sum + (dataSource === 'team' ? parseInt(t.Rs, 10) / parseInt(t.PG, 10) : parseInt(t.Rf, 10) / parseInt(t.PG, 10)),
+          sum +
+          (dataSource === 'team'
+            ? parseInt(t.Rs, 10) / parseInt(t.PG, 10)
+            : parseInt(t.Rf, 10) / parseInt(t.PG, 10)),
         0
       ) / totalNearbyTeams;
 
@@ -275,7 +284,7 @@ export async function getTeamStats(
         0
       ) / totalNearbyTeams;
 
-    // Include medie di lega regolate
+    // Restituisce le statistiche calcolate
     return {
       ...stats,
       played,
@@ -296,7 +305,7 @@ export async function getTeamStats(
           'Falli Comessi': avgFoulsCommitted,
           'Falli Subiti': avgFoulsSuffered,
           Fuorigioco: avgOffside,
-          'Ammonizioni': avgYellowCards,
+          Ammonizioni: avgYellowCards,
         },
         perMatch: {
           'Reti Fatte': avgPerMatchGoalsFor,
@@ -306,7 +315,7 @@ export async function getTeamStats(
           'Falli Comessi': avgPerMatchFoulsCommitted,
           'Falli Subiti': avgPerMatchFoulsSuffered,
           Fuorigioco: avgPerMatchOffside,
-          'Ammonizioni': avgPerMatchYellowCards,
+          Ammonizioni: avgPerMatchYellowCards,
         },
       },
     };

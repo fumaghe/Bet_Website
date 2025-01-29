@@ -42,17 +42,32 @@ export const LEAGUES: League[] = [
   },
 ];
 
-// Funzione per normalizzare il nome della lega
-const normalizeLeagueName = (name: string): string => {
+/**
+ * Funzione per normalizzare il nome della lega.
+ * Trasforma il nome in minuscolo e sostituisce gli spazi con underscore.
+ * @param name Nome della lega
+ * @returns Nome normalizzato
+ */
+export const normalizeLeagueName = (name: string): string => {
   return name.toLowerCase().replace(/\s+/g, '_');
 };
 
-// Funzione per normalizzare il nome della squadra
-const normalizeTeamName = (name: string): string => {
+/**
+ * Funzione per normalizzare il nome della squadra.
+ * Trasforma il nome in minuscolo e sostituisce gli spazi con underscore.
+ * @param name Nome della squadra
+ * @returns Nome normalizzato
+ */
+export const normalizeTeamName = (name: string): string => {
   return name.toLowerCase().replace(/\s+/g, '_');
 };
 
-// Funzione per normalizzare i dati delle squadre
+/**
+ * Funzione per normalizzare i dati delle squadre.
+ * @param row Riga del CSV
+ * @param league Nome della lega
+ * @returns Oggetto TeamStats normalizzato
+ */
 function normalizeTeamStats(row: any, league: string): TeamStats {
   return {
     position: parseInt(row.Pos, 10),
@@ -71,9 +86,10 @@ function normalizeTeamStats(row: any, league: string): TeamStats {
   };
 }
 
-// Funzione principale per caricare i dati
-// lib/services/data-service.ts
-
+/**
+ * Funzione principale per caricare i dati.
+ * Carica le classifiche delle leghe e le partite da file CSV.
+ */
 export async function loadData() {
   try {
     const leagues = [
@@ -116,7 +132,7 @@ export async function loadData() {
 
     // Mappa le partite in MatchDetailsType
     matches = parsedMatches.data.map((row: CsvMatchRow) => ({
-      id: `${row['Squadra Casa']}-${row['Squadra Trasferta']}-${row['Giorno']}-${row['Orario']}`,
+      id: `${normalizeTeamName(row['Squadra Casa'])}-${normalizeTeamName(row['Squadra Trasferta'])}-${row['Giorno']}-${row['Orario']}`,
       homeTeam: row['Squadra Casa'],
       awayTeam: row['Squadra Trasferta'],
       league: row['Campionato'],
@@ -134,19 +150,29 @@ export async function loadData() {
   }
 }
 
-
-// Funzione per ottenere la classifica di una lega
+/**
+ * Funzione per ottenere la classifica di una lega.
+ * @param league Nome della lega
+ * @returns Array di TeamStats
+ */
 export function getLeagueStandings(league: string): TeamStats[] {
   const normalizedLeague = normalizeLeagueName(league);
   return leagueStats[normalizedLeague] || [];
 }
 
-// Funzione per ottenere tutte le partite
+/**
+ * Funzione per ottenere tutte le partite.
+ * @returns Array di MatchDetailsType
+ */
 export function getMatches(): MatchDetailsType[] {
   return matches;
 }
 
-// Funzione per ottenere le performance di una squadra
+/**
+ * Funzione per ottenere le performance di una squadra.
+ * @param teamName Nome della squadra
+ * @returns Oggetto TeamPerformance o undefined
+ */
 export function getTeamPerformance(teamName: string): TeamPerformance | undefined {
   const normalizedTeamName = normalizeTeamName(teamName);
   const allTeams = Object.entries(leagueStats).flatMap(([league, teams]) =>
@@ -179,7 +205,11 @@ export function getTeamPerformance(teamName: string): TeamPerformance | undefine
   return undefined;
 }
 
-// Funzione per ottenere i dettagli di una partita
+/**
+ * Funzione per ottenere i dettagli di una partita.
+ * @param matchId ID della partita
+ * @returns Oggetto MatchDetailsType o null
+ */
 export function getMatchDetails(matchId: string): MatchDetailsType | null {
   const match = matches.find(m => m.id === matchId);
   if (!match) return null;

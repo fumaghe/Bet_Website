@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup, Comment
 import pandas as pd
+import warnings
 
 def fetch_table(url, table_id):
     headers = {
@@ -18,7 +19,10 @@ def fetch_table(url, table_id):
     if not table:
         comments = soup.find_all(string=lambda text: isinstance(text, Comment))
         for comment in comments:
-            comment_soup = BeautifulSoup(comment, 'lxml')
+            # Suppress specific warning temporarily
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", category=UserWarning)
+                comment_soup = BeautifulSoup(comment, 'lxml')
             table = comment_soup.find('table', id=table_id)
             if table:
                 print(f"Found table with ID '{table_id}' within comments.")
@@ -80,7 +84,10 @@ def fetch_misc_table(url, table_id, columns_to_extract, column_mapping):
     if not table:
         comments = soup.find_all(string=lambda text: isinstance(text, Comment))
         for comment in comments:
-            comment_soup = BeautifulSoup(comment, 'lxml')
+            # Suppress specific warning temporarily
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", category=UserWarning)
+                comment_soup = BeautifulSoup(comment, 'lxml')
             table = comment_soup.find('table', id=table_id)
             if table:
                 print(f"Found table with ID '{table_id}' within comments.")
@@ -122,11 +129,11 @@ def fetch_misc_table(url, table_id, columns_to_extract, column_mapping):
 
 def main():
     try:
-        # URLs and table IDs for Champions League players
-        url_champions_standard = "https://fbref.com/it/comp/8/stats/calciatori/Statistiche-di-Champions-League"
+        # URLs e ID delle tabelle per i giocatori della Champions League
+        url_champions_standard = "https://fbref.com/it/comp/8/stats/Statistiche-di-Champions-League"
         table_id_standard = "stats_standard"
 
-        url_misc_giocatori = "https://fbref.com/it/comp/Big5/misc/calciatori/Statistiche-di-Champions-League"
+        url_misc_giocatori = "https://fbref.com/it/comp/8/misc/Statistiche-di-Champions-League"
         table_id_misc = "stats_misc"
         columns_to_extract_giocatori = ["player", "fouls", "fouled", "offsides"]  # data-stat keys
         column_mapping_giocatori = {
@@ -136,7 +143,7 @@ def main():
             "offsides": "Fuorigioco"
         }
 
-        url_tir = "https://fbref.com/it/comp/Big5/shooting/calciatori/Statistiche-di-Champions-League"
+        url_tir = "https://fbref.com/it/comp/8/shooting/Statistiche-di-Champions-League"
         table_id_tir = "stats_shooting"
         columns_to_extract_tir = ["player", "shots", "shots_on_target"]  # Corretto: 'shots' invece di 'shots_total'
         column_mapping_tir = {
@@ -145,30 +152,53 @@ def main():
             "shots_on_target": "Tiri in porta"
         }
 
-        # Fetch standard player stats
+        # Recupera le statistiche standard dei giocatori
         df_standard = fetch_table(url_champions_standard, table_id_standard)
+        print(f"Standard stats fetched: {len(df_standard)} righe")
 
-        # Fetch miscellaneous player stats
+        # Recupera le statistiche miscellaneous dei giocatori
         df_misc = fetch_misc_table(url_misc_giocatori, table_id_misc, columns_to_extract_giocatori, column_mapping_giocatori)
+        print(f"Miscellaneous stats fetched: {len(df_misc)} righe")
 
-        # Fetch shooting stats
+        # Recupera le statistiche di tiro
         df_tir = fetch_misc_table(url_tir, table_id_tir, columns_to_extract_tir, column_mapping_tir)
+        print(f"Shooting stats fetched: {len(df_tir)} righe")
 
-        # Validate 'Giocatore' column
-        if 'Giocatore' not in df_tir.columns:
-            raise KeyError("'Giocatore' non trovato in df_tir (Champions_giocatori)")
+        # Pulizia delle colonne 'Giocatore'
+        for df in [df_standard, df_misc, df_tir]:
+            df['Giocatore'] = df['Giocatore'].str.strip()
+            # Se necessario, rimuovi caratteri speciali
+            # df['Giocatore'] = df['Giocatore'].str.replace(r'[^\w\s]', '', regex=True)
 
-        # Merge dataframes on "Giocatore"
-        merged_df = pd.merge(df_standard, df_tir, on="Giocatore", how="inner")
-        df_total = pd.merge(merged_df, df_misc, on="Giocatore", how="inner")
-        df_total.drop_duplicates(subset=["Giocatore", "Squadra"], inplace=True)
+        # Unisci i DataFrame con join interni per mantenere solo i giocatori presenti in tutte le tabelle
+        merged_df = pd.merge(df_standard, df_tir, on="Giocatore", how="inner", suffixes=('_standard', '_tir'))
+        print(f"Merged standard e shooting: {len(merged_df)} righe")
 
-        # Save to CSV
+        df_total = pd.merge(merged_df, df_misc, on="Giocatore", how="inner", suffixes=('', '_misc'))
+        print(f"Unito con miscellaneous: {len(df_total)} righe")
+
+        # Verifica se ci sono duplicati nel DataFrame finale
+        duplicates = df_total.duplicated(subset=["Giocatore", "Squadra"], keep='first')
+        num_duplicates = duplicates.sum()
+        if num_duplicates > 0:
+            df_total.drop_duplicates(subset=["Giocatore", "Squadra"], inplace=True)
+            print(f"Rimosso {num_duplicates} duplicati.")
+
+        # Gestisci i valori mancanti se necessario
+        df_total.fillna({
+            "Tiri totali": 0,
+            "Tiri in porta": 0,
+            "Falli commessi": 0,
+            "Falli subiti": 0,
+            "Fuorigioco": 0
+        }, inplace=True)
+
+        # Salva il DataFrame finale su CSV
         df_total.to_csv("public/data/players/champions_league_players.csv", index=False, encoding='utf-8')
-        print("champions_league_players.csv has been created successfully.")
+        print("champions_league_players.csv è stato creato con successo.")
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"Si è verificato un errore: {e}")
 
 if __name__ == "__main__":
     main()
