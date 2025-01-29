@@ -10,6 +10,7 @@ export interface Bet {
   matchName: string;
   label: string;
   odd: number;
+  status: 'pending' | 'won' | 'lost'; // Aggiunto
 }
 
 /**
@@ -25,6 +26,14 @@ export interface ConfirmedBetSlip {
 }
 
 /**
+ * Interfaccia per la cronologia del portafoglio.
+ */
+export interface WalletHistoryEntry {
+  date: string;
+  balance: number;
+}
+
+/**
  * Interfaccia del contesto BetSlip
  */
 interface BetSlipContextType {
@@ -32,6 +41,7 @@ interface BetSlipContextType {
   betSlip: Bet[];
   totalStake: number;
   confirmedBets: ConfirmedBetSlip[];
+  walletHistory: WalletHistoryEntry[]; // Aggiunto
 
   // Metodi
   addBet: (bet: Omit<Bet, 'id'>) => void;
@@ -39,7 +49,11 @@ interface BetSlipContextType {
   updateBetOdd: (betId: string, odd: number) => void;
   updateTotalStake: (stake: number) => void;
   confirmBetSlip: () => void;
-  setBetStatus: (betSlipId: string, newStatus: 'won' | 'lost' | 'pending') => void;
+  setBetStatus: (
+    betSlipId: string,
+    betId: string,
+    newStatus: 'won' | 'lost' | 'pending'
+  ) => void; // Modificato
 
   // Metodi aggiunti per la gestione del saldo e delle schedine
   updateWallet: (newVal: number) => void;
@@ -52,6 +66,7 @@ const BetSlipContext = createContext<BetSlipContextType>({
   betSlip: [],
   totalStake: 0,
   confirmedBets: [],
+  walletHistory: [], // Aggiunto
   addBet: () => {},
   removeBet: () => {},
   updateBetOdd: () => {},
@@ -68,6 +83,9 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
   const [betSlip, setBetSlip] = useState<Bet[]>([]);
   const [totalStake, setTotalStake] = useState<number>(0);
   const [confirmedBets, setConfirmedBets] = useState<ConfirmedBetSlip[]>([]);
+  const [walletHistory, setWalletHistory] = useState<WalletHistoryEntry[]>([
+    { date: new Date().toISOString(), balance: 100 },
+  ]);
 
   // Caricamento da localStorage
   useEffect(() => {
@@ -79,6 +97,7 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
         if (Array.isArray(data.betSlip)) setBetSlip(data.betSlip);
         if (typeof data.totalStake === 'number') setTotalStake(data.totalStake);
         if (Array.isArray(data.confirmedBets)) setConfirmedBets(data.confirmedBets);
+        if (Array.isArray(data.walletHistory)) setWalletHistory(data.walletHistory);
       }
     } catch (err) {
       console.warn('Errore nel parsing di localStorage:', err);
@@ -92,9 +111,10 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
       betSlip,
       totalStake,
       confirmedBets,
+      walletHistory, // Aggiunto
     };
     localStorage.setItem('betSlipContext', JSON.stringify(payload));
-  }, [wallet, betSlip, totalStake, confirmedBets]);
+  }, [wallet, betSlip, totalStake, confirmedBets, walletHistory]);
 
   // Aggiunge una bet, evita duplicati
   const addBet = (bet: Omit<Bet, 'id'>) => {
@@ -106,6 +126,7 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
     const newBet: Bet = {
       id: Date.now().toString(),
       ...bet,
+      status: 'pending', // Impostato di default
     };
     setBetSlip((prev) => [...prev, newBet]);
   };
@@ -151,7 +172,15 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
     }
 
     // Scala stake dal wallet
-    setWallet((prev) => parseFloat((prev - totalStake).toFixed(2)));
+    setWallet((prev) => {
+      const newBalance = parseFloat((prev - totalStake).toFixed(2));
+      // Aggiorna la cronologia del wallet
+      setWalletHistory((history) => [
+        ...history,
+        { date: new Date().toISOString(), balance: newBalance },
+      ]);
+      return newBalance;
+    });
 
     // Crea la schedina
     const newConfirmed: ConfirmedBetSlip = {
@@ -168,38 +197,77 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
     setTotalStake(0);
   };
 
-  // Setta lo stato di una schedina
-  const setBetStatus = (betSlipId: string, newStatus: 'won' | 'lost' | 'pending') => {
+  // Setta lo stato di una singola bet e aggiorna lo stato complessivo della schedina
+  const setBetStatus = (
+    betSlipId: string,
+    betId: string,
+    newStatus: 'won' | 'lost' | 'pending'
+  ) => {
     setConfirmedBets((prev) =>
       prev.map((slip) => {
         if (slip.id !== betSlipId) return slip;
-        if (slip.status === newStatus) return slip; // nessun cambio
 
-        // Aggiorniamo il wallet se passiamo da pending->won, won->lost, etc.
-        let updatedWallet = wallet;
-        if (slip.status === 'pending') {
-          if (newStatus === 'won') {
-            updatedWallet += slip.potentialWin;
-          }
-        } else if (slip.status === 'won') {
-          if (newStatus === 'lost') {
-            updatedWallet -= slip.potentialWin;
-          }
-        } else if (slip.status === 'lost') {
-          if (newStatus === 'won') {
-            updatedWallet += slip.potentialWin;
+        const updatedBets = slip.bets.map((bet) => {
+          if (bet.id !== betId) return bet;
+          return { ...bet, status: newStatus };
+        });
+
+        // Determina lo stato complessivo della schedina
+        let slipStatus: 'won' | 'lost' | 'pending' = 'pending';
+        if (updatedBets.some((bet) => bet.status === 'lost')) {
+          slipStatus = 'lost';
+        } else if (updatedBets.every((bet) => bet.status === 'won')) {
+          slipStatus = 'won';
+        }
+
+        // Gestione del wallet in base allo stato della schedina
+        if (slip.status !== slipStatus) {
+          switch (slipStatus) {
+            case 'won':
+              setWallet((prevWallet) => {
+                const newBalance = parseFloat((prevWallet + slip.potentialWin).toFixed(2));
+                setWalletHistory((history) => [
+                  ...history,
+                  { date: new Date().toISOString(), balance: newBalance },
+                ]);
+                return newBalance;
+              });
+              break;
+            case 'lost':
+              // Nessuna azione sul wallet in caso di perdita
+              break;
+            case 'pending':
+              if (slip.status === 'won') {
+                setWallet((prevWallet) => {
+                  const newBalance = parseFloat((prevWallet - slip.potentialWin).toFixed(2));
+                  setWalletHistory((history) => [
+                    ...history,
+                    { date: new Date().toISOString(), balance: newBalance },
+                  ]);
+                  return newBalance;
+                });
+              }
+              break;
+            default:
+              break;
           }
         }
 
-        setWallet(parseFloat(updatedWallet.toFixed(2)));
-        return { ...slip, status: newStatus };
+        return { ...slip, bets: updatedBets, status: slipStatus };
       })
     );
   };
 
   // Aggiorna direttamente il wallet
   const updateWallet = (newVal: number) => {
-    setWallet(parseFloat(newVal.toFixed(2)));
+    setWallet((prevWallet) => {
+      const updatedWallet = parseFloat((prevWallet + newVal).toFixed(2));
+      setWalletHistory((history) => [
+        ...history,
+        { date: new Date().toISOString(), balance: updatedWallet },
+      ]);
+      return updatedWallet;
+    });
   };
 
   // Cancella tutte le schedine confermate
@@ -219,6 +287,7 @@ export function BetSlipProvider({ children }: { children: React.ReactNode }) {
         betSlip,
         totalStake,
         confirmedBets,
+        walletHistory, // Aggiunto
         addBet,
         removeBet,
         updateBetOdd,

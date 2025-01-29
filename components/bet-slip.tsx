@@ -17,7 +17,7 @@ export function BetSlip() {
     confirmBetSlip,
   } = useBetSlip();
 
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false); // Inizialmente chiuso
 
   const totalOdds = useMemo(() => {
     if (betSlip.length === 0) return 0;
@@ -41,6 +41,8 @@ export function BetSlip() {
           bg-card text-foreground 
           text-sm shadow-md
           rounded-md
+          transition-all duration-300
+          h-auto
         "
       >
         {/* Header con pulsante per aprire/chiudere */}
@@ -48,9 +50,10 @@ export function BetSlip() {
           className={`
             bg-primary text-primary-foreground px-4 
             flex items-center justify-between 
-            transition-all duration-300
-            ${isOpen ? 'py-3' : 'py-2 h-12'}
+            cursor-pointer
+            ${isOpen ? 'py-3' : 'py-2'}
           `}
+          onClick={() => setIsOpen(!isOpen)}
         >
           <span className="font-bold tracking-wide text-sm">Schedina</span>
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
@@ -59,7 +62,12 @@ export function BetSlip() {
         </div>
 
         {isOpen && (
-          <div className="p-4 space-y-4">
+          <div
+            className="
+              p-4 space-y-4
+              max-h-80 overflow-y-auto
+            "
+          >
             {betSlip.length === 0 ? (
               <p className="text-xs text-muted-foreground">Nessuna selezione.</p>
             ) : (
