@@ -21,9 +21,9 @@ export interface StandingsRow {
 
 /** TEAM PERFORMANCE (team_performance.csv) */
 export interface TeamPerformanceRow {
-  ["Pos."]: string;
+  ["Pos."]?: string; // Reso opzionale per Champions League
   ["Squadra"]: string;
-  ["Competizione"]: string;
+  ["Competizione"]?: string; // Reso opzionale per Champions League
   ["N. di giocatori"]: string;
   ["Età"]: string;
   ["Poss."]: string;
@@ -45,9 +45,9 @@ export interface TeamPerformanceRow {
   ["npxG+xAG"]: string;
   ["PrgC"]: string;
   ["PrgP"]: string;
-  ["Falli commessi"]: string;
-  ["Falli subiti"]: string;
-  ["Fuorigioco"]: string;
+  ["Falli commessi"]?: string; // Reso opzionale per Champions League
+  ["Falli subiti"]?: string; // Reso opzionale per Champions League
+  ["Fuorigioco"]?: string; // Reso opzionale per Champions League
 }
 
 /** OPPONENT PERFORMANCE (opponent_performance.csv) */
@@ -88,6 +88,21 @@ export interface PlayerRow {
   ["Fuorigioco"]: string;
 }
 
+/** CHAMPIONS LEAGUE AVVERSARI (champions_avversari.csv) */
+export interface ChampionsAvversariRow extends TeamPerformanceRow {
+  // Inherits TeamPerformanceRow properties
+}
+
+/** CHAMPIONS LEAGUE CASA (champions_casa.csv) */
+export interface ChampionsCasaRow extends TeamPerformanceRow {
+  // Inherits TeamPerformanceRow properties
+}
+
+/** CHAMPIONS LEAGUE PLAYERS (champions_league_players.csv) */
+export interface ChampionsLeaguePlayerRow extends PlayerRow {
+  // Assuming the structure is identical to PlayerRow
+}
+
 /** ALL LEAGUES MATCHES (all_leagues_matches.csv) */
 export interface MatchRow {
   ["Squadra Casa"]: string;
@@ -124,6 +139,11 @@ let playersData: PlayerRow[] = [];
 let matchesData: MatchRow[] = [];
 let uniquePlayersData: PlayerRow[] = [];
 
+// Champions League Specific Data
+let championsAvversariData: ChampionsAvversariRow[] = [];
+let championsCasaData: ChampionsCasaRow[] = [];
+let championsLeaguePlayersData: ChampionsLeaguePlayerRow[] = [];
+
 let dataLoaded = false;
 
 // ----------------------------------------------------------------------------
@@ -140,6 +160,7 @@ export async function loadAllBetsData() {
     '/Bet_Website/data/standings/premier_league.csv',
     '/Bet_Website/data/standings/bundesliga.csv',
     '/Bet_Website/data/standings/laliga.csv',
+    '/Bet_Website/data/standings/champions_league.csv', // Added Champions League standings if available
   ];
   for (const file of possibleStandingsFiles) {
     try {
@@ -154,30 +175,68 @@ export async function loadAllBetsData() {
   // team_performance
   {
     const resp = await fetch('/Bet_Website/data/team_performance.csv');
-    const text = await resp.text();
-    const parsed = Papa.parse<TeamPerformanceRow>(text, { header: true, skipEmptyLines: true });
-    teamPerformanceData = parsed.data;
+    if (resp.ok) {
+      const text = await resp.text();
+      const parsed = Papa.parse<TeamPerformanceRow>(text, { header: true, skipEmptyLines: true });
+      teamPerformanceData = parsed.data;
+    }
   }
   // opponent_performance
   {
     const resp = await fetch('/Bet_Website/data/opponent_performance.csv');
-    const text = await resp.text();
-    const parsed = Papa.parse<OpponentPerformanceRow>(text, { header: true, skipEmptyLines: true });
-    opponentPerformanceData = parsed.data;
+    if (resp.ok) {
+      const text = await resp.text();
+      const parsed = Papa.parse<OpponentPerformanceRow>(text, { header: true, skipEmptyLines: true });
+      opponentPerformanceData = parsed.data;
+    }
   }
   // players
   {
     const resp = await fetch('/Bet_Website/data/players/league_players.csv');
-    const text = await resp.text();
-    const parsed = Papa.parse<PlayerRow>(text, { header: true, skipEmptyLines: true });
-    playersData = parsed.data;
+    if (resp.ok) {
+      const text = await resp.text();
+      const parsed = Papa.parse<PlayerRow>(text, { header: true, skipEmptyLines: true });
+      playersData = parsed.data;
+    }
   }
   // all_leagues_matches
   {
     const resp = await fetch('/Bet_Website/data/all_leagues_matches.csv');
-    const text = await resp.text();
-    const parsed = Papa.parse<MatchRow>(text, { header: true, skipEmptyLines: true });
-    matchesData = parsed.data;
+    if (resp.ok) {
+      const text = await resp.text();
+      const parsed = Papa.parse<MatchRow>(text, { header: true, skipEmptyLines: true });
+      matchesData = parsed.data;
+    }
+  }
+
+  // Load Champions League Specific Data
+  // 1. champions_avversari.csv
+  {
+    const resp = await fetch('/Bet_Website/data/champions_avversari.csv');
+    if (resp.ok) {
+      const text = await resp.text();
+      const parsed = Papa.parse<ChampionsAvversariRow>(text, { header: true, skipEmptyLines: true });
+      championsAvversariData = parsed.data;
+    }
+  }
+  // 2. champions_casa.csv
+  {
+    const resp = await fetch('/Bet_Website/data/champions_casa.csv');
+    if (resp.ok) {
+      const text = await resp.text();
+      const parsed = Papa.parse<ChampionsCasaRow>(text, { header: true, skipEmptyLines: true });
+      championsCasaData = parsed.data;
+    }
+  }
+  // 3. champions_league_players.csv
+  {
+    const resp = await fetch('/Bet_Website/data/champions_league_players.csv');
+    if (resp.ok) {
+      const text = await resp.text();
+      const parsed = Papa.parse<ChampionsLeaguePlayerRow>(text, { header: true, skipEmptyLines: true });
+      championsLeaguePlayersData = parsed.data;
+      playersData = playersData.concat(parsed.data); // Unify all players
+    }
   }
 
   // Process uniquePlayersData: exclude players with multiple entries and PG >=5
@@ -273,24 +332,35 @@ function getStandings(team: string, league: string): StandingsRow | null {
 }
 
 function getTeamPerformance(team: string, league: string): TeamPerformanceRow | null {
+  if (normalizeName(league) === 'champions league') {
+    return championsCasaData.find((r) =>
+      normalizeName(r["Squadra"]) === normalizeName(team)
+    ) || null;
+  }
   return teamPerformanceData.find((r) =>
     normalizeName(r["Squadra"]) === normalizeName(team) &&
-    normalizeName(r["Competizione"]) === normalizeName(league)
+    normalizeName(r["Competizione"] || "") === normalizeName(league)
   ) || null;
 }
 
 function getOpponentPerformance(team: string, league: string): OpponentPerformanceRow | null {
+  if (normalizeName(league) === 'champions league') {
+    return championsAvversariData.find((r) =>
+      normalizeName(r["Squadra"]) === normalizeName(team)
+    ) || null;
+  }
   return opponentPerformanceData.find((r) =>
     normalizeName(r["Squadra"]) === normalizeName(team) &&
-    normalizeName(r["Competizione"]) === normalizeName(league)
+    normalizeName(r["Competizione"] || "") === normalizeName(league)
   ) || null;
 }
 
-function filterDirectMatches(homeTeam: string, awayTeam: string): MatchRow[] {
+function filterDirectMatches(homeTeam: string, awayTeam: string, league: string): MatchRow[] {
   return matchesData.filter((m) => {
     const h = normalizeName(m["Squadra Casa"]);
     const a = normalizeName(m["Squadra Trasferta"]);
-    return (
+    const camp = normalizeName(m["Campionato"]) === normalizeName(league);
+    return camp && (
       (h === normalizeName(homeTeam) && a === normalizeName(awayTeam)) ||
       (h === normalizeName(awayTeam) && a === normalizeName(homeTeam))
     );
@@ -301,10 +371,26 @@ function filterDirectMatches(homeTeam: string, awayTeam: string): MatchRow[] {
  * Restituisce le ultime N partite in casa per una squadra.
  */
 function getLastNHomeMatches(team: string, league: string, N = 20): MatchRow[] {
-  let homeMatches = matchesData.filter((m) =>
-    normalizeName(m["Squadra Casa"]) === normalizeName(team) &&
-    normalizeName(m["Campionato"]) === normalizeName(league)
-  );
+  let homeMatches: MatchRow[] = [];
+  if (normalizeName(league) === 'champions league') {
+    homeMatches = championsCasaData.map((c) => ({
+      "Squadra Casa": c["Squadra"],
+      "Squadra Trasferta": "Unknown", // O un valore reale se disponibile
+      "Orario": "Unknown", // Se non disponibile
+      "Giorno": "Unknown", // Se non disponibile
+      "Campionato": league,
+      "xG Casa": "0",
+      "Gol Casa": c["Reti"],
+      "Gol Trasferta": "0", // Assumiamo nessun gol subito
+      "xG Trasferta": "0",
+      // "Sett.": undefined // opzionale
+    }));
+  } else {
+    homeMatches = matchesData.filter((m) =>
+      normalizeName(m["Squadra Casa"]) === normalizeName(team) &&
+      normalizeName(m["Campionato"]) === normalizeName(league)
+    );
+  }
 
   homeMatches = homeMatches.sort((a, b) => (a["Giorno"] > b["Giorno"] ? 1 : -1));
   return homeMatches.slice(-N);
@@ -314,10 +400,26 @@ function getLastNHomeMatches(team: string, league: string, N = 20): MatchRow[] {
  * Restituisce le ultime N partite in trasferta per una squadra.
  */
 function getLastNAwayMatches(team: string, league: string, N = 20): MatchRow[] {
-  let awayMatches = matchesData.filter((m) =>
-    normalizeName(m["Squadra Trasferta"]) === normalizeName(team) &&
-    normalizeName(m["Campionato"]) === normalizeName(league)
-  );
+  let awayMatches: MatchRow[] = [];
+  if (normalizeName(league) === 'champions league') {
+    awayMatches = championsAvversariData.map((c) => ({
+      "Squadra Casa": "Unknown", // O un valore reale se disponibile
+      "Squadra Trasferta": c["Squadra"],
+      "Orario": "Unknown",
+      "Giorno": "Unknown", // Se non disponibile
+      "Campionato": league,
+      "xG Casa": "0",
+      "Gol Casa": "0", // Assumiamo nessun gol segnato
+      "Gol Trasferta": c["Reti"],
+      "xG Trasferta": "0",
+      // "Sett.": undefined // opzionale
+    }));
+  } else {
+    awayMatches = matchesData.filter((m) =>
+      normalizeName(m["Squadra Trasferta"]) === normalizeName(team) &&
+      normalizeName(m["Campionato"]) === normalizeName(league)
+    );
+  }
 
   awayMatches = awayMatches.sort((a, b) => (a["Giorno"] > b["Giorno"] ? 1 : -1));
   return awayMatches.slice(-N);
@@ -387,8 +489,8 @@ function getTeamDefensiveStrength(team: string, league: string, isHome: boolean,
 
   const pg = num(opp["PG"]) || 1;
   const ga = num(opp["Reti"]) / pg;
-  const xga = num(opp["xG"]) / pg;
-  let defVal = (ga + xga) / 2;
+  const xag = num(opp["xAG"] || "0") / pg; // Corretto da xGA a xAG
+  let defVal = (ga + xag) / 2;
 
   // Recupera le ultime 20 partite in casa o in trasferta
   const lastMatches = isHome
@@ -465,7 +567,7 @@ export function get1X2(homeTeam: string, awayTeam: string, league: string): BetR
   const homeR = computeTeamRating(homeTeam, league);
   const awayR = computeTeamRating(awayTeam, league);
 
-  const direct = filterDirectMatches(homeTeam, awayTeam);
+  const direct = filterDirectMatches(homeTeam, awayTeam, league);
   let homeWins = 0;
   for (const m of direct) {
     const gh = num(m["Gol Casa"]);
@@ -721,9 +823,15 @@ function pickShotLinesForOver(avg: number): number[] {
  * Se la media è sotto 0.8, preferiamo 0.5 
  * Se la media >= 1.5, aggiungiamo anche Over 1.5
  */
-function pickCardLine(avg: number): number {
-  if (avg < 0.8) return 0.5;
-  return 1.5;
+function pickCardLine(avg: number): number[] {
+  const lines: number[] = [];
+  if (avg < 0.8) {
+    lines.push(0.5);
+  }
+  if (avg >= 1.5) {
+    lines.push(1.5);
+  }
+  return lines;
 }
 
 /** 
@@ -798,10 +906,7 @@ export function getPlayerBets(players: PlayerRow[], teamName: string): BetRecomm
   for (const player of topCardPronePlayers) {
     const avg = cardsPerMatch(player);
     if (avg > 0) {
-      const lines = [pickCardLine(avg)];
-      if (avg >= 1.5) {
-        lines.push(1.5);
-      }
+      const lines = pickCardLine(avg);
       for (const line of lines) {
         const pOv = poissonOver(avg, line);
         out.push({
@@ -886,7 +991,7 @@ export function calculateScorelinePredictions(
   }
 
   // Ordina le predizioni per probabilità decrescente e prendi le prime 5
-  return predictions.sort((a, b) => b.probability - a.probability).slice(0, 4);
+  return predictions.sort((a, b) => b.probability - a.probability).slice(0, 5);
 }
 
 // ----------------------------------------------------------------------------
@@ -911,11 +1016,11 @@ export function calculateRecommendedBets(
   // 4) Giocatori
   const homePlayers = uniquePlayersData.filter((p) =>
     normalizeName(p["Squadra"]) === normalizeName(homeTeam) &&
-    normalizeName(p["Competizione"]) === normalizeName(league)
+    (normalizeName(p["Competizione"] || "") === normalizeName(league) || normalizeName(league) === 'champions league')
   );
   const awayPlayers = uniquePlayersData.filter((p) =>
     normalizeName(p["Squadra"]) === normalizeName(awayTeam) &&
-    normalizeName(p["Competizione"]) === normalizeName(league)
+    (normalizeName(p["Competizione"] || "") === normalizeName(league) || normalizeName(league) === 'champions league')
   );
 
   bets.push(...getPlayerBets(homePlayers, homeTeam));

@@ -60,6 +60,13 @@ def map_columns(df_columns, columns_needed):
                 break
     return mapped_columns
 
+def clean_team_name(team_name):
+    """
+    Rimuove tutto il testo prima della prima lettera maiuscola.
+    Esempio: "eng Liverpool" -> "Liverpool"
+    """
+    return pd.Series(team_name).str.replace(r'^[^A-Z]*', '', regex=True).iloc[0]
+
 for league in leagues:
     table_id = league['id']
     url = league['url']
@@ -88,12 +95,11 @@ for league in leagues:
         df_selected = df[[mapped_cols[key] for key in columns_needed]].copy()
         df_selected.rename(columns={v: k for k, v in mapped_cols.items()}, inplace=True)
         df_selected['Lega'] = league_name.replace('_', ' ')
-        if league_name == 'Champions_League':
+        
+        if league_name == 'champions_league':
             if 'Squadra' in df_selected.columns:
-                df_selected['Squadra'] = df_selected['Squadra'].str.replace(r'^[^A-Z]*', '', regex=True)
-            nazione_cols = [col for col in df_selected.columns if "Squadra" in col]
-            for col in nazione_cols:
-                df_selected[col] = df_selected[col].str.replace(r'^[^A-Z]*', '', regex=True)
+                df_selected['Squadra'] = df_selected['Squadra'].apply(clean_team_name)
+        
         output_csv = os.path.join(f"public/data/standings/{league_name}.csv")
         try:
             df_selected.to_csv(output_csv, index=False, encoding='utf-8-sig')

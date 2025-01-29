@@ -64,7 +64,6 @@ export async function getTeamStats(
       };
     }
 
-
     const teamPosition = parseInt(teamLeagueStats.Pos, 10);
 
     // Determina il range di posizioni per il calcolo della media
@@ -92,12 +91,24 @@ export async function getTeamStats(
 
     // Decide quale dataset utilizzare
     let dataFile = '';
-    if (dataSource === 'team') {
-      dataFile = '/Bet_Website/data/team_performance.csv';
-    } else if (dataSource === 'opponent') {
-      dataFile = '/Bet_Website/data/opponent_performance.csv';
+    const normalizedLeague = league.trim().toLowerCase();
+
+    if (normalizedLeague === 'champions league') {
+      if (dataSource === 'team') {
+        dataFile = '/public/data/champions_casa.csv';
+      } else if (dataSource === 'opponent') {
+        dataFile = '/public/data/champions_avversari.csv';
+      } else {
+        throw new Error(`Data source ${dataSource} is not recognized.`);
+      }
     } else {
-      throw new Error(`Data source ${dataSource} is not recognized.`);
+      if (dataSource === 'team') {
+        dataFile = '/Bet_Website/data/team_performance.csv';
+      } else if (dataSource === 'opponent') {
+        dataFile = '/Bet_Website/data/opponent_performance.csv';
+      } else {
+        throw new Error(`Data source ${dataSource} is not recognized.`);
+      }
     }
 
     // Carica dati dal file appropriato
@@ -144,17 +155,16 @@ export async function getTeamStats(
             xAG: 0,
             'Falli Comessi': 0,
             'Falli Subiti': 0,
-            Fuorigioco: 0,
+            'Fuorigioco': 0,
             'Ammonizioni': 0,
           },
         },
       };
     }
-    
 
     // Calcola statistiche per la squadra
     const played = parseInt(teamLeagueStats.PG, 10);
-    
+
     // Inverti Rf e Rs se dataSource è 'opponent'
     const goalsFor =
       dataSource === 'team'

@@ -1,10 +1,11 @@
+import re
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
 from datetime import datetime, timedelta
 
-# Define base URLs and league names
+# Leghe da scaricare
 leagues = {
     "Premier League": ("https://fbref.com/en/comps/9", "Premier-League"),
     "Champions League": ("https://fbref.com/en/comps/8", "Champions-League"),
@@ -14,129 +15,223 @@ leagues = {
     "Ligue 1": ("https://fbref.com/en/comps/13", "Ligue-1"),
 }
 
-# Helper function to generate the correct season URLs
+
+# Se vuoi aggiungere codici di altri paesi, inseriscili qui
+COUNTRY_CODES = {
+    "it", "ch", "eng", "fr", "de", "nl", "pt", "es", "ua", "rs",
+    "cz", "sk", "hr", "sct", "be", "at",
+}
+
+def remove_country_code(team_name: str) -> str:
+    """
+    Rimuove eventuali codici paese di 2-3 lettere all'inizio o alla fine
+    (es. "Milanit" -> "Milan", "Paris S-Gfr" -> "Paris S-G",
+         "Young Boysch" -> "Young Boys", "engAston Villa" -> "Aston Villa").
+    """
+    name = team_name.strip()
+    if not name:
+        return name
+
+    # Rimuove prefisso se matcha
+    for code in COUNTRY_CODES:
+        if name.startswith(code):
+            name = name[len(code):].strip()
+            break  # Rimuove solo il primo match
+
+    # Rimuove suffisso se matcha
+    for code in COUNTRY_CODES:
+        if name.endswith(code):
+            name = name[:-len(code)].strip()
+            break  # Rimuove solo il primo match
+
+    return name
+
 def get_season_urls(base_url, league_name):
+    """
+    Costruisce la lista di URL per le stagioni 2023-2024 e 2024-2025.
+    """
     urls = []
-    for year in range(2020, 2025):
+    for year in range(2018, 2025):
         if year < 2024:
-            season_str = f"{year}-{year + 1}"
+            season_str = f"{year}-{year + 1}"  # es: "2023-2024"
             urls.append(f"{base_url}/{season_str}/schedule/{season_str}-{league_name}-Scores-and-Fixtures")
-        else:  # Current season (2024-2025)
+        else:
+            # stagione corrente 2024-2025
             urls.append(f"{base_url}/schedule/{league_name}-Scores-and-Fixtures")
     return urls
 
-# Helper function to parse the match data from the table rows
-def parse_match_data(row, league_name):
-    # Skip header rows and spacer rows
-    if "thead" in row.get("class", []) or "spacer" in row.get("class", []):
+def parse_match_row(tr, league_name):
+    """
+    Parsa un singolo <tr> con data-stat specifici:
+      - date (giorno)
+      - start_time (orario)
+      - home_team (squadra casa)
+      - home_xg (xG casa)
+      - score (gol casa–gol trasf)
+      - away_xg (xG trasf)
+      - away_team (squadra trasf)
+      - gameweek (sett)
+    """
+    # Salta righe di header/spacer
+    if "thead" in tr.get("class", []) or "spacer" in tr.get("class", []):
         return None
 
-    columns = row.find_all("td")
-    if not columns:
-        return None  # Skip rows without data
-
-    try:
-        sett = row.find("th", {"data-stat": "gameweek"}).text.strip() if row.find("th", {"data-stat": "gameweek"}) else ""
-        data = columns[1].find("a").text.strip() if len(columns) > 1 and columns[1].find("a") else ""  # Extract full date (YYYY-MM-DD)
-
-        # Extract time, fallback to venuetime if localtime is missing
-        ora = ""
-        if len(columns) > 2:
-            time_cell = columns[2]
-            local_time_span = time_cell.find("span", class_="localtime")
-            venuetime_span = time_cell.find("span", class_="venuetime")
-            
-            if local_time_span and local_time_span.text.strip():
-                ora = local_time_span.text.strip().replace("(", "").replace(")", "")
-            elif venuetime_span:
-                ora = venuetime_span.text.strip()
-
-        casa = columns[3].find("a").text.strip() if len(columns) > 3 and columns[3].find("a") else "-"
-        xg_casa = columns[4].text.strip() if len(columns) > 4 else "-"
-        punteggio = columns[5].find("a").text.strip() if len(columns) > 5 and columns[5].find("a") else "-"
-        gol_casa, gol_trasferta = "-", "-"
-        if "–" in punteggio:
-            gol_casa, gol_trasferta = punteggio.split("–")
-        xg_trasferta = columns[6].text.strip() if len(columns) > 6 else "-"
-        trasferta = columns[7].find("a").text.strip() if len(columns) > 7 and columns[7].find("a") else "-"
-        return [casa, trasferta, ora, data, league_name, xg_casa, gol_casa, gol_trasferta, xg_trasferta, sett]
-    except Exception as e:
-        print(f"Error parsing row: {e}")
+    tds = tr.find_all("td")
+    if not tds:
         return None
 
-# Function to download and parse matches for a specific league and season
+    # Trova il "matchweek" in <th data-stat="gameweek">
+    matchweek_th = tr.find("th", {"data-stat": "gameweek"})
+    sett = matchweek_th.get_text(strip=True) if matchweek_th else ""
+
+    # Estraggo le celle in base a data-stat (più robusto che usare indici)
+    date_td       = tr.find("td", {"data-stat": "date"})
+    time_td       = tr.find("td", {"data-stat": "start_time"})
+    home_td       = tr.find("td", {"data-stat": "home_team"})
+    home_xg_td    = tr.find("td", {"data-stat": "home_xg"})
+    score_td      = tr.find("td", {"data-stat": "score"})
+    away_xg_td    = tr.find("td", {"data-stat": "away_xg"})
+    away_td       = tr.find("td", {"data-stat": "away_team"})
+
+    # Se mancano i campi essenziali, scarta
+    if not (date_td and time_td and home_td and score_td and away_td):
+        return None
+
+    giorno    = date_td.get_text(strip=True)  
+    orario    = time_td.get_text(strip=True)
+    casa_raw  = home_td.get_text(strip=True)
+    xg_casa   = home_xg_td.get_text(strip=True) if home_xg_td else ""
+    punteggio = score_td.get_text(strip=True)
+    xg_trasf  = away_xg_td.get_text(strip=True) if away_xg_td else ""
+    trasf_raw = away_td.get_text(strip=True)
+
+    # Rimuovo eventuali codici nazione
+    casa   = remove_country_code(casa_raw)
+    trasf  = remove_country_code(trasf_raw)
+
+    # Splitta gol casa e trasf da punteggio (es. "2–1")
+    gol_casa, gol_trasferta = "", ""
+    if "–" in punteggio:
+        parts = punteggio.split("–", 1)
+        if len(parts) == 2:
+            gol_casa, gol_trasferta = parts
+
+    return [
+        casa,               # Squadra Casa
+        trasf,              # Squadra Trasferta
+        orario,             # Orario
+        giorno,             # Giorno
+        league_name,        # Campionato
+        xg_casa,            # xG Casa
+        gol_casa,           # Gol Casa
+        gol_trasferta,      # Gol Trasferta
+        xg_trasf,           # xG Trasferta
+        sett                # Sett
+    ]
+
 def download_matches(base_url, league_name, league_code):
+    """
+    Scarica e parsa le tabelle.
+    Per la Champions, usa sched_all. Per le altre leghe, sched_{season}_{league_code}_1.
+    """
     all_matches = []
-    season_urls = get_season_urls(base_url, league_name)
-    session = requests.Session()  # Persistent session
+    urls = get_season_urls(base_url, league_name)
+    session = requests.Session()
+
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:114.0) Gecko/20100101 Firefox/114.0",
+        "User-Agent": "Mozilla/5.0",
         "Accept-Language": "en-US,en;q=0.5",
         "Accept-Encoding": "gzip, deflate, br",
         "Referer": "https://fbref.com/",
         "Connection": "keep-alive",
-        "DNT": "1",  # Do Not Track enabled
+        "DNT": "1",
         "Upgrade-Insecure-Requests": "1",
     }
-    for url in season_urls:
-        season = url.split("/")[-3] if "schedule" in url and "-" in url.split("/")[-3] else "2024-2025"  # Handle current season
-        print(f"Fetching data from: {url}")
+
+    for url in urls:
+        parts = url.split("/")
+        if "schedule" in url and "-" in parts[-3]:
+            season = parts[-3]  # es "2023-2024"
+        else:
+            season = "2024-2025"
+
+        print(f"\n[INFO] Downloading {url}  (season={season})")
+
         try:
-            response = session.get(url, headers=headers)
-            if response.status_code == 429:
-                print(f"Rate limited: Waiting 120 seconds...")
-                time.sleep(120)  # Wait and retry
-                response = session.get(url, headers=headers)
-            if response.status_code != 200:
-                print(f"Failed to retrieve {url} with status code {response.status_code}")
+            resp = session.get(url, headers=headers)
+            if resp.status_code == 429:
+                print("[WARN] Rate-limited, wait 120s ...")
+                time.sleep(120)
+                resp = session.get(url, headers=headers)
+
+            if resp.status_code != 200:
+                print(f"[WARN] {url} => HTTP {resp.status_code}")
                 continue
-            soup = BeautifulSoup(response.content, "html.parser")
-            table_id = f"sched_{season}_{league_code}_1"  # Correct table ID format
+
+            soup = BeautifulSoup(resp.content, "html.parser")
+
+            # Champions => "sched_all", altrimenti sched_{season}_{league_code}_1
+            if league_name == "Champions-League":
+                table_id = "sched_all"
+            else:
+                table_id = f"sched_{season}_{league_code}_1"
+
             table = soup.find("table", {"id": table_id})
             if not table:
-                print(f"Table not found for {url} (table_id: {table_id})")
+                print(f"[WARN] Table {table_id} not found in {url}")
                 continue
-            rows = table.find("tbody").find_all("tr")
-            for row in rows:
-                match_data = parse_match_data(row, league_name)
-                if match_data:
-                    all_matches.append(match_data)
-            time.sleep(10)  # Rate limiting: wait 10 seconds between requests
-        except Exception as e:
-            print(f"Error fetching data from {url}: {e}")
+
+            rows = table.find("tbody").find_all("tr", recursive=False)
+            print(f"[INFO] Found {len(rows)} rows in table {table_id}")
+
+            valid = 0
+            for tr in rows:
+                match_info = parse_match_row(tr, league_name)
+                if match_info:
+                    all_matches.append(match_info)
+                    valid += 1
+
+            print(f"[INFO] Valid matches extracted: {valid}")
+            time.sleep(5)
+        except Exception as ex:
+            print(f"[ERROR] {url}: {ex}")
             continue
+
     return all_matches
 
-# Main loop to gather data for all leagues
-columns = [
-    "Squadra Casa", "Squadra Trasferta", "Orario", "Giorno", "Campionato",
-    "xG Casa", "Gol Casa", "Gol Trasferta", "xG Trasferta", "Sett."
+# Colonne finali
+cols = [
+    "Squadra Casa","Squadra Trasferta","Orario","Giorno","Campionato",
+    "xG Casa","Gol Casa","Gol Trasferta","xG Trasferta","Sett."
 ]
-all_league_data = []
+all_data = []
+
 for league, (base_url, league_name) in leagues.items():
-    league_code = base_url.split("/")[-1]
-    print(f"Downloading data for {league}...")
-    league_matches = download_matches(base_url, league_name, league_code)
-    all_league_data.extend(league_matches)
+    code = base_url.split("/")[-1]
+    print(f"\n=== Scarico dati per {league} (code={code}) ===")
+    matches = download_matches(base_url, league_name, code)
+    all_data.extend(matches)
 
-# Convert to DataFrame
-df = pd.DataFrame(all_league_data, columns=columns)
+df = pd.DataFrame(all_data, columns=cols)
 
-# Increment the time by 1 hour for each match
-def increment_time(time_str):
+def fix_time(t):
+    """
+    Se vuoi aggiungere +1 ora, decommenta.
+    """
     try:
-        if time_str:
-            time_obj = datetime.strptime(time_str, "%H:%M")
-            return time_obj.strftime("%H:%M")
-    except ValueError:
-        return time_str  # Return original time if it fails to parse
-    return time_str
+        if t:
+            parsed = datetime.strptime(t, "%H:%M")
+            # parsed += timedelta(hours=1)
+            return parsed.strftime("%H:%M")
+    except:
+        pass
+    return t
 
-df["Orario"] = df["Orario"].apply(increment_time)
+df["Orario"] = df["Orario"].apply(fix_time)
 
-# Rimuovere righe vuote o con valori placeholder
-df = df.dropna(how="all")  # Rimuove righe completamente vuote
-df = df[~((df["Orario"] == "") | (df["Squadra Casa"] == "-") | (df["Gol Casa"] == "-") | (df["Gol Trasferta"] == "-"))]
+# Se vuoi TENERE TUTTE le gare (anche future), lascia così.
+# Se vuoi SOLO partite con risultato (Gol Casa != "-"), filtra:
+# df = df[~( (df["Gol Casa"]=="-") | (df["Gol Trasferta"]=="-") )]
 
 # Salva il CSV
 df.to_csv("public/data/all_leagues_matches.csv", index=False)
