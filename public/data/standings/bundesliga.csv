@@ -1,19 +1,19 @@
 ﻿Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
-1,Bayern Munich,19,15,3,1,58,16,42,48,46.2,11.0,bundesliga
-2,Leverkusen,19,12,6,1,46,26,20,42,36.5,20.0,bundesliga
-3,Eint Frankfurt,19,11,4,4,44,26,18,37,37.4,28.8,bundesliga
-4,Stuttgart,19,9,5,5,36,28,8,32,36.2,26.0,bundesliga
-5,RB Leipzig,19,9,5,5,34,29,5,32,26.6,31.2,bundesliga
-6,Mainz 05,19,9,4,6,33,23,10,31,26.9,26.4,bundesliga
-7,Wolfsburg,19,8,4,7,42,34,8,28,28.8,31.3,bundesliga
-8,Gladbach,19,8,3,8,30,29,1,27,29.3,35.3,bundesliga
-9,Werder Bremen,19,7,6,6,33,36,-3,27,25.7,26.0,bundesliga
-10,Freiburg,19,8,3,8,26,36,-10,27,23.3,25.1,bundesliga
-11,Dortmund,19,7,5,7,34,33,1,26,26.7,25.5,bundesliga
-12,Augsburg,19,7,4,8,23,34,-11,25,20.2,26.9,bundesliga
-13,St. Pauli,19,6,2,11,17,21,-4,20,21.3,25.2,bundesliga
-14,Union Berlin,19,5,4,10,15,28,-13,19,20.8,24.3,bundesliga
-15,Hoffenheim,19,4,6,9,25,37,-12,18,24.9,33.2,bundesliga
-16,Heidenheim,19,4,2,13,24,40,-16,14,25.2,31.7,bundesliga
-17,Holstein Kiel,19,3,3,13,28,48,-20,12,20.9,32.1,bundesliga
-18,Bochum,19,3,3,13,18,42,-24,12,22.0,39.1,bundesliga
+1,Bayern Munich,21,17,3,1,65,19,46,54,53.6,12.9,bundesliga
+2,Leverkusen,20,13,6,1,49,27,22,45,37.9,21.9,bundesliga
+3,Eint Frankfurt,20,11,5,4,45,27,18,38,38.5,30.0,bundesliga
+4,RB Leipzig,20,9,6,5,34,29,5,33,26.9,32.5,bundesliga
+5,Stuttgart,20,9,5,6,37,30,7,32,37.4,28.1,bundesliga
+6,Mainz 05,20,9,4,7,33,24,9,31,28.1,28.9,bundesliga
+7,Gladbach,20,9,3,8,32,30,2,30,31.4,36.5,bundesliga
+8,Werder Bremen,21,8,6,7,34,39,-5,30,28.4,31.3,bundesliga
+9,Freiburg,20,9,3,8,27,36,-9,30,25.0,26.1,bundesliga
+10,Wolfsburg,20,8,5,7,43,35,8,29,30.0,32.5,bundesliga
+11,Dortmund,20,8,5,7,36,34,2,29,29.0,26.0,bundesliga
+12,Augsburg,20,7,5,8,24,35,-11,26,20.5,27.7,bundesliga
+13,St. Pauli,20,6,3,11,18,22,-4,21,22.1,25.5,bundesliga
+14,Union Berlin,20,5,5,10,15,28,-13,20,22.1,24.6,bundesliga
+15,Hoffenheim,20,4,6,10,26,40,-14,18,26.8,34.6,bundesliga
+16,Heidenheim,20,4,2,14,25,42,-17,14,25.8,33.9,bundesliga
+17,Holstein Kiel,20,3,3,14,31,52,-21,12,22.6,35.5,bundesliga
+18,Bochum,20,3,3,14,18,43,-25,12,23.0,40.8,bundesliga

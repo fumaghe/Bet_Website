@@ -1,37 +1,37 @@
 ﻿Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
-1,Liverpool,7,7,0,0,15,2,13,21,17.3,5.8,champions league
-2,Barcelona,7,6,0,1,26,11,15,18,18.0,9.4,champions league
-3,Arsenal,7,5,1,1,14,2,12,16,13.7,5.0,champions league
-4,Inter,7,5,1,1,8,1,7,16,10.4,7.1,champions league
-5,Atlético Madrid,7,5,0,2,16,11,5,15,10.9,10.6,champions league
-6,Milan,7,5,0,2,13,9,4,15,10.4,11.0,champions league
-7,Atalanta,7,4,2,1,18,4,14,14,19.1,6.0,champions league
-8,Leverkusen,7,4,1,2,13,7,6,13,11.7,7.3,champions league
-9,Aston Villa,7,4,1,2,9,4,5,13,8.4,8.5,champions league
-10,Monaco,7,4,1,2,13,10,3,13,11.2,9.0,champions league
-11,Feyenoord,7,4,1,2,17,15,2,13,9.3,12.5,champions league
-12,Lille,7,4,1,2,11,9,2,13,8.2,12.8,champions league
-13,Brest,7,4,1,2,10,8,2,13,8.2,10.0,champions league
-14,Dortmund,7,4,0,3,19,11,8,12,13.5,11.6,champions league
-15,Bayern Munich,7,4,0,3,17,11,6,12,18.1,7.0,champions league
-16,Real Madrid,7,4,0,3,17,12,5,12,16.8,13.5,champions league
-17,Juventus,7,3,3,1,9,5,4,12,7.7,10.8,champions league
-18,Celtic,7,3,3,1,11,10,1,12,11.2,9.3,champions league
-19,PSV Eindhoven,7,3,2,2,13,10,3,11,10.8,12.7,champions league
-20,Club Brugge,7,3,2,2,6,8,-2,11,6.7,6.5,champions league
-21,Benfica,7,3,1,3,14,12,2,10,14.9,9.1,champions league
-22,Paris S-G,7,3,1,3,10,8,2,10,13.8,6.2,champions league
-23,Sporting CP,7,3,1,3,12,11,1,10,10.4,13.1,champions league
-24,Stuttgart,7,3,1,3,12,13,-1,10,13.3,8.7,champions league
-25,Manchester City,7,2,2,3,15,13,2,8,16.2,10.0,champions league
-26,Dinamo Zagreb,7,2,2,3,10,18,-8,8,5.7,15.3,champions league
-27,Shakhtar,7,2,1,4,7,13,-6,7,7.9,13.1,champions league
-28,Bologna,7,1,2,4,3,8,-5,5,7.0,8.6,champions league
-29,Sparta Prague,7,1,1,5,7,19,-12,4,5.6,11.7,champions league
-30,RB Leipzig,7,1,0,6,8,14,-6,3,10.7,11.4,champions league
-31,Girona,7,1,0,6,4,11,-7,3,8.8,10.5,champions league
-32,Red Star,7,1,0,6,12,22,-10,3,7.6,14.4,champions league
-33,Sturm Graz,7,1,0,6,4,14,-10,3,5.0,14.7,champions league
-34,RB Salzburg,7,1,0,6,4,23,-19,3,6.0,17.3,champions league
-35,Slovan Bratislava,7,0,0,7,6,24,-18,0,6.0,17.9,champions league
-36,Young Boys,7,0,0,7,3,23,-20,0,5.2,17.3,champions league
+1,Liverpool,8,7,0,1,17,5,12,21,18.9,7.1,champions league
+2,Barcelona,8,6,1,1,28,13,15,19,20.4,10.7,champions league
+3,Arsenal,8,6,1,1,16,3,13,19,15.8,5.8,champions league
+4,Inter,8,6,1,1,11,1,10,19,14.3,7.3,champions league
+5,Atlético Madrid,8,6,0,2,20,12,8,18,13.0,11.2,champions league
+6,Leverkusen,8,5,1,2,15,7,8,16,13.3,8.0,champions league
+7,Lille,8,5,1,2,17,10,7,16,9.5,13.5,champions league
+8,Aston Villa,8,5,1,2,13,6,7,16,12.3,9.3,champions league
+9,Atalanta,8,4,3,1,20,6,14,15,20.4,8.4,champions league
+10,Dortmund,8,5,0,3,22,12,10,15,15.8,11.9,champions league
+11,Real Madrid,8,5,0,3,20,12,8,15,19.4,14.9,champions league
+12,Bayern Munich,8,5,0,3,20,12,8,15,21.8,8.0,champions league
+13,Milan,8,5,0,3,14,11,3,15,11.5,12.4,champions league
+14,PSV Eindhoven,8,4,2,2,16,12,4,14,12.2,14.3,champions league
+15,Paris S-G,8,4,1,3,14,9,5,13,16.2,6.9,champions league
+16,Benfica,8,4,1,3,16,12,4,13,17.1,10.1,champions league
+17,Monaco,8,4,1,3,13,13,0,13,11.4,12.9,champions league
+18,Brest,8,4,1,3,10,11,-1,13,9.6,12.5,champions league
+19,Feyenoord,8,4,1,3,18,21,-3,13,10.0,13.8,champions league
+20,Juventus,8,3,3,2,9,7,2,12,8.6,13.0,champions league
+21,Celtic,8,3,3,2,13,14,-1,12,12.0,13.3,champions league
+22,Manchester City,8,3,2,3,18,14,4,11,18.2,11.1,champions league
+23,Sporting CP,8,3,2,3,13,12,1,11,11.6,14.2,champions league
+24,Club Brugge,8,3,2,3,7,11,-4,11,7.8,8.5,champions league
+25,Dinamo Zagreb,8,3,2,3,12,19,-7,11,7.0,16.4,champions league
+26,Stuttgart,8,3,1,4,13,17,-4,10,14.1,11.1,champions league
+27,Shakhtar,8,2,1,5,8,16,-8,7,8.3,15.5,champions league
+28,Bologna,8,1,3,4,4,9,-5,6,8.1,9.9,champions league
+29,Red Star,8,2,0,6,13,22,-9,6,9.3,14.9,champions league
+30,Sturm Graz,8,2,0,6,5,14,-9,6,6.2,16.2,champions league
+31,Sparta Prague,8,1,1,6,7,21,-14,4,6.3,13.3,champions league
+32,RB Leipzig,8,1,0,7,8,15,-7,3,12.3,12.7,champions league
+33,Girona,8,1,0,7,5,13,-8,3,9.6,12.6,champions league
+34,RB Salzburg,8,1,0,7,5,27,-22,3,6.6,19.4,champions league
+35,Slovan Bratislava,8,0,0,8,7,27,-20,0,7.0,21.6,champions league
+36,Young Boys,8,0,0,8,3,24,-21,0,5.6,19.1,champions league

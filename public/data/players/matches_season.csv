@@ -4,7 +4,7 @@ Ipswich Town,Liverpool,12:30,2024-08-17,Premier League
 Newcastle Utd,Southampton,15:00,2024-08-17,Premier League
 Nott'ham Forest,Bournemouth,15:00,2024-08-17,Premier League
 Everton,Brighton,15:00,2024-08-17,Premier League
-Arsenal,Wolves,15:00,2024-08-17,Premier League
+Arsenal,Wolv,15:00,2024-08-17,Premier League
 West Ham,Aston Villa,17:30,2024-08-17,Premier League
 Brentford,Crystal Palace,14:00,2024-08-18,Premier League
 Chelsea,Manchester City,16:30,2024-08-18,Premier League
@@ -17,12 +17,12 @@ Manchester City,Ipswich Town,15:00,2024-08-24,Premier League
 Southampton,Nott'ham Forest,15:00,2024-08-24,Premier League
 Aston Villa,Arsenal,17:30,2024-08-24,Premier League
 Bournemouth,Newcastle Utd,14:00,2024-08-25,Premier League
-Wolves,Chelsea,14:00,2024-08-25,Premier League
+Wolv,Chelsea,14:00,2024-08-25,Premier League
 Liverpool,Brentford,16:30,2024-08-25,Premier League
 Arsenal,Brighton,12:30,2024-08-31,Premier League
 Everton,Bournemouth,15:00,2024-08-31,Premier League
 Leicester City,Aston Villa,15:00,2024-08-31,Premier League
-Nott'ham Forest,Wolves,15:00,2024-08-31,Premier League
+Nott'ham Forest,Wolv,15:00,2024-08-31,Premier League
 Ipswich Town,Fulham,15:00,2024-08-31,Premier League
 Brentford,Southampton,15:00,2024-08-31,Premier League
 West Ham,Manchester City,17:30,2024-08-31,Premier League
@@ -38,14 +38,14 @@ Fulham,West Ham,15:00,2024-09-14,Premier League
 Aston Villa,Everton,17:30,2024-09-14,Premier League
 Bournemouth,Chelsea,20:00,2024-09-14,Premier League
 Tottenham,Arsenal,14:00,2024-09-15,Premier League
-Wolves,Newcastle Utd,16:30,2024-09-15,Premier League
+Wolv,Newcastle Utd,16:30,2024-09-15,Premier League
 West Ham,Chelsea,12:30,2024-09-21,Premier League
 Liverpool,Bournemouth,15:00,2024-09-21,Premier League
 Leicester City,Everton,15:00,2024-09-21,Premier League
 Southampton,Ipswich Town,15:00,2024-09-21,Premier League
 Tottenham,Brentford,15:00,2024-09-21,Premier League
 Fulham,Newcastle Utd,15:00,2024-09-21,Premier League
-Aston Villa,Wolves,15:00,2024-09-21,Premier League
+Aston Villa,Wolv,15:00,2024-09-21,Premier League
 Crystal Palace,Manchester Utd,17:30,2024-09-21,Premier League
 Brighton,Nott'ham Forest,14:00,2024-09-22,Premier League
 Manchester City,Arsenal,16:30,2024-09-22,Premier League
@@ -55,13 +55,13 @@ Arsenal,Leicester City,15:00,2024-09-28,Premier League
 Brentford,West Ham,15:00,2024-09-28,Premier League
 Everton,Crystal Palace,15:00,2024-09-28,Premier League
 Nott'ham Forest,Fulham,15:00,2024-09-28,Premier League
-Wolves,Liverpool,17:30,2024-09-28,Premier League
+Wolv,Liverpool,17:30,2024-09-28,Premier League
 Ipswich Town,Aston Villa,14:00,2024-09-29,Premier League
 Manchester Utd,Tottenham,16:30,2024-09-29,Premier League
 Bournemouth,Southampton,20:00,2024-09-30,Premier League
 Crystal Palace,Liverpool,12:30,2024-10-05,Premier League
 Manchester City,Fulham,15:00,2024-10-05,Premier League
-Brentford,Wolves,15:00,2024-10-05,Premier League
+Brentford,Wolv,15:00,2024-10-05,Premier League
 West Ham,Ipswich Town,15:00,2024-10-05,Premier League
 Arsenal,Southampton,15:00,2024-10-05,Premier League
 Leicester City,Bournemouth,15:00,2024-10-05,Premier League
@@ -76,12 +76,12 @@ Newcastle Utd,Brighton,15:00,2024-10-19,Premier League
 Fulham,Aston Villa,15:00,2024-10-19,Premier League
 Manchester Utd,Brentford,15:00,2024-10-19,Premier League
 Bournemouth,Arsenal,17:30,2024-10-19,Premier League
-Wolves,Manchester City,14:00,2024-10-20,Premier League
+Wolv,Manchester City,14:00,2024-10-20,Premier League
 Liverpool,Chelsea,16:30,2024-10-20,Premier League
 Nott'ham Forest,Crystal Palace,20:00,2024-10-21,Premier League
 Leicester City,Nott'ham Forest,20:00,2024-10-25,Premier League
 Brentford,Ipswich Town,15:00,2024-10-26,Premier League
-Brighton,Wolves,15:00,2024-10-26,Premier League
+Brighton,Wolv,15:00,2024-10-26,Premier League
 Manchester City,Southampton,15:00,2024-10-26,Premier League
 Aston Villa,Bournemouth,15:00,2024-10-26,Premier League
 Everton,Fulham,17:30,2024-10-26,Premier League
@@ -95,14 +95,14 @@ Liverpool,Brighton,15:00,2024-11-02,Premier League
 Nott'ham Forest,West Ham,15:00,2024-11-02,Premier League
 Ipswich Town,Leicester City,15:00,2024-11-02,Premier League
 Bournemouth,Manchester City,15:00,2024-11-02,Premier League
-Wolves,Crystal Palace,17:30,2024-11-02,Premier League
+Wolv,Crystal Palace,17:30,2024-11-02,Premier League
 Tottenham,Aston Villa,14:00,2024-11-03,Premier League
 Manchester Utd,Chelsea,16:30,2024-11-03,Premier League
 Fulham,Brentford,20:00,2024-11-04,Premier League
 Brentford,Bournemouth,15:00,2024-11-09,Premier League
 West Ham,Everton,15:00,2024-11-09,Premier League
 Crystal Palace,Fulham,15:00,2024-11-09,Premier League
-Wolves,Southampton,15:00,2024-11-09,Premier League
+Wolv,Southampton,15:00,2024-11-09,Premier League
 Brighton,Manchester City,17:30,2024-11-09,Premier League
 Liverpool,Aston Villa,20:00,2024-11-09,Premier League
 Manchester Utd,Leicester City,14:00,2024-11-10,Premier League
@@ -114,14 +114,14 @@ Arsenal,Nott'ham Forest,15:00,2024-11-23,Premier League
 Bournemouth,Brighton,15:00,2024-11-23,Premier League
 Aston Villa,Crystal Palace,15:00,2024-11-23,Premier League
 Everton,Brentford,15:00,2024-11-23,Premier League
-Fulham,Wolves,15:00,2024-11-23,Premier League
+Fulham,Wolv,15:00,2024-11-23,Premier League
 Manchester City,Tottenham,17:30,2024-11-23,Premier League
 Southampton,Liverpool,14:00,2024-11-24,Premier League
 Ipswich Town,Manchester Utd,16:30,2024-11-24,Premier League
 Newcastle Utd,West Ham,20:00,2024-11-25,Premier League
 Brighton,Southampton,20:00,2024-11-29,Premier League
 Crystal Palace,Newcastle Utd,15:00,2024-11-30,Premier League
-Wolves,Bournemouth,15:00,2024-11-30,Premier League
+Wolv,Bournemouth,15:00,2024-11-30,Premier League
 Nott'ham Forest,Ipswich Town,15:00,2024-11-30,Premier League
 Brentford,Leicester City,15:00,2024-11-30,Premier League
 West Ham,Arsenal,17:30,2024-11-30,Premier League
@@ -131,7 +131,7 @@ Manchester Utd,Everton,13:30,2024-12-01,Premier League
 Liverpool,Manchester City,16:00,2024-12-01,Premier League
 Ipswich Town,Crystal Palace,19:30,2024-12-03,Premier League
 Leicester City,West Ham,20:15,2024-12-03,Premier League
-Everton,Wolves,19:30,2024-12-04,Premier League
+Everton,Wolv,19:30,2024-12-04,Premier League
 Newcastle Utd,Liverpool,19:30,2024-12-04,Premier League
 Manchester City,Nott'ham Forest,19:30,2024-12-04,Premier League
 Southampton,Chelsea,19:30,2024-12-04,Premier League
@@ -147,10 +147,10 @@ Fulham,Arsenal,14:00,2024-12-08,Premier League
 Ipswich Town,Bournemouth,14:00,2024-12-08,Premier League
 Leicester City,Brighton,14:00,2024-12-08,Premier League
 Tottenham,Chelsea,16:30,2024-12-08,Premier League
-West Ham,Wolves,20:00,2024-12-09,Premier League
+West Ham,Wolv,20:00,2024-12-09,Premier League
 Newcastle Utd,Leicester City,15:00,2024-12-14,Premier League
 Arsenal,Everton,15:00,2024-12-14,Premier League
-Wolves,Ipswich Town,15:00,2024-12-14,Premier League
+Wolv,Ipswich Town,15:00,2024-12-14,Premier League
 Liverpool,Fulham,15:00,2024-12-14,Premier League
 Nott'ham Forest,Aston Villa,17:30,2024-12-14,Premier League
 Brighton,Crystal Palace,14:00,2024-12-15,Premier League
@@ -166,7 +166,7 @@ Crystal Palace,Arsenal,17:30,2024-12-21,Premier League
 Manchester Utd,Bournemouth,14:00,2024-12-22,Premier League
 Fulham,Southampton,14:00,2024-12-22,Premier League
 Everton,Chelsea,14:00,2024-12-22,Premier League
-Leicester City,Wolves,14:00,2024-12-22,Premier League
+Leicester City,Wolv,14:00,2024-12-22,Premier League
 Tottenham,Liverpool,16:30,2024-12-22,Premier League
 Manchester City,Everton,12:30,2024-12-26,Premier League
 Chelsea,Fulham,15:00,2024-12-26,Premier League
@@ -174,12 +174,12 @@ Southampton,West Ham,15:00,2024-12-26,Premier League
 Bournemouth,Crystal Palace,15:00,2024-12-26,Premier League
 Newcastle Utd,Aston Villa,15:00,2024-12-26,Premier League
 Nott'ham Forest,Tottenham,15:00,2024-12-26,Premier League
-Wolves,Manchester Utd,17:30,2024-12-26,Premier League
+Wolv,Manchester Utd,17:30,2024-12-26,Premier League
 Liverpool,Leicester City,20:00,2024-12-26,Premier League
 Brighton,Brentford,19:30,2024-12-27,Premier League
 Arsenal,Ipswich Town,20:15,2024-12-27,Premier League
 Leicester City,Manchester City,14:30,2024-12-29,Premier League
-Tottenham,Wolves,15:00,2024-12-29,Premier League
+Tottenham,Wolv,15:00,2024-12-29,Premier League
 Fulham,Bournemouth,15:00,2024-12-29,Premier League
 Everton,Nott'ham Forest,15:00,2024-12-29,Premier League
 Crystal Palace,Southampton,15:00,2024-12-29,Premier League
@@ -197,13 +197,13 @@ Aston Villa,Leicester City,15:00,2025-01-04,Premier League
 Brighton,Arsenal,17:30,2025-01-04,Premier League
 Fulham,Ipswich Town,14:00,2025-01-05,Premier League
 Liverpool,Manchester Utd,16:30,2025-01-05,Premier League
-Wolves,Nott'ham Forest,20:00,2025-01-06,Premier League
+Wolv,Nott'ham Forest,20:00,2025-01-06,Premier League
 Brentford,Manchester City,19:30,2025-01-14,Premier League
 West Ham,Fulham,19:30,2025-01-14,Premier League
 Chelsea,Bournemouth,19:30,2025-01-14,Premier League
 Nott'ham Forest,Liverpool,20:00,2025-01-14,Premier League
 Everton,Aston Villa,19:30,2025-01-15,Premier League
-Newcastle Utd,Wolves,19:30,2025-01-15,Premier League
+Newcastle Utd,Wolv,19:30,2025-01-15,Premier League
 Leicester City,Crystal Palace,19:30,2025-01-15,Premier League
 Arsenal,Tottenham,20:00,2025-01-15,Premier League
 Ipswich Town,Brighton,19:30,2025-01-16,Premier League
@@ -217,8 +217,8 @@ Manchester Utd,Brighton,14:00,2025-01-19,Premier League
 Nott'ham Forest,Southampton,14:00,2025-01-19,Premier League
 Everton,Tottenham,14:00,2025-01-19,Premier League
 Ipswich Town,Manchester City,16:30,2025-01-19,Premier League
-Chelsea,Wolves,20:00,2025-01-20,Premier League
-Wolves,Arsenal,15:00,2025-01-25,Premier League
+Chelsea,Wolv,20:00,2025-01-20,Premier League
+Wolv,Arsenal,15:00,2025-01-25,Premier League
 Southampton,Newcastle Utd,15:00,2025-01-25,Premier League
 Brighton,Everton,15:00,2025-01-25,Premier League
 Liverpool,Ipswich Town,15:00,2025-01-25,Premier League
@@ -233,7 +233,7 @@ Ipswich Town,Southampton,15:00,2025-02-01,Premier League
 Everton,Leicester City,15:00,2025-02-01,Premier League
 Newcastle Utd,Fulham,15:00,2025-02-01,Premier League
 Bournemouth,Liverpool,15:00,2025-02-01,Premier League
-Wolves,Aston Villa,17:30,2025-02-01,Premier League
+Wolv,Aston Villa,17:30,2025-02-01,Premier League
 Brentford,Tottenham,14:00,2025-02-02,Premier League
 Manchester Utd,Crystal Palace,14:00,2025-02-02,Premier League
 Arsenal,Manchester City,16:30,2025-02-02,Premier League
@@ -247,20 +247,21 @@ West Ham,Brentford,15:00,2025-02-15,Premier League
 Manchester City,Newcastle Utd,15:00,2025-02-15,Premier League
 Southampton,Bournemouth,15:00,2025-02-15,Premier League
 Crystal Palace,Everton,17:30,2025-02-15,Premier League
-Liverpool,Wolves,14:00,2025-02-16,Premier League
+Liverpool,Wolv,14:00,2025-02-16,Premier League
 Tottenham,Manchester Utd,16:30,2025-02-16,Premier League
+Aston Villa,Liverpool,19:30,2025-02-19,Premier League
 Leicester City,Brentford,20:00,2025-02-21,Premier League
 Everton,Manchester Utd,12:30,2025-02-22,Premier League
 Fulham,Crystal Palace,15:00,2025-02-22,Premier League
 Ipswich Town,Tottenham,15:00,2025-02-22,Premier League
-Bournemouth,Wolves,15:00,2025-02-22,Premier League
+Bournemouth,Wolv,15:00,2025-02-22,Premier League
 Arsenal,West Ham,15:00,2025-02-22,Premier League
 Southampton,Brighton,15:00,2025-02-22,Premier League
 Aston Villa,Chelsea,17:30,2025-02-22,Premier League
 Newcastle Utd,Nott'ham Forest,14:00,2025-02-23,Premier League
 Manchester City,Liverpool,16:30,2025-02-23,Premier League
 Crystal Palace,Aston Villa,19:30,2025-02-25,Premier League
-Wolves,Fulham,19:30,2025-02-25,Premier League
+Wolv,Fulham,19:30,2025-02-25,Premier League
 Brighton,Bournemouth,19:30,2025-02-25,Premier League
 Chelsea,Southampton,20:15,2025-02-25,Premier League
 Brentford,Everton,19:30,2025-02-26,Premier League
@@ -274,24 +275,23 @@ Liverpool,Southampton,15:00,2025-03-08,Premier League
 Crystal Palace,Ipswich Town,15:00,2025-03-08,Premier League
 Brighton,Fulham,15:00,2025-03-08,Premier League
 Brentford,Aston Villa,17:30,2025-03-08,Premier League
-Wolves,Everton,20:00,2025-03-08,Premier League
+Wolv,Everton,20:00,2025-03-08,Premier League
 Chelsea,Leicester City,14:00,2025-03-09,Premier League
 Tottenham,Bournemouth,14:00,2025-03-09,Premier League
 Manchester Utd,Arsenal,16:30,2025-03-09,Premier League
 West Ham,Newcastle Utd,20:00,2025-03-10,Premier League
-Aston Villa,Liverpool,12:30,2025-03-15,Premier League
-Fulham,Tottenham,15:00,2025-03-15,Premier League
-Newcastle Utd,Crystal Palace,15:00,2025-03-15,Premier League
+Newcastle Utd,Crystal Palace,,2025-03-15,Premier League
 Manchester City,Brighton,15:00,2025-03-15,Premier League
 Ipswich Town,Nott'ham Forest,15:00,2025-03-15,Premier League
 Everton,West Ham,15:00,2025-03-15,Premier League
-Southampton,Wolves,15:00,2025-03-15,Premier League
+Southampton,Wolv,15:00,2025-03-15,Premier League
 Bournemouth,Brentford,17:30,2025-03-15,Premier League
 Arsenal,Chelsea,,2025-03-16,Premier League
+Fulham,Tottenham,,2025-03-16,Premier League
 Leicester City,Manchester Utd,19:00,2025-03-16,Premier League
 Brighton,Aston Villa,19:45,2025-04-01,Premier League
 Bournemouth,Ipswich Town,19:45,2025-04-01,Premier League
-Wolves,West Ham,19:45,2025-04-01,Premier League
+Wolv,West Ham,19:45,2025-04-01,Premier League
 Arsenal,Fulham,19:45,2025-04-01,Premier League
 Nott'ham Forest,Manchester Utd,19:45,2025-04-01,Premier League
 Southampton,Crystal Palace,19:45,2025-04-02,Premier League
@@ -305,7 +305,7 @@ Brentford,Chelsea,15:00,2025-04-05,Premier League
 Aston Villa,Nott'ham Forest,15:00,2025-04-05,Premier League
 Everton,Arsenal,15:00,2025-04-05,Premier League
 Fulham,Liverpool,15:00,2025-04-05,Premier League
-Ipswich Town,Wolves,15:00,2025-04-05,Premier League
+Ipswich Town,Wolv,15:00,2025-04-05,Premier League
 Leicester City,Newcastle Utd,15:00,2025-04-05,Premier League
 Crystal Palace,Brighton,15:00,2025-04-05,Premier League
 Tottenham,Southampton,15:00,2025-04-05,Premier League
@@ -313,7 +313,7 @@ Bournemouth,Fulham,15:00,2025-04-12,Premier League
 Newcastle Utd,Manchester Utd,15:00,2025-04-12,Premier League
 Arsenal,Brentford,15:00,2025-04-12,Premier League
 Liverpool,West Ham,15:00,2025-04-12,Premier League
-Wolves,Tottenham,15:00,2025-04-12,Premier League
+Wolv,Tottenham,15:00,2025-04-12,Premier League
 Brighton,Leicester City,15:00,2025-04-12,Premier League
 Manchester City,Crystal Palace,15:00,2025-04-12,Premier League
 Nott'ham Forest,Everton,15:00,2025-04-12,Premier League
@@ -328,9 +328,9 @@ West Ham,Southampton,15:00,2025-04-19,Premier League
 Crystal Palace,Bournemouth,15:00,2025-04-19,Premier League
 Everton,Manchester City,15:00,2025-04-19,Premier League
 Fulham,Chelsea,15:00,2025-04-19,Premier League
-Manchester Utd,Wolves,15:00,2025-04-19,Premier League
+Manchester Utd,Wolv,15:00,2025-04-19,Premier League
 Chelsea,Everton,15:00,2025-04-26,Premier League
-Wolves,Leicester City,15:00,2025-04-26,Premier League
+Wolv,Leicester City,15:00,2025-04-26,Premier League
 Newcastle Utd,Ipswich Town,15:00,2025-04-26,Premier League
 Manchester City,Aston Villa,15:00,2025-04-26,Premier League
 Liverpool,Tottenham,15:00,2025-04-26,Premier League
@@ -341,7 +341,7 @@ Nott'ham Forest,Brentford,15:00,2025-04-26,Premier League
 Brighton,West Ham,15:00,2025-04-26,Premier League
 Chelsea,Liverpool,15:00,2025-05-03,Premier League
 Brentford,Manchester Utd,15:00,2025-05-03,Premier League
-Manchester City,Wolves,15:00,2025-05-03,Premier League
+Manchester City,Wolv,15:00,2025-05-03,Premier League
 West Ham,Tottenham,15:00,2025-05-03,Premier League
 Crystal Palace,Nott'ham Forest,15:00,2025-05-03,Premier League
 Arsenal,Bournemouth,15:00,2025-05-03,Premier League
@@ -358,7 +358,7 @@ Nott'ham Forest,Leicester City,15:00,2025-05-10,Premier League
 Manchester Utd,West Ham,15:00,2025-05-10,Premier League
 Bournemouth,Aston Villa,15:00,2025-05-10,Premier League
 Ipswich Town,Brentford,15:00,2025-05-10,Premier League
-Wolves,Brighton,15:00,2025-05-10,Premier League
+Wolv,Brighton,15:00,2025-05-10,Premier League
 Brentford,Fulham,15:00,2025-05-18,Premier League
 Arsenal,Newcastle Utd,15:00,2025-05-18,Premier League
 Brighton,Liverpool,15:00,2025-05-18,Premier League
@@ -368,7 +368,7 @@ Everton,Southampton,15:00,2025-05-18,Premier League
 Aston Villa,Tottenham,15:00,2025-05-18,Premier League
 Chelsea,Manchester Utd,15:00,2025-05-18,Premier League
 Manchester City,Bournemouth,15:00,2025-05-18,Premier League
-Crystal Palace,Wolves,15:00,2025-05-18,Premier League
+Crystal Palace,Wolv,15:00,2025-05-18,Premier League
 Southampton,Arsenal,16:00,2025-05-25,Premier League
 Liverpool,Crystal Palace,16:00,2025-05-25,Premier League
 Ipswich Town,West Ham,16:00,2025-05-25,Premier League
@@ -377,98 +377,168 @@ Newcastle Utd,Everton,16:00,2025-05-25,Premier League
 Fulham,Manchester City,16:00,2025-05-25,Premier League
 Nott'ham Forest,Chelsea,16:00,2025-05-25,Premier League
 Manchester Utd,Aston Villa,16:00,2025-05-25,Premier League
-Wolves,Brentford,16:00,2025-05-25,Premier League
+Wolv,Brentford,16:00,2025-05-25,Premier League
 Tottenham,Brighton,16:00,2025-05-25,Premier League
-FK Panevėžys,HJK,18:30,2024-07-09,Champions League
-KV,Shamrock Rov,18:45,2024-07-09,Champions League
-Ħamrun Spartans FC,Red Imps,18:45,2024-07-09,Champions League
-The New Saints,FK Dečić,19:00,2024-07-09,Champions League
-UE Santa Coloma,KF Ballkani Therandë,20:00,2024-07-09,Champions League
-AC Virtus,FCSB,21:00,2024-07-09,Champions League
-Slovan Bratislava,FK Struga Trim-Lum,19:00,2024-07-10,Champions League
-Flora,NK Celje,19:00,2024-07-10,Champions League
-KÍ,Differdange,19:00,2024-07-10,Champions League
-FK Rīgas FS,Larne FC,20:00,2024-07-10,Champions League
-Ordabasy,Petrocub,21:00,2024-07-10,Champions League
-Borac Banja Luka,FK Egnatia,21:00,2024-07-10,Champions League
-Ludogorets,Dinamo Batumi,21:00,2024-07-10,Champions League
-Dinamo Minsk,Pyunik,21:45,2024-07-10,Champions League
-KF Ballkani Therandë,UE Santa Coloma,16:30,2024-07-16,Champions League
-Red Imps,Ħamrun Spartans FC,18:00,2024-07-16,Champions League
-HJK,FK Panevėžys,19:00,2024-07-16,Champions League
-NK Celje,Flora,19:00,2024-07-16,Champions League
-Shamrock Rov,KV,20:00,2024-07-16,Champions League
-Pyunik,Dinamo Minsk,20:00,2024-07-16,Champions League
-FCSB,AC Virtus,20:30,2024-07-16,Champions League
-FK Dečić,The New Saints,21:00,2024-07-16,Champions League
-FK Struga Trim-Lum,Slovan Bratislava,17:00,2024-07-17,Champions League
-Differdange,KÍ,19:00,2024-07-17,Champions League
-Petrocub,Ordabasy,20:00,2024-07-17,Champions League
-Larne FC,FK Rīgas FS,20:00,2024-07-17,Champions League
-FK Egnatia,Borac Banja Luka,21:00,2024-07-17,Champions League
-Dinamo Batumi,Ludogorets,21:00,2024-07-17,Champions League
-Bodø/Glimt,FK Rīgas FS,17:00,2024-07-23,Champions League
-Red Imps,Qarabağ,18:00,2024-07-23,Champions League
-FK Panevėžys,Jagiellonia,18:30,2024-07-23,Champions League
-Malmö,KÍ,19:00,2024-07-23,Champions League
-Ferencváros,The New Saints,20:00,2024-07-23,Champions League
-APOEL,Petrocub,20:00,2024-07-23,Champions League
-UE Santa Coloma,Midtjylland,20:00,2024-07-23,Champions League
-Shamrock Rov,Sparta Prague,20:00,2024-07-23,Champions League
-FCSB,Maccabi Tel Aviv,20:30,2024-07-23,Champions League
-Lugano,Fenerbahçe,20:30,2024-07-23,Champions League
-Dynamo Kyiv,Partizan,21:00,2024-07-23,Champions League
-NK Celje,Slovan Bratislava,20:15,2024-07-24,Champions League
-PAOK,Borac Banja Luka,20:30,2024-07-24,Champions League
-Ludogorets,Dinamo Minsk,21:00,2024-07-24,Champions League
-The New Saints,Ferencváros,19:00,2024-07-30,Champions League
-Sparta Prague,Shamrock Rov,19:00,2024-07-30,Champions League
-KÍ,Malmö,19:45,2024-07-30,Champions League
-Petrocub,APOEL,20:00,2024-07-30,Champions League
-Fenerbahçe,Lugano,20:00,2024-07-30,Champions League
-Qarabağ,Red Imps,20:00,2024-07-30,Champions League
-Slovan Bratislava,NK Celje,20:30,2024-07-30,Champions League
-Midtjylland,UE Santa Coloma,19:15,2024-07-31,Champions League
-Partizan,Dynamo Kyiv,20:00,2024-07-31,Champions League
-FK Rīgas FS,Bodø/Glimt,20:00,2024-07-31,Champions League
-Maccabi Tel Aviv,FCSB,20:00,2024-07-31,Champions League
-Jagiellonia,FK Panevėžys,20:30,2024-07-31,Champions League
-Borac Banja Luka,PAOK,21:00,2024-07-31,Champions League
-Dinamo Minsk,Ludogorets,21:45,2024-07-31,Champions League
-Malmö,PAOK,19:00,2024-08-06,Champions League
-Midtjylland,Ferencváros,19:15,2024-08-06,Champions League
-Sparta Prague,FCSB,20:00,2024-08-06,Champions League
-Dynamo Kyiv,Rangers,20:00,2024-08-06,Champions League
-Qarabağ,Ludogorets,20:00,2024-08-06,Champions League
-Lille,Fenerbahçe,20:30,2024-08-06,Champions League
-RB Salzburg,Twente,20:45,2024-08-06,Champions League
-Slavia Prague,Union SG,19:00,2024-08-07,Champions League
-Slovan Bratislava,APOEL,20:30,2024-08-07,Champions League
-Jagiellonia,Bodø/Glimt,20:45,2024-08-07,Champions League
-Twente,RB Salzburg,19:00,2024-08-13,Champions League
-Bodø/Glimt,Jagiellonia,19:00,2024-08-13,Champions League
-Rangers,Dynamo Kyiv,19:45,2024-08-13,Champions League
-Fenerbahçe,Lille,20:00,2024-08-13,Champions League
-APOEL,Slovan Bratislava,20:00,2024-08-13,Champions League
-Ferencváros,Midtjylland,20:00,2024-08-13,Champions League
-Union SG,Slavia Prague,20:30,2024-08-13,Champions League
-PAOK,Malmö,20:30,2024-08-13,Champions League
-Ludogorets,Qarabağ,21:00,2024-08-13,Champions League
-FCSB,Sparta Prague,21:30,2024-08-13,Champions League
-Dinamo Zagreb,Qarabağ,21:00,2024-08-20,Champions League
-Bodø/Glimt,Red Star,21:00,2024-08-20,Champions League
-Lille,Slavia Prague,21:00,2024-08-20,Champions League
-Dynamo Kyiv,RB Salzburg,21:00,2024-08-21,Champions League
-Malmö,Sparta Prague,21:00,2024-08-21,Champions League
-Midtjylland,Slovan Bratislava,21:00,2024-08-21,Champions League
-Young Boys,Galatasaray,21:00,2024-08-21,Champions League
-RB Salzburg,Dynamo Kyiv,21:00,2024-08-27,Champions League
-Sparta Prague,Malmö,21:00,2024-08-27,Champions League
-Galatasaray,Young Boys,22:00,2024-08-27,Champions League
-Qarabağ,Dinamo Zagreb,20:45,2024-08-28,Champions League
-Red Star,Bodø/Glimt,21:00,2024-08-28,Champions League
-Slavia Prague,Lille,21:00,2024-08-28,Champions League
-Slovan Bratislava,Midtjylland,21:00,2024-08-28,Champions League
+Young Boys,Aston Villa,18:45,2024-09-17,Champions League
+Juventus,PSV Eindhoven,18:45,2024-09-17,Champions League
+Sporting CP,Lille,20:00,2024-09-17,Champions League
+Real Madrid,Stuttgart,21:00,2024-09-17,Champions League
+Milan,Liverpool,21:00,2024-09-17,Champions League
+Bayern Munich,Dinamo Zagreb,21:00,2024-09-17,Champions League
+Bologna,Shakhtar,18:45,2024-09-18,Champions League
+Sparta Prague,RB Salzburg,18:45,2024-09-18,Champions League
+Celtic,Slovan Bratislava,20:00,2024-09-18,Champions League
+Manchester City,Inter,20:00,2024-09-18,Champions League
+Paris S-G,Girona,21:00,2024-09-18,Champions League
+Club Brugge,Dortmund,21:00,2024-09-18,Champions League
+Feyenoord,Leverkusen,18:45,2024-09-19,Champions League
+Red Star,Benfica,18:45,2024-09-19,Champions League
+Atalanta,Arsenal,21:00,2024-09-19,Champions League
+Brest,Sturm Graz,21:00,2024-09-19,Champions League
+Monaco,Barcelona,21:00,2024-09-19,Champions League
+Atlético Madrid,RB Leipzig,21:00,2024-09-19,Champions League
+Stuttgart,Sparta Prague,18:45,2024-10-01,Champions League
+RB Salzburg,Brest,18:45,2024-10-01,Champions League
+Arsenal,Paris S-G,20:00,2024-10-01,Champions League
+Inter,Red Star,21:00,2024-10-01,Champions League
+Leverkusen,Milan,21:00,2024-10-01,Champions League
+Dortmund,Celtic,21:00,2024-10-01,Champions League
+Barcelona,Young Boys,21:00,2024-10-01,Champions League
+PSV Eindhoven,Sporting CP,21:00,2024-10-01,Champions League
+Slovan Bratislava,Manchester City,21:00,2024-10-01,Champions League
+Girona,Feyenoord,18:45,2024-10-02,Champions League
+Shakhtar,Atalanta,18:45,2024-10-02,Champions League
+Aston Villa,Bayern Muni,20:00,2024-10-02,Champions League
+Liverpool,Bologna,20:00,2024-10-02,Champions League
+Benfica,Atlético Madrid,20:00,2024-10-02,Champions League
+RB Leipzig,Juventus,21:00,2024-10-02,Champions League
+Lille,Real Madrid,21:00,2024-10-02,Champions League
+Sturm Graz,Club Brugge,21:00,2024-10-02,Champions League
+Dinamo Zagreb,Monaco,21:00,2024-10-02,Champions League
+Monaco,Red Star,18:45,2024-10-22,Champions League
+Milan,Club Brugge,18:45,2024-10-22,Champions League
+Arsenal,Shakhtar,20:00,2024-10-22,Champions League
+Aston Villa,Bologna,20:00,2024-10-22,Champions League
+Juventus,Stuttgart,21:00,2024-10-22,Champions League
+Sturm Graz,Sporting CP,21:00,2024-10-22,Champions League
+Paris S-G,PSV Eindhoven,21:00,2024-10-22,Champions League
+Real Madrid,Dortmund,21:00,2024-10-22,Champions League
+Girona,Slovan Bratislava,21:00,2024-10-22,Champions League
+Brest,Leverkusen,18:45,2024-10-23,Champions League
+Atalanta,Celtic,18:45,2024-10-23,Champions League
+Benfica,Feyenoord,20:00,2024-10-23,Champions League
+Manchester City,Sparta Prague,20:00,2024-10-23,Champions League
+RB Salzburg,Dinamo Zagreb,21:00,2024-10-23,Champions League
+Barcelona,Bayern Muni,21:00,2024-10-23,Champions League
+RB Leipzig,Liverpool,21:00,2024-10-23,Champions League
+Atlético Madrid,Lille,21:00,2024-10-23,Champions League
+Young Boys,Inter,21:00,2024-10-23,Champions League
+Slovan Bratislava,Dinamo Zagreb,18:45,2024-11-05,Champions League
+PSV Eindhoven,Girona,18:45,2024-11-05,Champions League
+Sporting CP,Manchester City,20:00,2024-11-05,Champions League
+Liverpool,Leverkusen,20:00,2024-11-05,Champions League
+Celtic,RB Leipzig,20:00,2024-11-05,Champions League
+Bologna,Monaco,21:00,2024-11-05,Champions League
+Real Madrid,Milan,21:00,2024-11-05,Champions League
+Lille,Juventus,21:00,2024-11-05,Champions League
+Dortmund,Sturm Graz,21:00,2024-11-05,Champions League
+Club Brugge,Aston Villa,18:45,2024-11-06,Champions League
+Shakhtar,Young Boys,19:45,2024-11-06,Champions League
+Bayern Munich,Benfica,21:00,2024-11-06,Champions League
+Feyenoord,RB Salzburg,21:00,2024-11-06,Champions League
+Inter,Arsenal,21:00,2024-11-06,Champions League
+Stuttgart,Atalanta,21:00,2024-11-06,Champions League
+Red Star,Barcelona,21:00,2024-11-06,Champions League
+Sparta Prague,Brest,21:00,2024-11-06,Champions League
+Paris S-G,Atlético Madrid,21:00,2024-11-06,Champions League
+Slovan Bratislava,Milan,18:45,2024-11-26,Champions League
+Sparta Prague,Atlético Madrid,18:45,2024-11-26,Champions League
+Sporting CP,Arsenal,20:00,2024-11-26,Champions League
+Manchester City,Feyenoord,20:00,2024-11-26,Champions League
+Inter,RB Leipzig,21:00,2024-11-26,Champions League
+Leverkusen,RB Salzburg,21:00,2024-11-26,Champions League
+Bayern Munich,Paris S-G,21:00,2024-11-26,Champions League
+Young Boys,Atalanta,21:00,2024-11-26,Champions League
+Barcelona,Brest,21:00,2024-11-26,Champions League
+Red Star,Stuttgart,18:45,2024-11-27,Champions League
+Sturm Graz,Girona,18:45,2024-11-27,Champions League
+Aston Villa,Juventus,20:00,2024-11-27,Champions League
+Celtic,Club Brugge,20:00,2024-11-27,Champions League
+Liverpool,Real Madrid,20:00,2024-11-27,Champions League
+Dinamo Zagreb,Dortmund,21:00,2024-11-27,Champions League
+Monaco,Benfica,21:00,2024-11-27,Champions League
+PSV Eindhoven,Shakhtar,21:00,2024-11-27,Champions League
+Bologna,Lille,21:00,2024-11-27,Champions League
+Girona,Liverpool,18:45,2024-12-10,Champions League
+Dinamo Zagreb,Celtic,18:45,2024-12-10,Champions League
+Club Brugge,Sporting CP,21:00,2024-12-10,Champions League
+RB Salzburg,Paris S-G,21:00,2024-12-10,Champions League
+RB Leipzig,Aston Villa,21:00,2024-12-10,Champions League
+Brest,PSV Eindhoven,21:00,2024-12-10,Champions League
+Leverkusen,Inter,21:00,2024-12-10,Champions League
+Atalanta,Real Madrid,21:00,2024-12-10,Champions League
+Shakhtar,Bayern Muni,22:00,2024-12-10,Champions League
+Atlético Madrid,Slovan Bratislava,18:45,2024-12-11,Champions League
+Lille,Sturm Graz,18:45,2024-12-11,Champions League
+Benfica,Bologna,20:00,2024-12-11,Champions League
+Arsenal,Monaco,20:00,2024-12-11,Champions League
+Juventus,Manchester City,21:00,2024-12-11,Champions League
+Stuttgart,Young Boys,21:00,2024-12-11,Champions League
+Feyenoord,Sparta Prague,21:00,2024-12-11,Champions League
+Milan,Red Star,21:00,2024-12-11,Champions League
+Dortmund,Barcelona,21:00,2024-12-11,Champions League
+Atalanta,Sturm Graz,18:45,2025-01-21,Champions League
+Monaco,Aston Villa,18:45,2025-01-21,Champions League
+Liverpool,Lille,20:00,2025-01-21,Champions League
+Benfica,Barcelona,20:00,2025-01-21,Champions League
+Atlético Madrid,Leverkusen,21:00,2025-01-21,Champions League
+Club Brugge,Juventus,21:00,2025-01-21,Champions League
+Red Star,PSV Eindhoven,21:00,2025-01-21,Champions League
+Slovan Bratislava,Stuttgart,21:00,2025-01-21,Champions League
+Bologna,Dortmund,21:00,2025-01-21,Champions League
+RB Leipzig,Sporting CP,18:45,2025-01-22,Champions League
+Shakhtar,Brest,19:45,2025-01-22,Champions League
+Celtic,Young Boys,20:00,2025-01-22,Champions League
+Arsenal,Dinamo Zagreb,20:00,2025-01-22,Champions League
+Feyenoord,Bayern Muni,21:00,2025-01-22,Champions League
+Real Madrid,RB Salzburg,21:00,2025-01-22,Champions League
+Sparta Prague,Inter,21:00,2025-01-22,Champions League
+Milan,Girona,21:00,2025-01-22,Champions League
+Paris S-G,Manchester City,21:00,2025-01-22,Champions League
+Aston Villa,Celtic,20:00,2025-01-29,Champions League
+Sporting CP,Bologna,20:00,2025-01-29,Champions League
+Manchester City,Club Brugge,20:00,2025-01-29,Champions League
+Brest,Real Madrid,21:00,2025-01-29,Champions League
+Juventus,Benfica,21:00,2025-01-29,Champions League
+Sturm Graz,RB Leipzig,21:00,2025-01-29,Champions League
+Lille,Feyenoord,21:00,2025-01-29,Champions League
+Stuttgart,Paris S-G,21:00,2025-01-29,Champions League
+RB Salzburg,Atlético Madrid,21:00,2025-01-29,Champions League
+Dortmund,Shakhtar,21:00,2025-01-29,Champions League
+Barcelona,Atalanta,21:00,2025-01-29,Champions League
+PSV Eindhoven,Liverpool,21:00,2025-01-29,Champions League
+Inter,Monaco,21:00,2025-01-29,Champions League
+Leverkusen,Sparta Prague,21:00,2025-01-29,Champions League
+Young Boys,Red Star,21:00,2025-01-29,Champions League
+Girona,Arsenal,21:00,2025-01-29,Champions League
+Bayern Munich,Slovan Bratislava,21:00,2025-01-29,Champions League
+Dinamo Zagreb,Milan,21:00,2025-01-29,Champions League
+Brest,Paris S-G,18:45,2025-02-11,Champions League
+Manchester City,Real Madrid,20:00,2025-02-11,Champions League
+Sporting CP,Dortmund,20:00,2025-02-11,Champions League
+Juventus,PSV Eindhoven,21:00,2025-02-11,Champions League
+Club Brugge,Atalanta,18:45,2025-02-12,Champions League
+Celtic,Bayern Muni,20:00,2025-02-12,Champions League
+Monaco,Benfica,21:00,2025-02-12,Champions League
+Feyenoord,Milan,21:00,2025-02-12,Champions League
+Milan,Feyenoord,18:45,2025-02-18,Champions League
+Benfica,Monaco,20:00,2025-02-18,Champions League
+Bayern Munich,Celtic,21:00,2025-02-18,Champions League
+Atalanta,Club Brugge,21:00,2025-02-18,Champions League
+Dortmund,Sporting CP,18:45,2025-02-19,Champions League
+PSV Eindhoven,Juventus,21:00,2025-02-19,Champions League
+Paris S-G,Brest,21:00,2025-02-19,Champions League
+Real Madrid,Manchester City,21:00,2025-02-19,Champions League
 Athletic Club,Getafe,19:00,2024-08-15,La Liga
 Betis,Girona,21:30,2024-08-15,La Liga
 Celta Vigo,Alavés,19:00,2024-08-16,La Liga
@@ -849,97 +919,97 @@ Villarreal,Sevilla,,2025-05-25,La Liga
 Girona,Atlético Madrid,,2025-05-25,La Liga
 Alavés,Osasuna,,2025-05-25,La Liga
 Rayo Vallecano,Mallorca,,2025-05-25,La Liga
-Gladbach,Leverkusen,20:30,2024-08-23,Bundesliga
+Gladba,Leverkusen,20:30,2024-08-23,Bundesliga
 Mainz 05,Union Berlin,15:30,2024-08-24,Bundesliga
 Augsburg,Werder Bremen,15:30,2024-08-24,Bundesliga
 Freiburg,Stuttgart,15:30,2024-08-24,Bundesliga
 Hoffenheim,Holstein Kiel,15:30,2024-08-24,Bundesliga
 RB Leipzig,Bochum,15:30,2024-08-24,Bundesliga
 Dortmund,Eint Frankfurt,18:30,2024-08-24,Bundesliga
-Wolfsburg,Bayern Munich,15:30,2024-08-25,Bundesliga
+Wolfsburg,Bayern Muni,15:30,2024-08-25,Bundesliga
 St. Pauli,Heidenheim,17:30,2024-08-25,Bundesliga
 Union Berlin,St. Pauli,20:30,2024-08-30,Bundesliga
 Werder Bremen,Dortmund,15:30,2024-08-31,Bundesliga
 Eint Frankfurt,Hoffenheim,15:30,2024-08-31,Bundesliga
 Stuttgart,Mainz 05,15:30,2024-08-31,Bundesliga
 Holstein Kiel,Wolfsburg,15:30,2024-08-31,Bundesliga
-Bochum,Gladbach,15:30,2024-08-31,Bundesliga
+Bochum,Gladba,15:30,2024-08-31,Bundesliga
 Leverkusen,RB Leipzig,18:30,2024-08-31,Bundesliga
 Heidenheim,Augsburg,15:30,2024-09-01,Bundesliga
-Bayern Munich,Freiburg,17:30,2024-09-01,Bundesliga
+Bayern Muni,Freiburg,17:30,2024-09-01,Bundesliga
 Dortmund,Heidenheim,20:30,2024-09-13,Bundesliga
 RB Leipzig,Union Berlin,15:30,2024-09-14,Bundesliga
-Gladbach,Stuttgart,15:30,2024-09-14,Bundesliga
+Gladba,Stuttgart,15:30,2024-09-14,Bundesliga
 Freiburg,Bochum,15:30,2024-09-14,Bundesliga
 Wolfsburg,Eint Frankfurt,15:30,2024-09-14,Bundesliga
 Hoffenheim,Leverkusen,15:30,2024-09-14,Bundesliga
-Holstein Kiel,Bayern Munich,18:30,2024-09-14,Bundesliga
+Holstein Kiel,Bayern Muni,18:30,2024-09-14,Bundesliga
 Augsburg,St. Pauli,15:30,2024-09-15,Bundesliga
 Mainz 05,Werder Bremen,17:30,2024-09-15,Bundesliga
 Augsburg,Mainz 05,20:30,2024-09-20,Bundesliga
 Heidenheim,Freiburg,15:30,2024-09-21,Bundesliga
 Union Berlin,Hoffenheim,15:30,2024-09-21,Bundesliga
 Bochum,Holstein Kiel,15:30,2024-09-21,Bundesliga
-Werder Bremen,Bayern Munich,15:30,2024-09-21,Bundesliga
-Eint Frankfurt,Gladbach,18:30,2024-09-21,Bundesliga
+Werder Bremen,Bayern Muni,15:30,2024-09-21,Bundesliga
+Eint Frankfurt,Gladba,18:30,2024-09-21,Bundesliga
 Leverkusen,Wolfsburg,15:30,2024-09-22,Bundesliga
 Stuttgart,Dortmund,17:30,2024-09-22,Bundesliga
 St. Pauli,RB Leipzig,19:30,2024-09-22,Bundesliga
 Dortmund,Bochum,20:30,2024-09-27,Bundesliga
 RB Leipzig,Augsburg,15:30,2024-09-28,Bundesliga
-Gladbach,Union Berlin,15:30,2024-09-28,Bundesliga
+Gladba,Union Berlin,15:30,2024-09-28,Bundesliga
 Freiburg,St. Pauli,15:30,2024-09-28,Bundesliga
 Wolfsburg,Stuttgart,15:30,2024-09-28,Bundesliga
 Mainz 05,Heidenheim,15:30,2024-09-28,Bundesliga
-Bayern Munich,Leverkusen,18:30,2024-09-28,Bundesliga
+Bayern Muni,Leverkusen,18:30,2024-09-28,Bundesliga
 Holstein Kiel,Eint Frankfurt,15:30,2024-09-29,Bundesliga
 Hoffenheim,Werder Bremen,17:30,2024-09-29,Bundesliga
-Augsburg,Gladbach,20:30,2024-10-04,Bundesliga
+Augsburg,Gladba,20:30,2024-10-04,Bundesliga
 Union Berlin,Dortmund,15:30,2024-10-05,Bundesliga
 Werder Bremen,Freiburg,15:30,2024-10-05,Bundesliga
 Leverkusen,Holstein Kiel,15:30,2024-10-05,Bundesliga
 Bochum,Wolfsburg,15:30,2024-10-05,Bundesliga
 St. Pauli,Mainz 05,18:30,2024-10-05,Bundesliga
 Heidenheim,RB Leipzig,15:30,2024-10-06,Bundesliga
-Eint Frankfurt,Bayern Munich,17:30,2024-10-06,Bundesliga
+Eint Frankfurt,Bayern Muni,17:30,2024-10-06,Bundesliga
 Stuttgart,Hoffenheim,19:30,2024-10-06,Bundesliga
 Dortmund,St. Pauli,20:30,2024-10-18,Bundesliga
 Mainz 05,RB Leipzig,15:30,2024-10-19,Bundesliga
 Leverkusen,Eint Frankfurt,15:30,2024-10-19,Bundesliga
 Freiburg,Augsburg,15:30,2024-10-19,Bundesliga
 Hoffenheim,Bochum,15:30,2024-10-19,Bundesliga
-Gladbach,Heidenheim,15:30,2024-10-19,Bundesliga
-Bayern Munich,Stuttgart,18:30,2024-10-19,Bundesliga
+Gladba,Heidenheim,15:30,2024-10-19,Bundesliga
+Bayern Muni,Stuttgart,18:30,2024-10-19,Bundesliga
 Holstein Kiel,Union Berlin,15:30,2024-10-20,Bundesliga
 Wolfsburg,Werder Bremen,17:30,2024-10-20,Bundesliga
-Mainz 05,Gladbach,20:30,2024-10-25,Bundesliga
+Mainz 05,Gladba,20:30,2024-10-25,Bundesliga
 Stuttgart,Holstein Kiel,15:30,2024-10-26,Bundesliga
 Augsburg,Dortmund,15:30,2024-10-26,Bundesliga
 St. Pauli,Wolfsburg,15:30,2024-10-26,Bundesliga
 RB Leipzig,Freiburg,15:30,2024-10-26,Bundesliga
 Werder Bremen,Leverkusen,18:30,2024-10-26,Bundesliga
-Bochum,Bayern Munich,15:30,2024-10-27,Bundesliga
+Bochum,Bayern Muni,15:30,2024-10-27,Bundesliga
 Union Berlin,Eint Frankfurt,17:30,2024-10-27,Bundesliga
 Heidenheim,Hoffenheim,19:30,2024-10-27,Bundesliga
 Leverkusen,Stuttgart,20:30,2024-11-01,Bundesliga
 Hoffenheim,St. Pauli,15:30,2024-11-02,Bundesliga
 Wolfsburg,Augsburg,15:30,2024-11-02,Bundesliga
-Bayern Munich,Union Berlin,15:30,2024-11-02,Bundesliga
+Bayern Muni,Union Berlin,15:30,2024-11-02,Bundesliga
 Holstein Kiel,Heidenheim,15:30,2024-11-02,Bundesliga
 Eint Frankfurt,Bochum,15:30,2024-11-02,Bundesliga
 Dortmund,RB Leipzig,18:30,2024-11-02,Bundesliga
 Freiburg,Mainz 05,15:30,2024-11-03,Bundesliga
-Gladbach,Werder Bremen,17:30,2024-11-03,Bundesliga
+Gladba,Werder Bremen,17:30,2024-11-03,Bundesliga
 Union Berlin,Freiburg,20:30,2024-11-08,Bundesliga
-St. Pauli,Bayern Munich,15:30,2024-11-09,Bundesliga
+St. Pauli,Bayern Muni,15:30,2024-11-09,Bundesliga
 Bochum,Leverkusen,15:30,2024-11-09,Bundesliga
 Werder Bremen,Holstein Kiel,15:30,2024-11-09,Bundesliga
 Mainz 05,Dortmund,15:30,2024-11-09,Bundesliga
-RB Leipzig,Gladbach,18:30,2024-11-09,Bundesliga
+RB Leipzig,Gladba,18:30,2024-11-09,Bundesliga
 Augsburg,Hoffenheim,15:30,2024-11-10,Bundesliga
 Stuttgart,Eint Frankfurt,17:30,2024-11-10,Bundesliga
 Heidenheim,Wolfsburg,19:30,2024-11-10,Bundesliga
-Bayern Munich,Augsburg,20:30,2024-11-22,Bundesliga
+Bayern Muni,Augsburg,20:30,2024-11-22,Bundesliga
 Wolfsburg,Union Berlin,15:30,2024-11-23,Bundesliga
 Leverkusen,Heidenheim,15:30,2024-11-23,Bundesliga
 Dortmund,Freiburg,15:30,2024-11-23,Bundesliga
@@ -947,14 +1017,14 @@ Stuttgart,Bochum,15:30,2024-11-23,Bundesliga
 Hoffenheim,RB Leipzig,15:30,2024-11-23,Bundesliga
 Eint Frankfurt,Werder Bremen,18:30,2024-11-23,Bundesliga
 Holstein Kiel,Mainz 05,15:30,2024-11-24,Bundesliga
-Gladbach,St. Pauli,17:30,2024-11-24,Bundesliga
+Gladba,St. Pauli,17:30,2024-11-24,Bundesliga
 St. Pauli,Holstein Kiel,20:30,2024-11-29,Bundesliga
 Union Berlin,Leverkusen,15:30,2024-11-30,Bundesliga
-Freiburg,Gladbach,15:30,2024-11-30,Bundesliga
+Freiburg,Gladba,15:30,2024-11-30,Bundesliga
 Werder Bremen,Stuttgart,15:30,2024-11-30,Bundesliga
 RB Leipzig,Wolfsburg,15:30,2024-11-30,Bundesliga
 Augsburg,Bochum,15:30,2024-11-30,Bundesliga
-Dortmund,Bayern Munich,18:30,2024-11-30,Bundesliga
+Dortmund,Bayern Muni,18:30,2024-11-30,Bundesliga
 Mainz 05,Hoffenheim,15:30,2024-12-01,Bundesliga
 Heidenheim,Eint Frankfurt,17:30,2024-12-01,Bundesliga
 Stuttgart,Union Berlin,20:30,2024-12-06,Bundesliga
@@ -962,21 +1032,21 @@ Leverkusen,St. Pauli,15:30,2024-12-07,Bundesliga
 Eint Frankfurt,Augsburg,15:30,2024-12-07,Bundesliga
 Holstein Kiel,RB Leipzig,15:30,2024-12-07,Bundesliga
 Bochum,Werder Bremen,15:30,2024-12-07,Bundesliga
-Bayern Munich,Heidenheim,15:30,2024-12-07,Bundesliga
-Gladbach,Dortmund,18:30,2024-12-07,Bundesliga
+Bayern Muni,Heidenheim,15:30,2024-12-07,Bundesliga
+Gladba,Dortmund,18:30,2024-12-07,Bundesliga
 Wolfsburg,Mainz 05,15:30,2024-12-08,Bundesliga
 Hoffenheim,Freiburg,17:30,2024-12-08,Bundesliga
 Freiburg,Wolfsburg,20:30,2024-12-13,Bundesliga
 Union Berlin,Bochum,15:30,2024-12-14,Bundesliga
-Gladbach,Holstein Kiel,15:30,2024-12-14,Bundesliga
+Gladba,Holstein Kiel,15:30,2024-12-14,Bundesliga
 Augsburg,Leverkusen,15:30,2024-12-14,Bundesliga
-Mainz 05,Bayern Munich,15:30,2024-12-14,Bundesliga
+Mainz 05,Bayern Muni,15:30,2024-12-14,Bundesliga
 St. Pauli,Werder Bremen,18:30,2024-12-14,Bundesliga
 Heidenheim,Stuttgart,15:30,2024-12-15,Bundesliga
 Dortmund,Hoffenheim,17:30,2024-12-15,Bundesliga
 RB Leipzig,Eint Frankfurt,19:30,2024-12-15,Bundesliga
-Bayern Munich,RB Leipzig,20:30,2024-12-20,Bundesliga
-Hoffenheim,Gladbach,15:30,2024-12-21,Bundesliga
+Bayern Muni,RB Leipzig,20:30,2024-12-20,Bundesliga
+Hoffenheim,Gladba,15:30,2024-12-21,Bundesliga
 Eint Frankfurt,Mainz 05,15:30,2024-12-21,Bundesliga
 Werder Bremen,Union Berlin,15:30,2024-12-21,Bundesliga
 Stuttgart,St. Pauli,15:30,2024-12-21,Bundesliga
@@ -990,25 +1060,25 @@ Freiburg,Holstein Kiel,15:30,2025-01-11,Bundesliga
 Hoffenheim,Wolfsburg,15:30,2025-01-11,Bundesliga
 St. Pauli,Eint Frankfurt,15:30,2025-01-11,Bundesliga
 Heidenheim,Union Berlin,15:30,2025-01-11,Bundesliga
-Gladbach,Bayern Munich,18:30,2025-01-11,Bundesliga
+Gladba,Bayern Muni,18:30,2025-01-11,Bundesliga
 RB Leipzig,Werder Bremen,15:30,2025-01-12,Bundesliga
 Augsburg,Stuttgart,17:30,2025-01-12,Bundesliga
 Holstein Kiel,Dortmund,18:30,2025-01-14,Bundesliga
-Wolfsburg,Gladbach,20:30,2025-01-14,Bundesliga
+Wolfsburg,Gladba,20:30,2025-01-14,Bundesliga
 Eint Frankfurt,Freiburg,20:30,2025-01-14,Bundesliga
 Leverkusen,Mainz 05,20:30,2025-01-14,Bundesliga
 Bochum,St. Pauli,18:30,2025-01-15,Bundesliga
 Stuttgart,RB Leipzig,20:30,2025-01-15,Bundesliga
-Bayern Munich,Hoffenheim,20:30,2025-01-15,Bundesliga
+Bayern Muni,Hoffenheim,20:30,2025-01-15,Bundesliga
 Werder Bremen,Heidenheim,20:30,2025-01-15,Bundesliga
 Union Berlin,Augsburg,20:30,2025-01-15,Bundesliga
 Eint Frankfurt,Dortmund,20:30,2025-01-17,Bundesliga
-Bayern Munich,Wolfsburg,15:30,2025-01-18,Bundesliga
+Bayern Muni,Wolfsburg,15:30,2025-01-18,Bundesliga
 Heidenheim,St. Pauli,15:30,2025-01-18,Bundesliga
 Stuttgart,Freiburg,15:30,2025-01-18,Bundesliga
 Bochum,RB Leipzig,15:30,2025-01-18,Bundesliga
 Holstein Kiel,Hoffenheim,15:30,2025-01-18,Bundesliga
-Leverkusen,Gladbach,18:30,2025-01-18,Bundesliga
+Leverkusen,Gladba,18:30,2025-01-18,Bundesliga
 Union Berlin,Mainz 05,15:30,2025-01-19,Bundesliga
 Werder Bremen,Augsburg,17:30,2025-01-19,Bundesliga
 Wolfsburg,Holstein Kiel,20:30,2025-01-24,Bundesliga
@@ -1016,122 +1086,122 @@ Dortmund,Werder Bremen,15:30,2025-01-25,Bundesliga
 Mainz 05,Stuttgart,15:30,2025-01-25,Bundesliga
 Augsburg,Heidenheim,15:30,2025-01-25,Bundesliga
 RB Leipzig,Leverkusen,15:30,2025-01-25,Bundesliga
-Freiburg,Bayern Munich,15:30,2025-01-25,Bundesliga
-Gladbach,Bochum,18:30,2025-01-25,Bundesliga
+Freiburg,Bayern Muni,15:30,2025-01-25,Bundesliga
+Gladba,Bochum,18:30,2025-01-25,Bundesliga
 Hoffenheim,Eint Frankfurt,15:30,2025-01-26,Bundesliga
 St. Pauli,Union Berlin,17:30,2025-01-26,Bundesliga
 Werder Bremen,Mainz 05,20:30,2025-01-31,Bundesliga
-Stuttgart,Gladbach,15:30,2025-02-01,Bundesliga
+Stuttgart,Gladba,15:30,2025-02-01,Bundesliga
 Heidenheim,Dortmund,15:30,2025-02-01,Bundesliga
-Bayern Munich,Holstein Kiel,15:30,2025-02-01,Bundesliga
+Bayern Muni,Holstein Kiel,15:30,2025-02-01,Bundesliga
 St. Pauli,Augsburg,15:30,2025-02-01,Bundesliga
 Bochum,Freiburg,15:30,2025-02-01,Bundesliga
 Union Berlin,RB Leipzig,18:30,2025-02-01,Bundesliga
 Eint Frankfurt,Wolfsburg,15:30,2025-02-02,Bundesliga
 Leverkusen,Hoffenheim,17:30,2025-02-02,Bundesliga
-Bayern Munich,Werder Bremen,20:30,2025-02-07,Bundesliga
+Bayern Muni,Werder Bremen,20:30,2025-02-07,Bundesliga
 Freiburg,Heidenheim,15:30,2025-02-08,Bundesliga
 Dortmund,Stuttgart,15:30,2025-02-08,Bundesliga
 Wolfsburg,Leverkusen,15:30,2025-02-08,Bundesliga
 Hoffenheim,Union Berlin,15:30,2025-02-08,Bundesliga
 Mainz 05,Augsburg,15:30,2025-02-08,Bundesliga
-Gladbach,Eint Frankfurt,18:30,2025-02-08,Bundesliga
+Gladba,Eint Frankfurt,18:30,2025-02-08,Bundesliga
 Holstein Kiel,Bochum,15:30,2025-02-09,Bundesliga
 RB Leipzig,St. Pauli,17:30,2025-02-09,Bundesliga
 Augsburg,RB Leipzig,20:30,2025-02-14,Bundesliga
 Bochum,Dortmund,15:30,2025-02-15,Bundesliga
-Union Berlin,Gladbach,15:30,2025-02-15,Bundesliga
+Union Berlin,Gladba,15:30,2025-02-15,Bundesliga
 St. Pauli,Freiburg,15:30,2025-02-15,Bundesliga
 Stuttgart,Wolfsburg,15:30,2025-02-15,Bundesliga
-Leverkusen,Bayern Munich,18:30,2025-02-15,Bundesliga
+Leverkusen,Bayern Muni,18:30,2025-02-15,Bundesliga
 Werder Bremen,Hoffenheim,15:30,2025-02-16,Bundesliga
 Eint Frankfurt,Holstein Kiel,17:30,2025-02-16,Bundesliga
 Heidenheim,Mainz 05,19:30,2025-02-16,Bundesliga
 Freiburg,Werder Bremen,20:30,2025-02-21,Bundesliga
-Gladbach,Augsburg,15:30,2025-02-22,Bundesliga
+Gladba,Augsburg,15:30,2025-02-22,Bundesliga
 Holstein Kiel,Leverkusen,15:30,2025-02-22,Bundesliga
 Mainz 05,St. Pauli,15:30,2025-02-22,Bundesliga
 Wolfsburg,Bochum,15:30,2025-02-22,Bundesliga
 Dortmund,Union Berlin,18:30,2025-02-22,Bundesliga
 RB Leipzig,Heidenheim,15:30,2025-02-23,Bundesliga
-Bayern Munich,Eint Frankfurt,17:30,2025-02-23,Bundesliga
+Bayern Muni,Eint Frankfurt,17:30,2025-02-23,Bundesliga
 Hoffenheim,Stuttgart,19:30,2025-02-23,Bundesliga
-Stuttgart,Bayern Munich,20:30,2025-02-28,Bundesliga
+Stuttgart,Bayern Muni,20:30,2025-02-28,Bundesliga
 Werder Bremen,Wolfsburg,15:30,2025-03-01,Bundesliga
 Bochum,Hoffenheim,15:30,2025-03-01,Bundesliga
-Heidenheim,Gladbach,15:30,2025-03-01,Bundesliga
+Heidenheim,Gladba,15:30,2025-03-01,Bundesliga
 RB Leipzig,Mainz 05,15:30,2025-03-01,Bundesliga
 St. Pauli,Dortmund,15:30,2025-03-01,Bundesliga
 Eint Frankfurt,Leverkusen,18:30,2025-03-01,Bundesliga
 Union Berlin,Holstein Kiel,15:30,2025-03-02,Bundesliga
 Augsburg,Freiburg,17:30,2025-03-02,Bundesliga
-Freiburg,RB Leipzig,,2025-03-08,Bundesliga
-Wolfsburg,St. Pauli,,2025-03-08,Bundesliga
-Dortmund,Augsburg,,2025-03-08,Bundesliga
-Holstein Kiel,Stuttgart,,2025-03-08,Bundesliga
-Leverkusen,Werder Bremen,,2025-03-08,Bundesliga
-Gladbach,Mainz 05,,2025-03-08,Bundesliga
-Eint Frankfurt,Union Berlin,,2025-03-08,Bundesliga
-Bayern Munich,Bochum,,2025-03-08,Bundesliga
-Hoffenheim,Heidenheim,,2025-03-08,Bundesliga
-Augsburg,Wolfsburg,,2025-03-15,Bundesliga
-St. Pauli,Hoffenheim,,2025-03-15,Bundesliga
-Union Berlin,Bayern Munich,,2025-03-15,Bundesliga
-RB Leipzig,Dortmund,,2025-03-15,Bundesliga
-Mainz 05,Freiburg,,2025-03-15,Bundesliga
-Bochum,Eint Frankfurt,,2025-03-15,Bundesliga
-Heidenheim,Holstein Kiel,,2025-03-15,Bundesliga
-Werder Bremen,Gladbach,,2025-03-15,Bundesliga
-Stuttgart,Leverkusen,,2025-03-15,Bundesliga
-Dortmund,Mainz 05,,2025-03-29,Bundesliga
-Bayern Munich,St. Pauli,,2025-03-29,Bundesliga
-Wolfsburg,Heidenheim,,2025-03-29,Bundesliga
-Holstein Kiel,Werder Bremen,,2025-03-29,Bundesliga
-Hoffenheim,Augsburg,,2025-03-29,Bundesliga
-Leverkusen,Bochum,,2025-03-29,Bundesliga
-Gladbach,RB Leipzig,,2025-03-29,Bundesliga
-Eint Frankfurt,Stuttgart,,2025-03-29,Bundesliga
-Freiburg,Union Berlin,,2025-03-29,Bundesliga
+Gladba,Mainz 05,20:30,2025-03-07,Bundesliga
+Wolfsburg,St. Pauli,15:30,2025-03-08,Bundesliga
+Dortmund,Augsburg,15:30,2025-03-08,Bundesliga
+Holstein Kiel,Stuttgart,15:30,2025-03-08,Bundesliga
+Leverkusen,Werder Bremen,15:30,2025-03-08,Bundesliga
+Bayern Muni,Bochum,15:30,2025-03-08,Bundesliga
+Freiburg,RB Leipzig,18:30,2025-03-08,Bundesliga
+Eint Frankfurt,Union Berlin,15:30,2025-03-09,Bundesliga
+Hoffenheim,Heidenheim,17:30,2025-03-09,Bundesliga
+St. Pauli,Hoffenheim,20:30,2025-03-14,Bundesliga
+Augsburg,Wolfsburg,15:30,2025-03-15,Bundesliga
+Union Berlin,Bayern Muni,15:30,2025-03-15,Bundesliga
+Mainz 05,Freiburg,15:30,2025-03-15,Bundesliga
+Werder Bremen,Gladba,15:30,2025-03-15,Bundesliga
+RB Leipzig,Dortmund,18:30,2025-03-15,Bundesliga
+Bochum,Eint Frankfurt,15:30,2025-03-16,Bundesliga
+Heidenheim,Holstein Kiel,17:30,2025-03-16,Bundesliga
+Stuttgart,Leverkusen,19:30,2025-03-16,Bundesliga
+Leverkusen,Bochum,20:30,2025-03-28,Bundesliga
+Bayern Muni,St. Pauli,15:30,2025-03-29,Bundesliga
+Wolfsburg,Heidenheim,15:30,2025-03-29,Bundesliga
+Holstein Kiel,Werder Bremen,15:30,2025-03-29,Bundesliga
+Hoffenheim,Augsburg,15:30,2025-03-29,Bundesliga
+Gladba,RB Leipzig,15:30,2025-03-29,Bundesliga
+Eint Frankfurt,Stuttgart,18:30,2025-03-29,Bundesliga
+Freiburg,Union Berlin,15:30,2025-03-30,Bundesliga
+Dortmund,Mainz 05,17:30,2025-03-30,Bundesliga
 Heidenheim,Leverkusen,,2025-04-05,Bundesliga
 Werder Bremen,Eint Frankfurt,,2025-04-05,Bundesliga
 Union Berlin,Wolfsburg,,2025-04-05,Bundesliga
 RB Leipzig,Hoffenheim,,2025-04-05,Bundesliga
-St. Pauli,Gladbach,,2025-04-05,Bundesliga
+St. Pauli,Gladba,,2025-04-05,Bundesliga
 Freiburg,Dortmund,,2025-04-05,Bundesliga
-Augsburg,Bayern Munich,,2025-04-05,Bundesliga
+Augsburg,Bayern Muni,,2025-04-05,Bundesliga
 Bochum,Stuttgart,,2025-04-05,Bundesliga
 Mainz 05,Holstein Kiel,,2025-04-05,Bundesliga
 Leverkusen,Union Berlin,,2025-04-12,Bundesliga
 Wolfsburg,RB Leipzig,,2025-04-12,Bundesliga
 Hoffenheim,Mainz 05,,2025-04-12,Bundesliga
-Bayern Munich,Dortmund,,2025-04-12,Bundesliga
+Bayern Muni,Dortmund,,2025-04-12,Bundesliga
 Eint Frankfurt,Heidenheim,,2025-04-12,Bundesliga
-Gladbach,Freiburg,,2025-04-12,Bundesliga
+Gladba,Freiburg,,2025-04-12,Bundesliga
 Bochum,Augsburg,,2025-04-12,Bundesliga
 Holstein Kiel,St. Pauli,,2025-04-12,Bundesliga
 Stuttgart,Werder Bremen,,2025-04-12,Bundesliga
 RB Leipzig,Holstein Kiel,,2025-04-19,Bundesliga
-Heidenheim,Bayern Munich,,2025-04-19,Bundesliga
+Heidenheim,Bayern Muni,,2025-04-19,Bundesliga
 Freiburg,Hoffenheim,,2025-04-19,Bundesliga
 Union Berlin,Stuttgart,,2025-04-19,Bundesliga
 St. Pauli,Leverkusen,,2025-04-19,Bundesliga
 Werder Bremen,Bochum,,2025-04-19,Bundesliga
-Dortmund,Gladbach,,2025-04-19,Bundesliga
+Dortmund,Gladba,,2025-04-19,Bundesliga
 Augsburg,Eint Frankfurt,,2025-04-19,Bundesliga
 Mainz 05,Wolfsburg,,2025-04-19,Bundesliga
 Werder Bremen,St. Pauli,,2025-04-26,Bundesliga
 Stuttgart,Heidenheim,,2025-04-26,Bundesliga
 Bochum,Union Berlin,,2025-04-26,Bundesliga
-Holstein Kiel,Gladbach,,2025-04-26,Bundesliga
+Holstein Kiel,Gladba,,2025-04-26,Bundesliga
 Eint Frankfurt,RB Leipzig,,2025-04-26,Bundesliga
 Hoffenheim,Dortmund,,2025-04-26,Bundesliga
-Bayern Munich,Mainz 05,,2025-04-26,Bundesliga
+Bayern Muni,Mainz 05,,2025-04-26,Bundesliga
 Wolfsburg,Freiburg,,2025-04-26,Bundesliga
 Leverkusen,Augsburg,,2025-04-26,Bundesliga
 Union Berlin,Werder Bremen,,2025-05-03,Bundesliga
-RB Leipzig,Bayern Munich,,2025-05-03,Bundesliga
+RB Leipzig,Bayern Muni,,2025-05-03,Bundesliga
 Mainz 05,Eint Frankfurt,,2025-05-03,Bundesliga
-Gladbach,Hoffenheim,,2025-05-03,Bundesliga
+Gladba,Hoffenheim,,2025-05-03,Bundesliga
 St. Pauli,Stuttgart,,2025-05-03,Bundesliga
 Freiburg,Leverkusen,,2025-05-03,Bundesliga
 Heidenheim,Bochum,,2025-05-03,Bundesliga
@@ -1143,15 +1213,15 @@ Bochum,Mainz 05,,2025-05-10,Bundesliga
 Wolfsburg,Hoffenheim,,2025-05-10,Bundesliga
 Union Berlin,Heidenheim,,2025-05-10,Bundesliga
 Werder Bremen,RB Leipzig,,2025-05-10,Bundesliga
-Bayern Munich,Gladbach,,2025-05-10,Bundesliga
+Bayern Muni,Gladba,,2025-05-10,Bundesliga
 Leverkusen,Dortmund,,2025-05-10,Bundesliga
 Stuttgart,Augsburg,,2025-05-10,Bundesliga
-Hoffenheim,Bayern Munich,15:30,2025-05-17,Bundesliga
+Hoffenheim,Bayern Muni,15:30,2025-05-17,Bundesliga
 Dortmund,Holstein Kiel,15:30,2025-05-17,Bundesliga
 Mainz 05,Leverkusen,15:30,2025-05-17,Bundesliga
 Augsburg,Union Berlin,15:30,2025-05-17,Bundesliga
 Heidenheim,Werder Bremen,15:30,2025-05-17,Bundesliga
-Gladbach,Wolfsburg,15:30,2025-05-17,Bundesliga
+Gladba,Wolfsburg,15:30,2025-05-17,Bundesliga
 Freiburg,Eint Frankfurt,15:30,2025-05-17,Bundesliga
 RB Leipzig,Stuttgart,15:30,2025-05-17,Bundesliga
 St. Pauli,Bochum,15:30,2025-05-17,Bundesliga
@@ -1238,7 +1308,6 @@ Hellas Verona,Monza,20:45,2024-10-21,Serie A
 Udinese,Cagliari,18:30,2024-10-25,Serie A
 Torino,Como,20:45,2024-10-25,Serie A
 Napoli,Lecce,15:00,2024-10-26,Serie A
-Bologna,Milan,18:00,2024-10-26,Serie A
 Atalanta,Hellas Verona,20:45,2024-10-26,Serie A
 Parma,Empoli,12:30,2024-10-27,Serie A
 Lazio,Genoa,15:00,2024-10-27,Serie A
@@ -1292,7 +1361,6 @@ Bologna,Venezia,20:45,2024-11-30,Serie A
 Udinese,Genoa,12:30,2024-12-01,Serie A
 Torino,Napoli,15:00,2024-12-01,Serie A
 Parma,Lazio,15:00,2024-12-01,Serie A
-Fiorentina,Inter,18:00,2024-12-01,Serie A
 Lecce,Juventus,20:45,2024-12-01,Serie A
 Roma,Atalanta,20:45,2024-12-02,Serie A
 Inter,Parma,18:30,2024-12-06,Serie A
@@ -1385,36 +1453,38 @@ Fiorentina,Genoa,15:00,2025-02-02,Serie A
 Milan,Inter,18:00,2025-02-02,Serie A
 Roma,Napoli,20:45,2025-02-02,Serie A
 Cagliari,Lazio,20:45,2025-02-03,Serie A
-Torino,Genoa,15:00,2025-02-09,Serie A
+Fiorentina,Inter,20:45,2025-02-06,Serie A
+Como,Juventus,20:45,2025-02-07,Serie A
+Hellas Verona,Atalanta,15:00,2025-02-08,Serie A
+Empoli,Milan,18:00,2025-02-08,Serie A
+Torino,Genoa,20:45,2025-02-08,Serie A
+Venezia,Roma,12:30,2025-02-09,Serie A
 Cagliari,Parma,15:00,2025-02-09,Serie A
-Lecce,Bologna,15:00,2025-02-09,Serie A
-Napoli,Udinese,15:00,2025-02-09,Serie A
-Como,Juventus,15:00,2025-02-09,Serie A
-Empoli,Milan,15:00,2025-02-09,Serie A
-Venezia,Roma,15:00,2025-02-09,Serie A
 Lazio,Monza,15:00,2025-02-09,Serie A
-Inter,Fiorentina,15:00,2025-02-09,Serie A
-Hellas Verona,Atalanta,15:00,2025-02-09,Serie A
-Fiorentina,Como,15:00,2025-02-16,Serie A
-Juventus,Inter,15:00,2025-02-16,Serie A
+Lecce,Bologna,18:00,2025-02-09,Serie A
+Napoli,Udinese,20:45,2025-02-09,Serie A
+Inter,Fiorentina,20:45,2025-02-10,Serie A
+Bologna,Torino,20:45,2025-02-14,Serie A
+Atalanta,Cagliari,15:00,2025-02-15,Serie A
+Lazio,Napoli,18:00,2025-02-15,Serie A
+Milan,Hellas Verona,20:45,2025-02-15,Serie A
+Fiorentina,Como,12:30,2025-02-16,Serie A
 Udinese,Empoli,15:00,2025-02-16,Serie A
-Parma,Roma,15:00,2025-02-16,Serie A
-Genoa,Venezia,15:00,2025-02-16,Serie A
-Milan,Hellas Verona,15:00,2025-02-16,Serie A
-Lazio,Napoli,15:00,2025-02-16,Serie A
-Bologna,Torino,15:00,2025-02-16,Serie A
-Atalanta,Cagliari,15:00,2025-02-16,Serie A
 Monza,Lecce,15:00,2025-02-16,Serie A
-Venezia,Lazio,15:00,2025-02-23,Serie A
-Empoli,Atalanta,15:00,2025-02-23,Serie A
-Lecce,Udinese,15:00,2025-02-23,Serie A
-Inter,Genoa,15:00,2025-02-23,Serie A
-Roma,Monza,15:00,2025-02-23,Serie A
+Parma,Roma,18:00,2025-02-16,Serie A
+Juventus,Inter,20:45,2025-02-16,Serie A
+Genoa,Venezia,20:45,2025-02-17,Serie A
+Lecce,Udinese,20:45,2025-02-21,Serie A
+Venezia,Lazio,15:00,2025-02-22,Serie A
+Parma,Bologna,15:00,2025-02-22,Serie A
+Torino,Milan,18:00,2025-02-22,Serie A
+Inter,Genoa,20:45,2025-02-22,Serie A
+Como,Napoli,12:30,2025-02-23,Serie A
 Hellas Verona,Fiorentina,15:00,2025-02-23,Serie A
-Torino,Milan,15:00,2025-02-23,Serie A
-Cagliari,Juventus,15:00,2025-02-23,Serie A
-Parma,Bologna,15:00,2025-02-23,Serie A
-Como,Napoli,15:00,2025-02-23,Serie A
+Empoli,Atalanta,18:00,2025-02-23,Serie A
+Cagliari,Juventus,20:45,2025-02-23,Serie A
+Roma,Monza,20:45,2025-02-24,Serie A
+Bologna,Milan,18:30,2025-02-26,Serie A
 Juventus,Hellas Verona,15:00,2025-03-02,Serie A
 Udinese,Parma,15:00,2025-03-02,Serie A
 Napoli,Inter,15:00,2025-03-02,Serie A
@@ -1541,219 +1611,219 @@ Reims,Lille,19:00,2024-08-17,Ligue 1
 Monaco,Saint-Étienne,21:00,2024-08-17,Ligue 1
 Auxerre,Nice,15:00,2024-08-18,Ligue 1
 Montpellier,Strasbourg,17:00,2024-08-18,Ligue 1
-Toulouse,Nantes,17:00,2024-08-18,Ligue 1
-Angers,Lens,17:00,2024-08-18,Ligue 1
-Rennes,Lyon,20:45,2024-08-18,Ligue 1
+Toulouse,Nant,17:00,2024-08-18,Ligue 1
+Ange,Lens,17:00,2024-08-18,Ligue 1
+Renn,Lyon,20:45,2024-08-18,Ligue 1
 Paris S-G,Montpellier,20:45,2024-08-23,Ligue 1
 Lyon,Monaco,17:00,2024-08-24,Ligue 1
-Lille,Angers,19:00,2024-08-24,Ligue 1
+Lille,Ange,19:00,2024-08-24,Ligue 1
 Saint-Étienne,Le Havre,21:00,2024-08-24,Ligue 1
 Lens,Brest,15:00,2024-08-25,Ligue 1
 Nice,Toulouse,17:00,2024-08-25,Ligue 1
-Nantes,Auxerre,17:00,2024-08-25,Ligue 1
-Strasbourg,Rennes,17:00,2024-08-25,Ligue 1
+Nant,Auxerre,17:00,2024-08-25,Ligue 1
+Strasbourg,Renn,17:00,2024-08-25,Ligue 1
 Marseille,Reims,20:45,2024-08-25,Ligue 1
 Lyon,Strasbourg,20:45,2024-08-30,Ligue 1
 Brest,Saint-Étienne,17:00,2024-08-31,Ligue 1
-Montpellier,Nantes,19:00,2024-08-31,Ligue 1
+Montpellier,Nant,19:00,2024-08-31,Ligue 1
 Toulouse,Marseille,21:00,2024-08-31,Ligue 1
 Monaco,Lens,15:00,2024-09-01,Ligue 1
 Le Havre,Auxerre,17:00,2024-09-01,Ligue 1
-Reims,Rennes,17:00,2024-09-01,Ligue 1
-Angers,Nice,17:00,2024-09-01,Ligue 1
+Reims,Renn,17:00,2024-09-01,Ligue 1
+Ange,Nice,17:00,2024-09-01,Ligue 1
 Lille,Paris S-G,20:45,2024-09-01,Ligue 1
 Saint-Étienne,Lille,20:45,2024-09-13,Ligue 1
 Marseille,Nice,17:00,2024-09-14,Ligue 1
 Auxerre,Monaco,19:00,2024-09-14,Ligue 1
 Paris S-G,Brest,21:00,2024-09-14,Ligue 1
-Rennes,Montpellier,15:00,2024-09-15,Ligue 1
-Strasbourg,Angers,17:00,2024-09-15,Ligue 1
-Nantes,Reims,17:00,2024-09-15,Ligue 1
+Renn,Montpellier,15:00,2024-09-15,Ligue 1
+Strasbourg,Ange,17:00,2024-09-15,Ligue 1
+Nant,Reims,17:00,2024-09-15,Ligue 1
 Toulouse,Le Havre,17:00,2024-09-15,Ligue 1
 Lens,Lyon,20:45,2024-09-15,Ligue 1
 Nice,Saint-Étienne,20:45,2024-09-20,Ligue 1
 Lille,Strasbourg,17:00,2024-09-21,Ligue 1
-Rennes,Lens,19:00,2024-09-21,Ligue 1
+Renn,Lens,19:00,2024-09-21,Ligue 1
 Reims,Paris S-G,21:00,2024-09-21,Ligue 1
 Monaco,Le Havre,15:00,2024-09-22,Ligue 1
-Angers,Nantes,17:00,2024-09-22,Ligue 1
+Ange,Nant,17:00,2024-09-22,Ligue 1
 Brest,Toulouse,17:00,2024-09-22,Ligue 1
 Montpellier,Auxerre,17:00,2024-09-22,Ligue 1
 Lyon,Marseille,20:45,2024-09-22,Ligue 1
 Auxerre,Brest,19:00,2024-09-27,Ligue 1
-Paris S-G,Rennes,21:00,2024-09-27,Ligue 1
+Paris S-G,Renn,21:00,2024-09-27,Ligue 1
 Lens,Nice,17:00,2024-09-28,Ligue 1
 Le Havre,Lille,19:00,2024-09-28,Ligue 1
 Monaco,Montpellier,21:00,2024-09-28,Ligue 1
 Toulouse,Lyon,15:00,2024-09-29,Ligue 1
-Angers,Reims,17:00,2024-09-29,Ligue 1
-Nantes,Saint-Étienne,17:00,2024-09-29,Ligue 1
+Ange,Reims,17:00,2024-09-29,Ligue 1
+Nant,Saint-Étienne,17:00,2024-09-29,Ligue 1
 Strasbourg,Marseille,20:45,2024-09-29,Ligue 1
-Marseille,Angers,20:45,2024-10-04,Ligue 1
+Marseille,Ange,20:45,2024-10-04,Ligue 1
 Saint-Étienne,Auxerre,17:00,2024-10-05,Ligue 1
 Lille,Toulouse,19:00,2024-10-05,Ligue 1
-Rennes,Monaco,21:00,2024-10-05,Ligue 1
-Lyon,Nantes,15:00,2024-10-06,Ligue 1
+Renn,Monaco,21:00,2024-10-05,Ligue 1
+Lyon,Nant,15:00,2024-10-06,Ligue 1
 Strasbourg,Lens,17:00,2024-10-06,Ligue 1
 Reims,Montpellier,17:00,2024-10-06,Ligue 1
 Brest,Le Havre,17:00,2024-10-06,Ligue 1
 Nice,Paris S-G,20:45,2024-10-06,Ligue 1
 Monaco,Lille,20:45,2024-10-18,Ligue 1
-Brest,Rennes,17:00,2024-10-19,Ligue 1
+Brest,Renn,17:00,2024-10-19,Ligue 1
 Saint-Étienne,Lens,19:00,2024-10-19,Ligue 1
 Paris S-G,Strasbourg,21:00,2024-10-19,Ligue 1
 Le Havre,Lyon,15:00,2024-10-20,Ligue 1
 Auxerre,Reims,17:00,2024-10-20,Ligue 1
-Nantes,Nice,17:00,2024-10-20,Ligue 1
-Toulouse,Angers,17:00,2024-10-20,Ligue 1
+Nant,Nice,17:00,2024-10-20,Ligue 1
+Toulouse,Ange,17:00,2024-10-20,Ligue 1
 Montpellier,Marseille,20:45,2024-10-20,Ligue 1
-Rennes,Le Havre,20:45,2024-10-25,Ligue 1
-Angers,Saint-Étienne,17:00,2024-10-26,Ligue 1
+Renn,Le Havre,20:45,2024-10-25,Ligue 1
+Ange,Saint-Étienne,17:00,2024-10-26,Ligue 1
 Reims,Brest,19:00,2024-10-26,Ligue 1
 Lens,Lille,21:00,2024-10-26,Ligue 1
 Lyon,Auxerre,15:00,2024-10-27,Ligue 1
 Montpellier,Toulouse,17:00,2024-10-27,Ligue 1
 Nice,Monaco,17:00,2024-10-27,Ligue 1
-Strasbourg,Nantes,17:00,2024-10-27,Ligue 1
+Strasbourg,Nant,17:00,2024-10-27,Ligue 1
 Marseille,Paris S-G,20:45,2024-10-27,Ligue 1
-Monaco,Angers,19:00,2024-11-01,Ligue 1
+Monaco,Ange,19:00,2024-11-01,Ligue 1
 Lille,Lyon,21:00,2024-11-01,Ligue 1
 Paris S-G,Lens,17:00,2024-11-02,Ligue 1
 Brest,Nice,19:00,2024-11-02,Ligue 1
 Saint-Étienne,Strasbourg,21:00,2024-11-02,Ligue 1
 Toulouse,Reims,15:00,2024-11-03,Ligue 1
 Le Havre,Montpellier,17:00,2024-11-03,Ligue 1
-Auxerre,Rennes,17:00,2024-11-03,Ligue 1
-Nantes,Marseille,20:45,2024-11-03,Ligue 1
+Auxerre,Renn,17:00,2024-11-03,Ligue 1
+Nant,Marseille,20:45,2024-11-03,Ligue 1
 Marseille,Auxerre,20:45,2024-11-08,Ligue 1
 Strasbourg,Monaco,17:00,2024-11-09,Ligue 1
-Lens,Nantes,19:00,2024-11-09,Ligue 1
-Angers,Paris S-G,21:00,2024-11-09,Ligue 1
+Lens,Nant,19:00,2024-11-09,Ligue 1
+Ange,Paris S-G,21:00,2024-11-09,Ligue 1
 Nice,Lille,15:00,2024-11-10,Ligue 1
 Le Havre,Reims,17:00,2024-11-10,Ligue 1
 Montpellier,Brest,17:00,2024-11-10,Ligue 1
-Rennes,Toulouse,17:00,2024-11-10,Ligue 1
+Renn,Toulouse,17:00,2024-11-10,Ligue 1
 Lyon,Saint-Étienne,20:45,2024-11-10,Ligue 1
 Monaco,Brest,19:00,2024-11-22,Ligue 1
 Paris S-G,Toulouse,21:00,2024-11-22,Ligue 1
 Lens,Marseille,17:00,2024-11-23,Ligue 1
 Saint-Étienne,Montpellier,19:00,2024-11-23,Ligue 1
 Reims,Lyon,21:00,2024-11-23,Ligue 1
-Lille,Rennes,15:00,2024-11-24,Ligue 1
-Nantes,Le Havre,17:00,2024-11-24,Ligue 1
-Auxerre,Angers,17:00,2024-11-24,Ligue 1
+Lille,Renn,15:00,2024-11-24,Ligue 1
+Nant,Le Havre,17:00,2024-11-24,Ligue 1
+Auxerre,Ange,17:00,2024-11-24,Ligue 1
 Nice,Strasbourg,20:45,2024-11-24,Ligue 1
 Reims,Lens,20:45,2024-11-29,Ligue 1
-Rennes,Saint-Étienne,17:00,2024-11-30,Ligue 1
+Renn,Saint-Étienne,17:00,2024-11-30,Ligue 1
 Brest,Strasbourg,19:00,2024-11-30,Ligue 1
-Paris S-G,Nantes,21:00,2024-11-30,Ligue 1
+Paris S-G,Nant,21:00,2024-11-30,Ligue 1
 Montpellier,Lille,15:00,2024-12-01,Ligue 1
 Lyon,Nice,17:00,2024-12-01,Ligue 1
-Le Havre,Angers,17:00,2024-12-01,Ligue 1
+Le Havre,Ange,17:00,2024-12-01,Ligue 1
 Toulouse,Auxerre,17:00,2024-12-01,Ligue 1
 Marseille,Monaco,20:45,2024-12-01,Ligue 1
 Lille,Brest,19:00,2024-12-06,Ligue 1
 Auxerre,Paris S-G,21:00,2024-12-06,Ligue 1
 Monaco,Toulouse,17:00,2024-12-07,Ligue 1
 Nice,Le Havre,19:00,2024-12-07,Ligue 1
-Angers,Lyon,21:00,2024-12-07,Ligue 1
+Ange,Lyon,21:00,2024-12-07,Ligue 1
 Lens,Montpellier,15:00,2024-12-08,Ligue 1
 Strasbourg,Reims,17:00,2024-12-08,Ligue 1
-Nantes,Rennes,17:00,2024-12-08,Ligue 1
+Nant,Renn,17:00,2024-12-08,Ligue 1
 Saint-Étienne,Marseille,20:45,2024-12-08,Ligue 1
 Toulouse,Saint-Étienne,20:45,2024-12-13,Ligue 1
 Marseille,Lille,17:00,2024-12-14,Ligue 1
 Auxerre,Lens,19:00,2024-12-14,Ligue 1
 Reims,Monaco,21:00,2024-12-14,Ligue 1
 Montpellier,Nice,15:00,2024-12-15,Ligue 1
-Brest,Nantes,17:00,2024-12-15,Ligue 1
+Brest,Nant,17:00,2024-12-15,Ligue 1
 Le Havre,Strasbourg,17:00,2024-12-15,Ligue 1
-Rennes,Angers,17:00,2024-12-15,Ligue 1
+Renn,Ange,17:00,2024-12-15,Ligue 1
 Paris S-G,Lyon,20:45,2024-12-15,Ligue 1
 Monaco,Paris S-G,21:00,2024-12-18,Ligue 1
-Nice,Rennes,21:00,2025-01-03,Ligue 1
+Nice,Renn,21:00,2025-01-03,Ligue 1
 Saint-Étienne,Reims,17:00,2025-01-04,Ligue 1
-Lille,Nantes,19:00,2025-01-04,Ligue 1
+Lille,Nant,19:00,2025-01-04,Ligue 1
 Lyon,Montpellier,21:00,2025-01-04,Ligue 1
 Lens,Toulouse,15:00,2025-01-05,Ligue 1
-Angers,Brest,15:00,2025-01-05,Ligue 1
+Ange,Brest,15:00,2025-01-05,Ligue 1
 Strasbourg,Auxerre,15:00,2025-01-05,Ligue 1
 Marseille,Le Havre,20:45,2025-01-05,Ligue 1
-Nantes,Monaco,19:00,2025-01-10,Ligue 1
+Nant,Monaco,19:00,2025-01-10,Ligue 1
 Auxerre,Lille,21:05,2025-01-10,Ligue 1
 Brest,Lyon,17:00,2025-01-11,Ligue 1
 Reims,Nice,19:00,2025-01-11,Ligue 1
-Rennes,Marseille,21:05,2025-01-11,Ligue 1
+Renn,Marseille,21:05,2025-01-11,Ligue 1
 Le Havre,Lens,15:00,2025-01-12,Ligue 1
-Montpellier,Angers,17:15,2025-01-12,Ligue 1
+Montpellier,Ange,17:15,2025-01-12,Ligue 1
 Toulouse,Strasbourg,17:15,2025-01-12,Ligue 1
 Paris S-G,Saint-Étienne,20:45,2025-01-12,Ligue 1
 Montpellier,Monaco,19:00,2025-01-17,Ligue 1
 Lille,Nice,21:05,2025-01-17,Ligue 1
 Lens,Paris S-G,17:00,2025-01-18,Ligue 1
-Rennes,Brest,19:00,2025-01-18,Ligue 1
+Renn,Brest,19:00,2025-01-18,Ligue 1
 Lyon,Toulouse,21:05,2025-01-18,Ligue 1
-Saint-Étienne,Nantes,15:00,2025-01-19,Ligue 1
-Angers,Auxerre,17:15,2025-01-19,Ligue 1
+Saint-Étienne,Nant,15:00,2025-01-19,Ligue 1
+Ange,Auxerre,17:15,2025-01-19,Ligue 1
 Reims,Le Havre,17:15,2025-01-19,Ligue 1
 Marseille,Strasbourg,20:45,2025-01-19,Ligue 1
 Auxerre,Saint-Étienne,20:45,2025-01-24,Ligue 1
-Monaco,Rennes,17:00,2025-01-25,Ligue 1
+Monaco,Renn,17:00,2025-01-25,Ligue 1
 Strasbourg,Lille,19:00,2025-01-25,Ligue 1
 Paris S-G,Reims,21:05,2025-01-25,Ligue 1
 Le Havre,Brest,15:00,2025-01-26,Ligue 1
-Lens,Angers,17:15,2025-01-26,Ligue 1
+Lens,Ange,17:15,2025-01-26,Ligue 1
 Toulouse,Montpellier,17:15,2025-01-26,Ligue 1
-Nantes,Lyon,17:15,2025-01-26,Ligue 1
+Nant,Lyon,17:15,2025-01-26,Ligue 1
 Nice,Marseille,20:45,2025-01-26,Ligue 1
 Montpellier,Lens,20:45,2025-01-31,Ligue 1
 Brest,Paris S-G,17:00,2025-02-01,Ligue 1
 Monaco,Auxerre,19:00,2025-02-01,Ligue 1
 Lille,Saint-Étienne,21:05,2025-02-01,Ligue 1
 Toulouse,Nice,15:00,2025-02-02,Ligue 1
-Angers,Le Havre,17:15,2025-02-02,Ligue 1
-Rennes,Strasbourg,17:15,2025-02-02,Ligue 1
-Reims,Nantes,17:15,2025-02-02,Ligue 1
+Ange,Le Havre,17:15,2025-02-02,Ligue 1
+Renn,Strasbourg,17:15,2025-02-02,Ligue 1
+Reims,Nant,17:15,2025-02-02,Ligue 1
 Marseille,Lyon,20:45,2025-02-02,Ligue 1
+Nant,Brest,19:00,2025-02-07,Ligue 1
 Paris S-G,Monaco,21:05,2025-02-07,Ligue 1
 Nice,Lens,17:00,2025-02-08,Ligue 1
-Saint-Étienne,Rennes,21:05,2025-02-08,Ligue 1
-Nantes,Brest,,2025-02-09,Ligue 1
-Lille,Le Havre,,2025-02-09,Ligue 1
+Lille,Le Havre,19:00,2025-02-08,Ligue 1
+Saint-Étienne,Renn,21:05,2025-02-08,Ligue 1
 Lyon,Reims,15:00,2025-02-09,Ligue 1
 Auxerre,Toulouse,17:15,2025-02-09,Ligue 1
 Strasbourg,Montpellier,17:15,2025-02-09,Ligue 1
-Angers,Marseille,20:45,2025-02-09,Ligue 1
-Marseille,Saint-Étienne,,2025-02-16,Ligue 1
-Montpellier,Lyon,,2025-02-16,Ligue 1
-Monaco,Nantes,,2025-02-16,Ligue 1
-Toulouse,Paris S-G,,2025-02-16,Ligue 1
-Brest,Auxerre,,2025-02-16,Ligue 1
-Reims,Angers,,2025-02-16,Ligue 1
-Lens,Strasbourg,,2025-02-16,Ligue 1
-Le Havre,Nice,,2025-02-16,Ligue 1
-Rennes,Lille,,2025-02-16,Ligue 1
-Nantes,Lens,,2025-02-23,Ligue 1
-Rennes,Reims,,2025-02-23,Ligue 1
+Ange,Marseille,20:45,2025-02-09,Ligue 1
+Brest,Auxerre,20:45,2025-02-14,Ligue 1
+Marseille,Saint-Étienne,17:00,2025-02-15,Ligue 1
+Monaco,Nant,19:00,2025-02-15,Ligue 1
+Toulouse,Paris S-G,21:05,2025-02-15,Ligue 1
+Montpellier,Lyon,15:00,2025-02-16,Ligue 1
+Reims,Ange,17:15,2025-02-16,Ligue 1
+Lens,Strasbourg,17:15,2025-02-16,Ligue 1
+Le Havre,Nice,17:15,2025-02-16,Ligue 1
+Renn,Lille,20:45,2025-02-16,Ligue 1
+Nant,Lens,,2025-02-23,Ligue 1
+Renn,Reims,,2025-02-23,Ligue 1
 Lyon,Paris S-G,,2025-02-23,Ligue 1
 Strasbourg,Brest,,2025-02-23,Ligue 1
-Saint-Étienne,Angers,,2025-02-23,Ligue 1
+Saint-Étienne,Ange,,2025-02-23,Ligue 1
 Le Havre,Toulouse,,2025-02-23,Ligue 1
 Nice,Montpellier,,2025-02-23,Ligue 1
 Lille,Monaco,,2025-02-23,Ligue 1
 Auxerre,Marseille,,2025-02-23,Ligue 1
 Paris S-G,Lille,,2025-03-02,Ligue 1
 Auxerre,Strasbourg,,2025-03-02,Ligue 1
-Montpellier,Rennes,,2025-03-02,Ligue 1
+Montpellier,Renn,,2025-03-02,Ligue 1
 Saint-Étienne,Nice,,2025-03-02,Ligue 1
 Lyon,Brest,,2025-03-02,Ligue 1
-Angers,Toulouse,,2025-03-02,Ligue 1
-Marseille,Nantes,,2025-03-02,Ligue 1
+Ange,Toulouse,,2025-03-02,Ligue 1
+Marseille,Nant,,2025-03-02,Ligue 1
 Lens,Le Havre,,2025-03-02,Ligue 1
 Monaco,Reims,,2025-03-02,Ligue 1
-Nantes,Strasbourg,,2025-03-09,Ligue 1
-Brest,Angers,,2025-03-09,Ligue 1
-Rennes,Paris S-G,,2025-03-09,Ligue 1
+Nant,Strasbourg,,2025-03-09,Ligue 1
+Brest,Ange,,2025-03-09,Ligue 1
+Renn,Paris S-G,,2025-03-09,Ligue 1
 Nice,Lyon,,2025-03-09,Ligue 1
 Lille,Montpellier,,2025-03-09,Ligue 1
 Reims,Auxerre,,2025-03-09,Ligue 1
@@ -1764,54 +1834,54 @@ Montpellier,Saint-Étienne,,2025-03-16,Ligue 1
 Brest,Reims,,2025-03-16,Ligue 1
 Strasbourg,Toulouse,,2025-03-16,Ligue 1
 Lyon,Le Havre,,2025-03-16,Ligue 1
-Angers,Monaco,,2025-03-16,Ligue 1
-Lens,Rennes,,2025-03-16,Ligue 1
+Ange,Monaco,,2025-03-16,Ligue 1
+Lens,Renn,,2025-03-16,Ligue 1
 Nice,Auxerre,,2025-03-16,Ligue 1
-Nantes,Lille,,2025-03-16,Ligue 1
+Nant,Lille,,2025-03-16,Ligue 1
 Paris S-G,Marseille,,2025-03-16,Ligue 1
 Lille,Lens,,2025-03-30,Ligue 1
-Le Havre,Nantes,,2025-03-30,Ligue 1
+Le Havre,Nant,,2025-03-30,Ligue 1
 Toulouse,Brest,,2025-03-30,Ligue 1
 Monaco,Nice,,2025-03-30,Ligue 1
 Auxerre,Montpellier,,2025-03-30,Ligue 1
 Reims,Marseille,,2025-03-30,Ligue 1
 Strasbourg,Lyon,,2025-03-30,Ligue 1
-Angers,Rennes,,2025-03-30,Ligue 1
+Ange,Renn,,2025-03-30,Ligue 1
 Saint-Étienne,Paris S-G,,2025-03-30,Ligue 1
 Montpellier,Le Havre,,2025-04-06,Ligue 1
 Marseille,Toulouse,,2025-04-06,Ligue 1
-Nice,Nantes,,2025-04-06,Ligue 1
+Nice,Nant,,2025-04-06,Ligue 1
 Brest,Monaco,,2025-04-06,Ligue 1
 Reims,Strasbourg,,2025-04-06,Ligue 1
 Lyon,Lille,,2025-04-06,Ligue 1
 Lens,Saint-Étienne,,2025-04-06,Ligue 1
-Paris S-G,Angers,,2025-04-06,Ligue 1
-Rennes,Auxerre,,2025-04-06,Ligue 1
+Paris S-G,Ange,,2025-04-06,Ligue 1
+Renn,Auxerre,,2025-04-06,Ligue 1
 Toulouse,Lille,,2025-04-13,Ligue 1
-Nantes,Paris S-G,,2025-04-13,Ligue 1
+Nant,Paris S-G,,2025-04-13,Ligue 1
 Lens,Reims,,2025-04-13,Ligue 1
-Angers,Montpellier,,2025-04-13,Ligue 1
+Ange,Montpellier,,2025-04-13,Ligue 1
 Strasbourg,Nice,,2025-04-13,Ligue 1
 Saint-Étienne,Brest,,2025-04-13,Ligue 1
-Le Havre,Rennes,,2025-04-13,Ligue 1
+Le Havre,Renn,,2025-04-13,Ligue 1
 Monaco,Marseille,,2025-04-13,Ligue 1
 Auxerre,Lyon,,2025-04-13,Ligue 1
 Saint-Étienne,Lyon,,2025-04-20,Ligue 1
 Brest,Lens,,2025-04-20,Ligue 1
-Nice,Angers,,2025-04-20,Ligue 1
+Nice,Ange,,2025-04-20,Ligue 1
 Marseille,Montpellier,,2025-04-20,Ligue 1
-Rennes,Nantes,,2025-04-20,Ligue 1
+Renn,Nant,,2025-04-20,Ligue 1
 Reims,Toulouse,,2025-04-20,Ligue 1
 Paris S-G,Le Havre,,2025-04-20,Ligue 1
 Monaco,Strasbourg,,2025-04-20,Ligue 1
 Lille,Auxerre,,2025-04-20,Ligue 1
 Lens,Auxerre,,2025-04-27,Ligue 1
-Lyon,Rennes,,2025-04-27,Ligue 1
+Lyon,Renn,,2025-04-27,Ligue 1
 Le Havre,Monaco,,2025-04-27,Ligue 1
 Montpellier,Reims,,2025-04-27,Ligue 1
-Nantes,Toulouse,,2025-04-27,Ligue 1
+Nant,Toulouse,,2025-04-27,Ligue 1
 Paris S-G,Nice,,2025-04-27,Ligue 1
-Angers,Lille,,2025-04-27,Ligue 1
+Ange,Lille,,2025-04-27,Ligue 1
 Strasbourg,Saint-Étienne,,2025-04-27,Ligue 1
 Marseille,Brest,,2025-04-27,Ligue 1
 Brest,Montpellier,,2025-05-04,Ligue 1
@@ -1821,23 +1891,23 @@ Saint-Étienne,Monaco,,2025-05-04,Ligue 1
 Lyon,Lens,,2025-05-04,Ligue 1
 Auxerre,Le Havre,,2025-05-04,Ligue 1
 Strasbourg,Paris S-G,,2025-05-04,Ligue 1
-Nantes,Angers,,2025-05-04,Ligue 1
-Toulouse,Rennes,,2025-05-04,Ligue 1
+Nant,Ange,,2025-05-04,Ligue 1
+Toulouse,Renn,,2025-05-04,Ligue 1
 Brest,Lille,,2025-05-11,Ligue 1
 Monaco,Lyon,,2025-05-11,Ligue 1
-Auxerre,Nantes,,2025-05-11,Ligue 1
+Auxerre,Nant,,2025-05-11,Ligue 1
 Toulouse,Lens,,2025-05-11,Ligue 1
 Le Havre,Marseille,,2025-05-11,Ligue 1
 Montpellier,Paris S-G,,2025-05-11,Ligue 1
-Rennes,Nice,,2025-05-11,Ligue 1
+Renn,Nice,,2025-05-11,Ligue 1
 Reims,Saint-Étienne,,2025-05-11,Ligue 1
-Angers,Strasbourg,,2025-05-11,Ligue 1
+Ange,Strasbourg,,2025-05-11,Ligue 1
 Saint-Étienne,Toulouse,,2025-05-18,Ligue 1
-Marseille,Rennes,,2025-05-18,Ligue 1
+Marseille,Renn,,2025-05-18,Ligue 1
 Nice,Brest,,2025-05-18,Ligue 1
-Lyon,Angers,,2025-05-18,Ligue 1
+Lyon,Ange,,2025-05-18,Ligue 1
 Strasbourg,Le Havre,,2025-05-18,Ligue 1
 Paris S-G,Auxerre,,2025-05-18,Ligue 1
 Lille,Reims,,2025-05-18,Ligue 1
-Nantes,Montpellier,,2025-05-18,Ligue 1
+Nant,Montpellier,,2025-05-18,Ligue 1
 Lens,Monaco,,2025-05-18,Ligue 1
