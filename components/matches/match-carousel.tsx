@@ -69,7 +69,7 @@ export function MatchCarousel({ onMatchSelect }: MatchCarouselProps) {
     const loadMatchData = async () => {
       try {
         // Fetch CSV
-        const response = await fetch('/Bet_Website/data/matches_season.csv');
+        const response = await fetch('/Bet_Website/data/players/matches_season.csv');
         const csvText = await response.text();
 
         // Parse CSV
