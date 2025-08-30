@@ -1459,7 +1459,7 @@ Marseille,Paris FC,17:00,2025-08-23,Ligue 1
 Nice,Auxerre,19:00,2025-08-23,Ligue 1
 Lyon,Metz,21:05,2025-08-23,Ligue 1
 Lorient,Renn,15:00,2025-08-24,Ligue 1
-Strasbourg,Nant,17:15,2025-08-24,Ligue 1
+Strasbourg,Nantes,17:15,2025-08-24,Ligue 1
 Le Havre,Lens,17:15,2025-08-24,Ligue 1
 Toulouse,Brest,17:15,2025-08-24,Ligue 1
 Lille,Monaco,20:45,2025-08-24,Ligue 1
@@ -1472,7 +1472,7 @@ Paris FC,Metz,17:15,2025-08-31,Ligue 1
 Le Havre,Nice,17:15,2025-08-31,Ligue 1
 Monaco,Strasbourg,17:15,2025-08-31,Ligue 1
 Lyon,Marseille,20:45,2025-08-31,Ligue 1
-Nice,Nant,,2025-09-14,Ligue 1
+Nice,Nantes,,2025-09-14,Ligue 1
 Renn,Lyon,,2025-09-14,Ligue 1
 Paris S-G,Lens,,2025-09-14,Ligue 1
 Marseille,Lorient,,2025-09-14,Ligue 1
@@ -1496,10 +1496,10 @@ Nice,Paris FC,,2025-09-28,Ligue 1
 Lorient,Monaco,,2025-09-28,Ligue 1
 Lille,Lyon,,2025-09-28,Ligue 1
 Ange,Brest,,2025-09-28,Ligue 1
-Toulouse,Nant,,2025-09-28,Ligue 1
+Toulouse,Nantes,,2025-09-28,Ligue 1
 Renn,Lens,,2025-09-28,Ligue 1
 Paris S-G,Auxerre,,2025-09-28,Ligue 1
-Brest,Nant,,2025-10-05,Ligue 1
+Brest,Nantes,,2025-10-05,Ligue 1
 Auxerre,Lens,,2025-10-05,Ligue 1
 Le Havre,Renn,,2025-10-05,Ligue 1
 Lille,Paris S-G,,2025-10-05,Ligue 1
@@ -1517,7 +1517,7 @@ Paris S-G,Strasbourg,,2025-10-19,Ligue 1
 Toulouse,Metz,,2025-10-19,Ligue 1
 Marseille,Le Havre,,2025-10-19,Ligue 1
 Lorient,Brest,,2025-10-19,Ligue 1
-Paris FC,Nant,,2025-10-26,Ligue 1
+Paris FC,Nantes,,2025-10-26,Ligue 1
 Brest,Paris S-G,,2025-10-26,Ligue 1
 Monaco,Toulouse,,2025-10-26,Ligue 1
 Lyon,Strasbourg,,2025-10-26,Ligue 1
@@ -1549,7 +1549,7 @@ Monaco,Lens,,2025-11-09,Ligue 1
 Paris FC,Renn,,2025-11-09,Ligue 1
 Ange,Auxerre,,2025-11-09,Ligue 1
 Metz,Nice,,2025-11-09,Ligue 1
-Le Havre,Nant,,2025-11-09,Ligue 1
+Le Havre,Nantes,,2025-11-09,Ligue 1
 Lorient,Toulouse,,2025-11-09,Ligue 1
 Strasbourg,Lille,,2025-11-09,Ligue 1
 Lyon,Paris S-G,,2025-11-09,Ligue 1
@@ -1568,7 +1568,7 @@ Le Havre,Lille,,2025-11-30,Ligue 1
 Marseille,Toulouse,,2025-11-30,Ligue 1
 Metz,Renn,,2025-11-30,Ligue 1
 Paris FC,Auxerre,,2025-11-30,Ligue 1
-Lyon,Nant,,2025-11-30,Ligue 1
+Lyon,Nantes,,2025-11-30,Ligue 1
 Monaco,Paris S-G,,2025-11-30,Ligue 1
 Strasbourg,Brest,,2025-11-30,Ligue 1
 Brest,Monaco,,2025-12-07,Ligue 1
@@ -1586,13 +1586,13 @@ Marseille,Monaco,,2025-12-14,Ligue 1
 Strasbourg,Lorient,,2025-12-14,Ligue 1
 Auxerre,Lille,,2025-12-14,Ligue 1
 Lyon,Le Havre,,2025-12-14,Ligue 1
-Ange,Nant,,2025-12-14,Ligue 1
+Ange,Nantes,,2025-12-14,Ligue 1
 Renn,Brest,,2025-12-14,Ligue 1
 Metz,Paris S-G,,2025-12-14,Ligue 1
 Lille,Renn,,2026-01-04,Ligue 1
 Paris S-G,Paris FC,,2026-01-04,Ligue 1
 Lorient,Metz,,2026-01-04,Ligue 1
-Marseille,Nant,,2026-01-04,Ligue 1
+Marseille,Nantes,,2026-01-04,Ligue 1
 Le Havre,Ange,,2026-01-04,Ligue 1
 Monaco,Lyon,,2026-01-04,Ligue 1
 Nice,Strasbourg,,2026-01-04,Ligue 1
@@ -1618,7 +1618,7 @@ Paris FC,Ange,,2026-01-25,Ligue 1
 Nant,Nice,,2026-01-25,Ligue 1
 Lens,Le Havre,,2026-02-01,Ligue 1
 Toulouse,Auxerre,,2026-02-01,Ligue 1
-Lorient,Nant,,2026-02-01,Ligue 1
+Lorient,Nantes,,2026-02-01,Ligue 1
 Strasbourg,Paris S-G,,2026-02-01,Ligue 1
 Nice,Brest,,2026-02-01,Ligue 1
 Ange,Metz,,2026-02-01,Ligue 1
@@ -1642,7 +1642,7 @@ Metz,Auxerre,,2026-02-15,Ligue 1
 Lille,Brest,,2026-02-15,Ligue 1
 Paris FC,Lens,,2026-02-15,Ligue 1
 Renn,Paris S-G,,2026-02-15,Ligue 1
-Monaco,Nant,,2026-02-15,Ligue 1
+Monaco,Nantes,,2026-02-15,Ligue 1
 Strasbourg,Lyon,,2026-02-22,Ligue 1
 Auxerre,Renn,,2026-02-22,Ligue 1
 Paris S-G,Metz,,2026-02-22,Ligue 1
@@ -1652,7 +1652,7 @@ Toulouse,Paris FC,,2026-02-22,Ligue 1
 Ange,Lille,,2026-02-22,Ligue 1
 Lens,Monaco,,2026-02-22,Ligue 1
 Nant,Le Havre,,2026-02-22,Ligue 1
-Lille,Nant,,2026-03-01,Ligue 1
+Lille,Nantes,,2026-03-01,Ligue 1
 Lorient,Auxerre,,2026-03-01,Ligue 1
 Renn,Toulouse,,2026-03-01,Ligue 1
 Metz,Brest,,2026-03-01,Ligue 1
@@ -1675,7 +1675,7 @@ Le Havre,Lyon,,2026-03-15,Ligue 1
 Lorient,Lens,,2026-03-15,Ligue 1
 Ange,Nice,,2026-03-15,Ligue 1
 Renn,Lille,,2026-03-15,Ligue 1
-Paris S-G,Nant,,2026-03-15,Ligue 1
+Paris S-G,Nantes,,2026-03-15,Ligue 1
 Monaco,Brest,,2026-03-15,Ligue 1
 Metz,Toulouse,,2026-03-15,Ligue 1
 Marseille,Auxerre,,2026-03-15,Ligue 1
@@ -1692,7 +1692,7 @@ Strasbourg,Nice,,2026-04-05,Ligue 1
 Lille,Lens,,2026-04-05,Ligue 1
 Ange,Lyon,,2026-04-05,Ligue 1
 Paris S-G,Toulouse,,2026-04-05,Ligue 1
-Metz,Nant,,2026-04-05,Ligue 1
+Metz,Nantes,,2026-04-05,Ligue 1
 Brest,Renn,,2026-04-05,Ligue 1
 Lorient,Paris FC,,2026-04-05,Ligue 1
 Monaco,Marseille,,2026-04-05,Ligue 1
@@ -1704,7 +1704,7 @@ Paris FC,Monaco,,2026-04-12,Ligue 1
 Toulouse,Lille,,2026-04-12,Ligue 1
 Brest,Strasbourg,,2026-04-12,Ligue 1
 Renn,Ange,,2026-04-12,Ligue 1
-Auxerre,Nant,,2026-04-12,Ligue 1
+Auxerre,Nantes,,2026-04-12,Ligue 1
 Lens,Paris S-G,,2026-04-12,Ligue 1
 Metz,Paris FC,,2026-04-19,Ligue 1
 Nant,Brest,,2026-04-19,Ligue 1
@@ -1717,7 +1717,7 @@ Strasbourg,Renn,,2026-04-19,Ligue 1
 Ange,Le Havre,,2026-04-19,Ligue 1
 Brest,Lens,,2026-04-26,Ligue 1
 Toulouse,Monaco,,2026-04-26,Ligue 1
-Renn,Nant,,2026-04-26,Ligue 1
+Renn,Nantes,,2026-04-26,Ligue 1
 Ange,Paris S-G,,2026-04-26,Ligue 1
 Le Havre,Metz,,2026-04-26,Ligue 1
 Lorient,Strasbourg,,2026-04-26,Ligue 1
@@ -1741,7 +1741,7 @@ Metz,Lorient,,2026-05-09,Ligue 1
 Renn,Paris FC,,2026-05-09,Ligue 1
 Le Havre,Marseille,,2026-05-09,Ligue 1
 Auxerre,Nice,,2026-05-09,Ligue 1
-Lens,Nant,,2026-05-09,Ligue 1
+Lens,Nantes,,2026-05-09,Ligue 1
 Lille,Auxerre,,2026-05-16,Ligue 1
 Lyon,Lens,,2026-05-16,Ligue 1
 Paris FC,Paris S-G,,2026-05-16,Ligue 1
