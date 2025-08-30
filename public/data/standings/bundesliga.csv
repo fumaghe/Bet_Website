@@ -1,19 +1,19 @@
 ﻿Pos,Squadra,PG,V,N,P,Rf,Rs,DR,Pt,xG,xGA,Lega
-1,Bayern Munich,21,17,3,1,65,19,46,54,53.6,12.9,bundesliga
-2,Leverkusen,21,13,7,1,49,27,22,46,39.3,22.6,bundesliga
-3,Eint Frankfurt,21,11,6,4,46,28,18,39,40.7,30.4,bundesliga
-4,Stuttgart,21,10,5,6,39,31,8,35,37.8,29.4,bundesliga
-5,RB Leipzig,20,9,6,5,34,29,5,33,26.9,32.5,bundesliga
-6,Freiburg,21,10,3,8,28,36,-8,33,26.0,26.6,bundesliga
-7,Mainz 05,21,9,5,7,33,24,9,32,29.5,29.3,bundesliga
-8,Gladbach,21,9,4,8,33,31,2,31,31.8,38.7,bundesliga
-9,Wolfsburg,21,8,6,7,43,35,8,30,30.7,33.9,bundesliga
-10,Werder Bremen,21,8,6,7,34,39,-5,30,28.4,31.3,bundesliga
-11,Dortmund,21,8,5,8,37,36,1,29,30.3,26.4,bundesliga
-12,Augsburg,21,7,6,8,24,35,-11,27,20.9,29.0,bundesliga
-13,Union Berlin,21,6,5,10,19,28,-9,23,25.0,25.6,bundesliga
-14,St. Pauli,20,6,3,11,18,22,-4,21,22.1,25.5,bundesliga
-15,Hoffenheim,21,4,6,11,26,44,-18,18,27.9,37.4,bundesliga
-16,Heidenheim,21,4,2,15,25,43,-18,14,26.3,34.8,bundesliga
-17,Holstein Kiel,20,3,3,14,31,52,-21,12,22.6,35.5,bundesliga
-18,Bochum,20,3,3,14,18,43,-25,12,23.0,40.8,bundesliga
+1,St. Pauli,2,1,1,0,5,3,2,4,2.7,1.9,bundesliga
+2,Bayern Munich,1,1,0,0,6,0,6,3,1.7,0.5,bundesliga
+3,Eint Frankfurt,1,1,0,0,4,1,3,3,2.7,0.5,bundesliga
+4,Wolfsburg,1,1,0,0,3,1,2,3,2.4,0.7,bundesliga
+5,Augsburg,1,1,0,0,3,1,2,3,1.3,2.4,bundesliga
+6,Hoffenheim,1,1,0,0,2,1,1,3,0.4,0.7,bundesliga
+7,Union Berlin,1,1,0,0,2,1,1,3,0.3,1.7,bundesliga
+8,Köln,1,1,0,0,1,0,1,3,1.4,1.4,bundesliga
+9,Dortmund,1,0,1,0,3,3,0,1,1.6,1.2,bundesliga
+10,MGladbach,1,0,1,0,0,0,0,1,1.1,0.4,bundesliga
+11,Hamburger SV,2,0,1,1,0,2,-2,1,0.8,2.5,bundesliga
+12,Stuttgart,1,0,0,1,1,2,-1,0,1.7,0.3,bundesliga
+13,Leverkusen,1,0,0,1,1,2,-1,0,0.7,0.4,bundesliga
+14,Mainz 05,1,0,0,1,0,1,-1,0,1.4,1.4,bundesliga
+15,Freiburg,1,0,0,1,1,3,-2,0,2.4,1.3,bundesliga
+16,Heidenheim,1,0,0,1,1,3,-2,0,0.7,2.4,bundesliga
+17,Werder Bremen,1,0,0,1,1,4,-3,0,0.5,2.7,bundesliga
+18,RB Leipzig,1,0,0,1,0,6,-6,0,0.5,1.7,bundesliga

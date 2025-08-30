@@ -8,13 +8,34 @@ import { PlayerStats } from '../types/stats';
 let leaguePlayers: PlayerStats[] = [];
 let championsLeaguePlayers: PlayerStats[] = [];
 
+/** Coalesce numeri: accetta number|string|undefined e torna un number valido (default 0) */
+function num(val: any, def = 0): number {
+  if (val === null || val === undefined || val === '') return def;
+  const n = typeof val === 'number' ? val : parseFloat(String(val).replace(',', '.'));
+  return isNaN(n) ? def : n;
+}
+
+/** Coalesce interi */
+function int(val: any, def = 0): number {
+  if (val === null || val === undefined || val === '') return def;
+  const n = typeof val === 'number' ? val : parseInt(String(val), 10);
+  return isNaN(n) ? def : n;
+}
+
+/** Coalesce stringhe “pulite” */
+function str(val: any, def = 'Sconosciuto'): string {
+  if (typeof val !== 'string') return def;
+  const s = val.trim();
+  return s.length ? s : def;
+}
+
 /**
  * Carica e normalizza i dati dei giocatori dai CSV.
  */
 export async function loadPlayerStats() {
   try {
-    const leagueResponse = await fetch('/Bet_Website/data/players/league_players.csv');
-    const championsResponse = await fetch('/Bet_Website/data/players/champions_league_players.csv');
+    const leagueResponse = await fetch('/Bet_Website/data/players/league_players.csv', { cache: 'no-store' });
+    const championsResponse = await fetch('/Bet_Website/data/players/champions_league_players.csv', { cache: 'no-store' });
 
     if (!leagueResponse.ok || !championsResponse.ok) {
       throw new Error('Errore nel caricamento dei file CSV');
@@ -26,13 +47,10 @@ export async function loadPlayerStats() {
     const parsedLeaguePlayers = await parseCSV(leagueData);
     const parsedChampionsPlayers = await parseCSV(championsData);
 
-    // Normalizza e separa i dati in due array globali
     leaguePlayers = normalizePlayerStats(parsedLeaguePlayers, 'league');
     championsLeaguePlayers = normalizePlayerStats(parsedChampionsPlayers, 'champions');
 
     console.log('Dati dei giocatori caricati correttamente.');
-    console.log('League Players:', leaguePlayers);
-    console.log('Champions League Players:', championsLeaguePlayers);
   } catch (error) {
     console.error('Error loading player stats:', error);
   }
@@ -40,53 +58,39 @@ export async function loadPlayerStats() {
 
 /**
  * Normalizza i dati dei giocatori aggiungendo informazioni sulla lega.
- * @param data Dati grezzi dei giocatori dal CSV.
- * @param type Tipo di lega ('league' o 'champions').
- * @returns Array di PlayerStats normalizzati.
+ * Nota: nel CSV di Champions la colonna è "Pos." (con il punto).
  */
 function normalizePlayerStats(data: any[], type: 'league' | 'champions'): PlayerStats[] {
   return data.map((row) => ({
-    // Nota: nel CSV di Champions la colonna è "Pos." (con il punto),
-    // perciò usiamo row['Pos.'] anziché row.Pos
-    pos: parseInt(row['Pos.']) || 0,
-    name: row.Giocatore || 'Sconosciuto',
-    nationality: row.Nazione || 'Sconosciuta',
-    position: row.Ruolo || 'Sconosciuto',
-    team:
-      typeof row.Squadra === 'string' && row.Squadra.trim() !== ''
-        ? row.Squadra
-        : 'Sconosciuta',
-    league:
-      type === 'league'
-        ? row.Competizione || 'Serie A'
-        : 'Champions League',
-    age: parseInt(row.Età) || 0,
-    matches: parseInt(row.PG) || 0,
-    starts: parseInt(row.Tit) || 0,
-    minutes: parseInt(row.Min) || 0,
-    goals: parseInt(row.Reti) || 0,
-    assists: parseInt(row.Assist) || 0,
-    yellowCards: parseInt(row['Amm.']) || 0,
-    redCards: parseInt(row['Esp.']) || 0,
-    xG: parseFloat(row.xG) || 0,
+    pos: int(row['Pos.']),
+    name: str(row.Giocatore, 'Sconosciuto'),
+    nationality: str(row.Nazione, 'Sconosciuta'),
+    position: str(row.Ruolo, 'Sconosciuto'),
+    team: str(row.Squadra, 'Sconosciuta'),
+    league: type === 'league' ? str(row.Competizione, 'Serie A') : 'Champions League',
+    age: int(row.Età),
+    matches: int(row.PG),
+    starts: int(row.Tit),
+    minutes: int(row.Min),
+    goals: int(row.Reti),
+    assists: int(row.Assist),
+    yellowCards: int(row['Amm.']),
+    redCards: int(row['Esp.']),
+    xG: num(row.xG),
 
-    // Queste colonne potrebbero essere assenti in qualche CSV,
-    // quindi il parseInt/parseFloat + || 0 evita NaN
-    shots: parseInt(row['Tiri totali']) || 0,
-    shotsOnTarget: parseInt(row['Tiri in porta']) || 0,
-    foulsCommitted: parseInt(row['Falli commessi']) || 0,
-    foulsDrawn: parseInt(row['Falli subiti']) || 0,
-    offsides: parseInt(row.Fuorigioco) || 0,
-    progressiveCarries: parseInt(row.PrgC) || 0,
-    progressivePasses: parseInt(row.PrgP) || 0,
+    // opzionali: mai NaN
+    shots: int(row['Tiri totali']),
+    shotsOnTarget: int(row['Tiri in porta']),
+    foulsCommitted: int(row['Falli commessi']),
+    foulsDrawn: int(row['Falli subiti']),
+    offsides: int(row.Fuorigioco),
+    progressiveCarries: int(row.PrgC),
+    progressivePasses: int(row.PrgP),
   }));
 }
 
 /**
- * Ottiene i giocatori filtrati per squadra e lega.
- * @param team Nome della squadra
- * @param league Nome della lega
- * @returns Array di PlayerStats filtrati
+ * Filtra per squadra + lega.
  */
 export function getPlayerStats(team: string, league: string): PlayerStats[] {
   const players = league === 'Champions League' ? championsLeaguePlayers : leaguePlayers;
@@ -98,12 +102,9 @@ export function getPlayerStats(team: string, league: string): PlayerStats[] {
 }
 
 /**
- * Ottiene i top N giocatori ordinati per una specifica statistica, applicando filtri sui match.
- * @param team Nome della squadra
- * @param league Nome della lega
- * @param stat La statistica per cui ordinare
- * @param limit Numero massimo di giocatori da restituire
- * @returns Array di PlayerStats ordinati e limitati
+ * Top N per statistica, con filtro minimo presenze.
+ * Se la statistica non esiste su nessun giocatore (tutti undefined/null), torniamo []:
+ * la UI si occuperà del fallback.
  */
 export function getTopPlayersByStat(
   team: string,
@@ -112,17 +113,12 @@ export function getTopPlayersByStat(
   limit: number = 10
 ): PlayerStats[] {
   const players = getPlayerStats(team, league);
-  console.log(`Filtrando i giocatori per ${team} nella lega ${league} per la statistica ${stat}`);
 
-  // Applica un filtro minimo di presenze (diverso per Champions o campionato)
   const minMatches = league === 'Champions League' ? 3 : 5;
   const filteredPlayers = players.filter(
     (player) => player.matches >= minMatches && player[stat] !== undefined && player[stat] !== null
   );
 
-  console.log(`Giocatori filtrati per ${stat}:`, filteredPlayers);
-
-  // Ordina i giocatori in ordine decrescente basato sulla statistica
   const sortedPlayers = filteredPlayers.sort((a, b) => {
     const aValue = a[stat];
     const bValue = b[stat];
@@ -132,24 +128,17 @@ export function getTopPlayersByStat(
     return 0;
   });
 
-  // Restituisce i primi 'limit' giocatori
-  const topPlayers = sortedPlayers.slice(0, limit);
-  console.log(`Top ${limit} giocatori per ${stat}:`, topPlayers);
-
-  return topPlayers;
+  return sortedPlayers.slice(0, limit);
 }
 
 /**
- * Restituisce i top giocatori in una determinata lega (o Champions),
- * ordinati per goals, assists o somma goals+assists.
+ * Top giocatori per goals / assists / goals+assists.
  */
 export function getLeagueTopPlayers(
   league: string,
   category: 'goals' | 'assists' | 'goalsAndAssists',
   limit: number = 20
 ): PlayerStats[] {
-  // Se è Champions League, usa il relativo array;
-  // altrimenti filtra i giocatori di "league" che abbiano come league = 'Serie A', 'La Liga', ecc.
   const players =
     league === 'Champions League'
       ? championsLeaguePlayers
@@ -161,7 +150,6 @@ export function getLeagueTopPlayers(
     } else if (category === 'assists') {
       return b.assists - a.assists;
     } else {
-      // goalsAndAssists
       return b.goals + b.assists - (a.goals + a.assists);
     }
   });

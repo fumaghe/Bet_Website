@@ -1,30 +1,14 @@
+// middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+const isDev = process.env.NODE_ENV !== 'production';
+
 export function middleware(request: NextRequest) {
-  const isAuthenticated = request.cookies.has('auth_token');
-  const isLoginPage = request.nextUrl.pathname === '/login';
-  const isPublicPath =
-    request.nextUrl.pathname.startsWith('/_next') ||
-    request.nextUrl.pathname.startsWith('/api') ||
-    request.nextUrl.pathname === '/favicon.ico';
-
-  if (isPublicPath) {
-    return NextResponse.next();
+  if (isDev) {
+    return NextResponse.next(); // in dev non bloccare nulla
   }
-
-  if (!isAuthenticated && !isLoginPage) {
-    const from = request.nextUrl.pathname;
-    const url = new URL('/login', request.url);
-    url.searchParams.set('from', from);
-    return NextResponse.redirect(url);
-  }
-
-  if (isAuthenticated && isLoginPage) {
-    const from = request.nextUrl.searchParams.get('from') || '/';
-    return NextResponse.redirect(new URL(from, request.url));
-  }
-
+  // ... tua logica attuale qui sotto se vuoi, altrimenti lascia così
   return NextResponse.next();
 }
 

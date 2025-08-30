@@ -11,7 +11,7 @@ import { FaFutbol, FaAssistiveListeningSystems, FaBullseye } from 'react-icons/f
 import { AiOutlineLineChart, AiFillFire } from 'react-icons/ai';
 import { MdOutlineSportsSoccer, MdOutlineAccessTime, MdOutlineBlock } from 'react-icons/md';
 import { BsFillSquareFill } from 'react-icons/bs';
-import { Switch } from '@/components/ui/switch'; // Assicurati di avere un componente Switch
+import { Switch } from '@/components/ui/switch';
 
 interface PlayerStatsSectionProps {
   homeTeam?: string;
@@ -59,41 +59,27 @@ export function PlayerStatsSection({ homeTeam, awayTeam, league }: PlayerStatsSe
   const [homeTopStats, setHomeTopStats] = useState<{ [key: string]: PlayerStats[] }>({});
   const [awayTopStats, setAwayTopStats] = useState<{ [key: string]: PlayerStats[] }>({});
 
-  // Quali statistiche mostrare di default in ogni categoria
   const [selectedStats, setSelectedStats] = useState<{ [categoryId: string]: string[] }>({
     scoring: ['goals'],
     discipline: ['yellowCards'],
     general: ['matches'],
   });
 
-  // Nuovo stato per selezionare se mostrare "totale" o "per match"
   const [displayMode, setDisplayMode] = useState<'total' | 'perMatch'>('total');
 
-  // Carichiamo i CSV E poi calcoliamo le statistiche
   useEffect(() => {
-    // Una funzione per caricare e poi fare la fetch
-    async function loadAndFetch() {
-      // 1) Carichiamo i CSV
+    (async () => {
       await loadPlayerStats();
-      // 2) Recuperiamo le statistiche
       fetchStats();
-    }
-
-    // Avviamo la procedura
-    loadAndFetch();
-
+    })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [homeTeam, awayTeam, league]); 
-  // Se cambiano questi parametri, ricarichiamo i CSV e rifacciamo la fetch
+  }, [homeTeam, awayTeam, league]);
 
-  // Funzione che calcola i top 10 giocatori su ogni statistica
   const fetchStats = () => {
-    // HOME
     if (homeTeam) {
       const newHomeTopStats: { [key: string]: PlayerStats[] } = {};
       for (const category of STAT_CATEGORIES) {
         for (const stat of category.stats) {
-          // `stat.key` è di tipo string, la castiamo a NumericPlayerStatsKeys
           newHomeTopStats[stat.key] = getTopPlayersByStat(
             homeTeam,
             league,
@@ -105,7 +91,6 @@ export function PlayerStatsSection({ homeTeam, awayTeam, league }: PlayerStatsSe
       setHomeTopStats(newHomeTopStats);
     }
 
-    // AWAY
     if (awayTeam) {
       const newAwayTopStats: { [key: string]: PlayerStats[] } = {};
       for (const category of STAT_CATEGORIES) {
@@ -122,7 +107,6 @@ export function PlayerStatsSection({ homeTeam, awayTeam, league }: PlayerStatsSe
     }
   };
 
-  // Gestisce l'aggiunta/rimozione di statistiche visualizzate in una categoria
   const handleStatToggle = (categoryId: string, statKey: string) => {
     setSelectedStats((prev) => {
       const categoryStats = prev[categoryId] || [];
@@ -140,17 +124,22 @@ export function PlayerStatsSection({ homeTeam, awayTeam, league }: PlayerStatsSe
     });
   };
 
-  // Toggles tra "TOT" e "x90"
   const handleDisplayModeChange = () => {
     setDisplayMode((prev) => (prev === 'total' ? 'perMatch' : 'total'));
   };
+
+  /** piccolo blocco riutilizzabile per fallback vuoto */
+  const EmptyState = ({ title }: { title: string }) => (
+    <div className="rounded-md border border-dashed border-gray-600 p-6 text-center text-sm text-gray-300">
+      Nessun dato disponibile per <span className="font-semibold">{title}</span> con i filtri attuali.
+    </div>
+  );
 
   return (
     <Card className="p-6 text-white rounded-lg">
       <h2 className="text-2xl font-bold mb-6">Statistiche Giocatori</h2>
 
       <Tabs value={activeCategory} onValueChange={setActiveCategory}>
-        {/* TabsList per cambiare Scoring / Discipline / General */}
         <TabsList className="flex mb-6 bg-darkblu-600 rounded-md">
           {STAT_CATEGORIES.map((category) => (
             <TabsTrigger
@@ -167,7 +156,6 @@ export function PlayerStatsSection({ homeTeam, awayTeam, league }: PlayerStatsSe
           ))}
         </TabsList>
 
-        {/* TabsContent per ogni categoria */}
         {STAT_CATEGORIES.map((category) => (
           <TabsContent key={category.id} value={category.id} className="space-y-6">
             {/* Bottoni di selezione delle statistiche */}
@@ -188,15 +176,24 @@ export function PlayerStatsSection({ homeTeam, awayTeam, league }: PlayerStatsSe
               ))}
             </div>
 
-            {/* Sezione con le tabelle delle statistiche selezionate */}
+            {/* Tabelle / fallback per le statistiche selezionate */}
             <div className="space-y-4">
               {selectedStats[category.id]?.map((statKey) => {
                 const foundStat = category.stats.find((s) => s.key === statKey);
                 const statLabel = foundStat ? foundStat.label : statKey;
 
+                const homeData = homeTeam ? homeTopStats[statKey] ?? [] : [];
+                const awayData = awayTeam ? awayTopStats[statKey] ?? [] : [];
+
+                const homeHasData = homeData.length > 0;
+                const awayHasData = awayData.length > 0;
+
+                const nothingToShow =
+                  (homeTeam && !homeHasData) && (!awayTeam || !awayHasData) ||
+                  (awayTeam && !awayHasData) && (!homeTeam || !homeHasData);
+
                 return (
                   <div key={statKey}>
-                    {/* Titolo e switch TOT/x90 */}
                     <div className="flex items-center justify-between mb-2">
                       <h2 className="text-2xl font-bold flex items-center gap-2 text-green-400">
                         {foundStat?.icon}
@@ -212,35 +209,46 @@ export function PlayerStatsSection({ homeTeam, awayTeam, league }: PlayerStatsSe
                       </div>
                     </div>
 
-                    {/* Tabelle per homeTeam e awayTeam */}
-                    <div className="grid gap-6 lg:grid-cols-2">
-                      {homeTeam && homeTopStats[statKey] && (
-                        <div>
-                          <h4 className="text-md font-medium mb-2">{homeTeam}</h4>
-                          <PlayerStatsTable
-                            players={homeTopStats[statKey]}
-                            statLabel={statLabel}
-                            displayMode={displayMode}
-                          />
-                        </div>
-                      )}
+                    {/* Se non c'è nessun dato per questa statistica, mostra fallback */}
+                    {(!homeTeam && !awayTeam) || nothingToShow ? (
+                      <EmptyState title={statLabel} />
+                    ) : (
+                      <div className="grid gap-6 lg:grid-cols-2">
+                        {homeTeam && (
+                          <div>
+                            <h4 className="text-md font-medium mb-2">{homeTeam}</h4>
+                            {homeHasData ? (
+                              <PlayerStatsTable
+                                players={homeData}
+                                statLabel={statLabel}
+                                displayMode={displayMode}
+                              />
+                            ) : (
+                              <EmptyState title={`${statLabel} — ${homeTeam}`} />
+                            )}
+                          </div>
+                        )}
 
-                      {awayTeam && awayTopStats[statKey] && (
-                        <div>
-                          <h4 className="text-md font-medium mb-2">{awayTeam}</h4>
-                          <PlayerStatsTable
-                            players={awayTopStats[statKey]}
-                            statLabel={statLabel}
-                            displayMode={displayMode}
-                          />
-                        </div>
-                      )}
-                    </div>
+                        {awayTeam && (
+                          <div>
+                            <h4 className="text-md font-medium mb-2">{awayTeam}</h4>
+                            {awayHasData ? (
+                              <PlayerStatsTable
+                                players={awayData}
+                                statLabel={statLabel}
+                                displayMode={displayMode}
+                              />
+                            ) : (
+                              <EmptyState title={`${statLabel} — ${awayTeam}`} />
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 );
               })}
 
-              {/* Se non è selezionata nessuna statistica, mostrina un messaggio */}
               {(!selectedStats[category.id] || selectedStats[category.id].length === 0) && (
                 <p>Nessuna statistica selezionata.</p>
               )}
